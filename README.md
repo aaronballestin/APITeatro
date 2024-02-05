@@ -1,4 +1,4 @@
 # APITeatro
 
-#Diagrama BBDD
+# Diagrama BBDD
 ![Diagrama ER](./complementos/Diagrama-ER.png)
