@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OlmS1wCDIStOmL8asWKp2a46pI+iTw/7FI7HwinVme0=",
+  "Source": "TeatroApi.Api",
+  "BasePath": "_content/TeatroApi.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

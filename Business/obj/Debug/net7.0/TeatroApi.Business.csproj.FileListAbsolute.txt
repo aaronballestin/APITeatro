@@ -1,0 +1,12 @@
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\bin\Debug\net7.0\TeatroApi.Business.deps.json
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\bin\Debug\net7.0\TeatroApi.Business.dll
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\bin\Debug\net7.0\TeatroApi.Business.pdb
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.csproj.AssemblyReference.cache
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.AssemblyInfoInputs.cache
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.AssemblyInfo.cs
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.csproj.CoreCompileInputs.cache
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.dll
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\refint\TeatroApi.Business.dll
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\TeatroApi.Business.pdb
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Business\obj\Debug\net7.0\ref\TeatroApi.Business.dll
