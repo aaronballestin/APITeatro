@@ -1,17 +1,16 @@
 # APITeatro
 
-# Indice
-1. [Diagrama BBDD](#diagramabbdd)
-2. [Comandos utilizados para crear el proyecto](#comandosutilizadosparacrearelproyecto)
-
+## Índice
+1. [Diagrama BBDD](#diagrama-bbdd)
+2. [Comandos utilizados para crear el proyecto](#comandos-utilizados-para-crear-el-proyecto)
 
 ## Diagrama BBDD
 ![Diagrama ER](./complementos/Diagrama-ER.png)
 
 ## Comandos utilizados para crear el proyecto
 
+```plaintext
 dotnet new sln -n TeatroApi
-
 
 dotnet new classlib -n TeatroApi.Models -o Models 
 dotnet sln add ./Models/TeatroApi.Models.csproj 
