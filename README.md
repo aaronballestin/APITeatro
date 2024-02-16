@@ -36,3 +36,4 @@ dotnet add ./Business/TeatroApi.Business.csproj reference ./Data/TeatroApi.Data.
 
 dotnet add ./Data/TeatroApi.Data.csproj reference ./Models/TeatroApi.Models.csproj
 
+```

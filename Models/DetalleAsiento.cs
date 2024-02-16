@@ -4,16 +4,13 @@ using System.Text;
 
 namespace TeatroApi.Models
 {
-    public class DetalleAsiento{
+    public class Entrada{
 
-        
         public int AsientoId {get; set;}
 
         public int ObraId {get; set;}
 
-        public Boolean Ocupado {get; set;}
-
-        public string NombreCliente {get; set;}
+        public string UsuarioId {get; set;}
 
         [ForeignKey("AsientoId")]
         public Asiento Asiento {get; set;}
@@ -21,7 +18,10 @@ namespace TeatroApi.Models
         [ForeignKey("ObraId")]
         public Obra Obra {get; set;}
 
-        public DetalleAsiento (){
+        [ForeignKey("UsuarioId")]
+        public Usuario Usuario {get; set;}
+
+        public Entrada(){
 
         }
     }

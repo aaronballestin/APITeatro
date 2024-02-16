@@ -9,7 +9,7 @@ namespace TeatroApi.Models
         public int CategoriaId {get; set;}
 
         [Required]
-        public string Nombre {get; set;}
+        public string NombreCategoria {get; set;}
         public List<Obra> Obras {get; set;}
         public Categoria(){
 
