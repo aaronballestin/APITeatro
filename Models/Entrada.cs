@@ -6,11 +6,12 @@ namespace TeatroApi.Models
 {
     public class Entrada{
 
+        public int EntradaId {get; set;}
         public int AsientoId {get; set;}
-
         public int ObraId {get; set;}
-
         public string UsuarioId {get; set;}
+
+
 
         [ForeignKey("AsientoId")]
         public Asiento Asiento {get; set;}
@@ -20,6 +21,7 @@ namespace TeatroApi.Models
 
         [ForeignKey("UsuarioId")]
         public Usuario Usuario {get; set;}
+
 
         public Entrada(){
 
