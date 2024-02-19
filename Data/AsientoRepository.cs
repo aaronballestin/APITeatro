@@ -22,10 +22,10 @@ namespace TeatroApi.Data
             return _context.Asientos.FirstOrDefault(asiento => asiento.AsientoId == asientoId);
         }
 
-        // public List<Asiento> GetAsientos()
-        // {
-        //     return _context.Asientos;
-        // }
+        public List<Asiento> GetAsientos()
+        {
+            return _context.Asientos.ToList();
+        }
 
         public void UpdateAsiento(Asiento asiento)
         {
