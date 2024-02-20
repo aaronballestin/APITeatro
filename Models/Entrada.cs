@@ -9,7 +9,7 @@ namespace TeatroApi.Models
         public int EntradaId {get; set;}
         public int AsientoId {get; set;}
         public int ObraId {get; set;}
-        public string UsuarioId {get; set;}
+        public int UsuarioId {get; set;}
 
 
 

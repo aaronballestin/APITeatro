@@ -22,6 +22,10 @@ namespace TeatroApi.Data
             return _context.Usuarios.FirstOrDefault(usuario => usuario.UsuarioId == usuarioId);
         }
 
+        public Usuario GetUsuario(string emailUsuario, string passwordUsuario){
+            return _context.Usuarios.FirstOrDefault(usuario => (usuario.EmailUsuario == emailUsuario && usuario.PasswordUsuario == passwordUsuario));
+        }
+
         public List<Usuario> GetUsuarios()
         {
             return _context.Usuarios.ToList();

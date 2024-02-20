@@ -12,6 +12,13 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
+        public Usuario GetUsuario(string emailUsuario, string passwordUsuario ){
+            return _repository.GetUsuario(emailUsuario, passwordUsuario);
+        }
+
+        public Usuario GetUsuario(int usuarioId ){
+            return _repository.GetUsuario(usuarioId);
+        }
 
     }
 }

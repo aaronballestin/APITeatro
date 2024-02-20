@@ -12,6 +12,14 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
+        public List<Entrada> GetEntradasByObra(int obraId){
+            return _repository.GetEntradasByObra(obraId);
+        }
+
+        
+        public List<Entrada> GetEntradasByUsuario(int usuarioId){
+            return _repository.GetEntradasByObra(usuarioId);
+        }
 
     }
 }

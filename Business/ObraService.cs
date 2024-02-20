@@ -56,5 +56,8 @@ namespace TeatroApi.Business
             _obraRepository.RemoveObra(obraId);
             _obraRepository.SaveChanges();
         }
+
+
+        
     }
 }

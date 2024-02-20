@@ -20,6 +20,8 @@ namespace TeatroApi.Models
         [Required]
         public string RutaFotoObra {get; set;}
 
+        public DateTime FechaObra {get; set;}
+
         public List<Entrada> Entradas {get; set;}
 
         

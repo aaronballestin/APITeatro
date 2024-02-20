@@ -12,6 +12,6 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
-
+        
     }
 }
