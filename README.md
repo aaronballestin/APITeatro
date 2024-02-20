@@ -1,76 +1,39 @@
 # APITeatro
 
+## Índice
+1. [Diagrama BBDD](#diagrama-bbdd)
+2. [Comandos utilizados para crear el proyecto](#comandos-utilizados-para-crear-el-proyecto)
+
 ## Diagrama BBDD
 ![Diagrama ER](./complementos/Diagrama-ER.png)
 
-## Comandos proyecto
+## Comandos utilizados para crear el proyecto
 
-### Crear proyecto de clase para Models en .NET 6
-```
-dotnet new classlib -n learnApi.Models -o Models --framework net6.0
-```
+```plaintext
+dotnet new sln -n TeatroApi
 
-### Agregar el proyecto de Models a la solución
-```
-dotnet sln add ./Models/learnApi.Models.csproj
-```
+dotnet new classlib -n TeatroApi.Models -o Models 
+dotnet sln add ./Models/TeatroApi.Models.csproj 
+dotnet build ./Models/TeatroApi.Models.csproj
 
-### Compilar el proyecto de Models
-```
-dotnet build ./Models/learnApi.Models.csproj
-```
+dotnet new classlib -n TeatroApi.Business -o Business 
+dotnet sln add ./Business/TeatroApi.Business.csproj 
+dotnet build ./Business/TeatroApi.Business.csproj
 
-### Crear proyecto de clase para Business en .NET 6
-```
-dotnet new classlib -n learnApi.Business -o Business --framework net6.0
-```
+dotnet new classlib -n TeatroApi.Data -o Data 
+dotnet sln add ./Data/TeatroApi.Data.csproj 
+dotnet build ./Data/TeatroApi.Data.csproj
 
-### Agregar el proyecto de Business a la solución
-```
-dotnet sln add ./Business/learnApi.Services.csproj
-```
-### Compilar el proyecto de Business
-```
-dotnet build ./Services/learnApi.Business.csproj
-```
+dotnet new webapi -n TeatroApi.Api -o Api 
+dotnet sln add ./Api/TeatroApi.Api.csproj 
+dotnet build ./Api/TeatroApi.Api.csproj
 
-### Crear proyecto de clase para Data en .NET 6
-```
-dotnet new classlib -n learnApi.Data -o Data --framework net6.0
-```
+dotnet add ./Business/TeatroApi.Business.csproj reference ./Models/TeatroApi.Models.csproj
 
-### Agregar el proyecto de Data a la solución
-```
-dotnet sln add ./Data/learnApi.Data.csproj
-```
+dotnet add ./Api/TeatroApi.Api.csproj reference ./Business/TeatroApi.Business.csproj
 
-### Compilar el proyecto de Data
-```
-dotnet build ./Data/learnApi.Data.csproj
-```
+dotnet add ./Business/TeatroApi.Business.csproj reference ./Data/TeatroApi.Data.csproj
 
-### Crear proyecto de Web API en .NET 6
-```
-dotnet new webapi -n learnApi.Api -o Api --framework net6.0
-```
+dotnet add ./Data/TeatroApi.Data.csproj reference ./Models/TeatroApi.Models.csproj
 
-### Agregar el proyecto de Api a la solución
 ```
-dotnet sln add ./Api/learnApi.Api.csproj
-```
-
-### Compilar el proyecto de Api
-```
-dotnet build ./Api/learnApi.Api.csproj
-```
-
-### Agregar referencias entre proyectos
-```
-dotnet add ./Business/learnApi.Business.csproj reference ./Models/learnApi.Models.csproj
-dotnet add ./Api/learnApi.Api.csproj reference ./Business/learnApi.Business.csproj
-dotnet add ./Data/learnApi.Data.csproj reference ./Models/learnApi.Models.csproj
-```
-
-
-
-dotnet ef migrations add InitialCreate -p ./Data/learnApi.Data.csproj -s ./Api/learnApi.Api.csproj
