@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace TeatroApi.Models
@@ -8,6 +9,8 @@ namespace TeatroApi.Models
         [Key]
         public int ObraId { get; set; }
 
+        public int CategoriaId { get; set; }
+
         [Required]
         public string NombreObra { get; set; }
         
@@ -16,6 +19,14 @@ namespace TeatroApi.Models
 
         [Required]
         public string RutaFotoObra {get; set;}
+
+        public DateTime FechaObra {get; set;}
+
+        public List<Entrada> Entradas {get; set;}
+
+        
+        [ForeignKey("CategoriaId")]
+        public Categoria Categoria {get; set;}
 
         public Obra(){
 

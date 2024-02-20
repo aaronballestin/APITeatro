@@ -27,6 +27,23 @@ namespace TeatroApi.Data
             return _context.Entradas.ToList();
         }
 
+        public List<Entrada> GetEntradasByObra(int obraId)
+        {
+            var entradas = _context.Entradas
+                            .Where(entrada => entrada.ObraId == obraId)
+                            .ToList();
+
+            return entradas;
+        }
+
+        public List<Entrada> GetEntradasByUsuario(int usuarioId)
+        {
+            var entradas = _context.Entradas
+                            .Where(entrada => entrada.UsuarioId == usuarioId)
+                            .ToList();
+
+            return entradas;
+        }
         public void UpdateEntrada(Entrada entrada)
         {
             // En EF Core, si el objeto ya está siendo rastreado, actualizar sus propiedades

@@ -18,6 +18,11 @@ namespace TeatroApi.Models{
         [Required]
         public string PasswordUsuario {get; set;}
 
+        [Required]
+        public string Rol {get; set;}
+
+        public List<Entrada> Entradas {get; set;}
+
         public Usuario(){
 
         }

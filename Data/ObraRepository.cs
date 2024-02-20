@@ -16,7 +16,6 @@ namespace TeatroApi.Data
         {
             _context.Obras.Add(obra);
         }
-
         public Obra GetObra(int obraId)
         {
             return _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);

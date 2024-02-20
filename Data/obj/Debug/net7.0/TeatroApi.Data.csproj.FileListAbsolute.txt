@@ -27,3 +27,8 @@ C:\Users\S2-PC00\Desktop\teatro\APITeatro\Data\bin\Debug\net7.0\TeatroApi.Models
 C:\Users\S2-PC00\Desktop\teatro\APITeatro\Data\obj\Debug\net7.0\TeatroApi.Data.csproj.CopyComplete
 C:\Users\S2-PC00\Desktop\teatro\APITeatro\Data\obj\Debug\net7.0\TeatroApi.Data.genruntimeconfig.cache
 C:\Users\S2-PC00\Desktop\teatro\APITeatro\Data\obj\Debug\net7.0\ref\TeatroApi.Data.dll
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Data\bin\Debug\net7.0\TeatroApi.Data.runtimeconfig.json
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Data\bin\Debug\net7.0\TeatroApi.Models.dll
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Data\bin\Debug\net7.0\TeatroApi.Models.pdb
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Data\obj\Debug\net7.0\TeatroApi.Data.csproj.CopyComplete
+C:\Users\S2-PC00\Desktop\apiteatro\APITeatro\Data\obj\Debug\net7.0\TeatroApi.Data.genruntimeconfig.cache

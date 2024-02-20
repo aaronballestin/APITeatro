@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AcR9ZPN6ywRTO2ycOe6OXiow3UAeyYZin+kNeZnuUFiYben0+f9hyQFtVwLYRP9gPmVHp68CJSU02KG3T4MBDg==",
+  "dgSpecHash": "p3ngJYuJiEPmWa/1EFqZb+4KB6Txg+ruwajsaGZgYyUFvbKBs6G7Egee2KTq/Ek6SslZFCxnxExfGXfEaa9o6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\teatro\\APITeatro\\Business\\TeatroApi.Business.csproj",
+  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Business\\TeatroApi.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S2-PC00\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\S2-PC00\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

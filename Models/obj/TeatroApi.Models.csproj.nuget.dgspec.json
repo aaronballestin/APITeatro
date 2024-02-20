@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\S2-PC00\\Desktop\\teatro\\APITeatro\\Models\\TeatroApi.Models.csproj": {}
+    "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj": {}
   },
   "projects": {
-    "c:\\Users\\S2-PC00\\Desktop\\teatro\\APITeatro\\Models\\TeatroApi.Models.csproj": {
+    "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\S2-PC00\\Desktop\\teatro\\APITeatro\\Models\\TeatroApi.Models.csproj",
+        "projectUniqueName": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj",
         "projectName": "TeatroApi.Models",
-        "projectPath": "c:\\Users\\S2-PC00\\Desktop\\teatro\\APITeatro\\Models\\TeatroApi.Models.csproj",
+        "projectPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj",
         "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\S2-PC00\\Desktop\\teatro\\APITeatro\\Models\\obj\\",
+        "outputPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
