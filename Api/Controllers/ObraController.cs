@@ -32,17 +32,18 @@ namespace TeatroApi.Controllers
                 return NotFound();
             }
             return Ok(obra);
+            
         }
 
         [HttpPost]
-        public ActionResult<int> AddObra([FromBody] Obra obra)
+        public ActionResult<int> AddObra( Obra obra)
         {
             var newObraId = _obraService.AddObra(obra);
             return CreatedAtAction(nameof(GetObra), new { id = newObraId }, obra);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateObra(int id, [FromBody] Obra obra)
+        public IActionResult UpdateObra(int id, Obra obra)
         {
             if (id != obra.ObraId)
             {

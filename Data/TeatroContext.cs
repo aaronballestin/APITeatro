@@ -27,7 +27,7 @@ namespace TeatroApi.Data
                 new Obra { ObraId = 1 }
             );
             modelBuilder.Entity<Asiento>().HasData(
-                new Asiento { AsientoId = 1}
+                new Asiento { AsientoId = 1, Fila = 1, Columna = 1}
             );
 
         }
