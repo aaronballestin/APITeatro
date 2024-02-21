@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TeatroApi.Models
 {
-    public class Compra{
+    public class Entrada{
 
         public int EntradaId {get; set;}
         public int AsientoId {get; set;}

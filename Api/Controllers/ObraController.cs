@@ -61,11 +61,5 @@ namespace TeatroApi.Controllers
             return NoContent();
         }
 
-        [HttpGet("categoria/{categoriaId}")]
-        public ActionResult<IEnumerable<Obra>> GetObrasByCategoria(int categoriaId)
-        {
-            var obrasByCategoria = _obraService.GetObrasByCategoria(categoriaId);
-            return Ok(obrasByCategoria);
-        }
     }
 }

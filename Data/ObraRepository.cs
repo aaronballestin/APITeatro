@@ -15,6 +15,7 @@ namespace TeatroApi.Data
         public void AddObra(Obra obra)
         {
             _context.Obras.Add(obra);
+            SaveChanges();
         }
         public Obra GetObra(int obraId)
         {
@@ -32,6 +33,7 @@ namespace TeatroApi.Data
             // y llamar a SaveChanges() es suficiente para actualizarlo en la base de datos.
             // Asegúrate de que el estado del objeto sea 'Modified' si es necesario.
             _context.Entry(obra).State = EntityState.Modified;
+            SaveChanges();
         }
 
         public void RemoveObra(int obraId)

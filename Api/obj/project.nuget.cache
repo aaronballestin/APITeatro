@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6L5efG0rRhGGrlxvrlqCvbqT4HdeEgs6isf6RdL6QVQmj6p7qpjK8fiQ5V+N6/PAjVUG9kzSbAHQWx1oMPadbg==",
+  "dgSpecHash": "7Ycm+p7pOrc9DFJBtWlgKx5GM9ij/lPnCu77iw/DTSnsB4kNfArMCCKnZps0p/SyPPKmK7ORJ2vxrDcZ1fvagw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Api\\TeatroApi.Api.csproj",
+  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\trabajoTeatro\\APITeatro\\Api\\TeatroApi.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S2-PC00\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.7\\microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
     "C:\\Users\\S2-PC00\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
