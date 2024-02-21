@@ -14,6 +14,7 @@ namespace TeatroApi.Models
         [ForeignKey("SesionId")]
         public Sesion Sesion {get; set;}
 
+        [ForeignKey("AsientoId")]
         public Asiento Asiento {get; set;}
 
         public SesionAsiento(){

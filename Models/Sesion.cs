@@ -11,12 +11,15 @@ namespace TeatroApi.Models
         public int ObraId {get; set;}
         public List<Compra> Compras {get; set;}
         public DateTime FechaHora {get; set;}
+        public List<SesionAsiento> SesionAsientos {get; set;} 
         
         [ForeignKey("ObraId")]
         public Obra Obra {get; set;}
+        
 
         public Sesion(){
 
         }
+
     }
 }

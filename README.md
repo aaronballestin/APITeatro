@@ -47,9 +47,9 @@ docker-compose up --build --force-recreate -d
 
 docker-compose down
 
-dotnet tool install --global dotnet-ef --version 7.*
+dotnet tool install --global dotnet-ef --version 6.*
 
-dotnet ef migrations add InitialCreate -p ./Data/BankApp.Data.csproj -s ./API/BankApp.API.csproj
+dotnet ef migrations add InitialCreate -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
 
-dotnet ef database update  -p ./Data/BankApp.Data.csproj -s ./API/BankApp.API.csproj
+dotnet ef database update  -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
 ```
