@@ -15,8 +15,8 @@ namespace TeatroApi.Data
         public void AddObra(Obra obra)
         {
             //Recuperamos la categoria
-            CategoriaRepository categoriaRepository = new CategoriaRepository(_context);
-            obra.Categoria = categoriaRepository.GetCategoria(obra.CategoriaId);
+            // CategoriaRepository categoriaRepository = new CategoriaRepository(_context);
+            // obra.Categoria = categoriaRepository.GetCategoria(obra.CategoriaId);
 
             _context.Obras.Add(obra);
         }

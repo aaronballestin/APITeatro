@@ -207,13 +207,13 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
-                            FechaHora = new DateTime(2024, 2, 29, 20, 19, 21, 828, DateTimeKind.Local).AddTicks(23),
+                            FechaHora = new DateTime(2024, 2, 29, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4096),
                             ObraId = 1
                         },
                         new
                         {
                             SesionId = 2,
-                            FechaHora = new DateTime(2024, 3, 7, 20, 19, 21, 828, DateTimeKind.Local).AddTicks(74),
+                            FechaHora = new DateTime(2024, 3, 7, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4150),
                             ObraId = 2
                         });
                 });

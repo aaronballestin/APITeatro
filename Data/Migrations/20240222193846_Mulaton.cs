@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TeatroApi.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Mulaton : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -198,8 +198,8 @@ namespace TeatroApi.Data.Migrations
                 columns: new[] { "SesionId", "FechaHora", "ObraId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 2, 29, 17, 41, 15, 739, DateTimeKind.Local).AddTicks(1699), 1 },
-                    { 2, new DateTime(2024, 3, 7, 17, 41, 15, 739, DateTimeKind.Local).AddTicks(1751), 2 }
+                    { 1, new DateTime(2024, 2, 29, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4096), 1 },
+                    { 2, new DateTime(2024, 3, 7, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4150), 2 }
                 });
 
             migrationBuilder.InsertData(

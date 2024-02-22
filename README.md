@@ -45,7 +45,9 @@ dotnet add ./Data/TeatroApi.Data.csproj reference ./Models/TeatroApi.Models.cspr
 ```plaintext
 docker-compose up --build --force-recreate -d
 
-docker-compose down
+docker-compose down -v
+
+dotnet ef migrations remove  -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
 
 dotnet tool install --global dotnet-ef --version 6.*
 

@@ -12,8 +12,8 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    [Migration("20240222164115_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240222193846_Mulaton")]
+    partial class Mulaton
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -210,13 +210,13 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
-                            FechaHora = new DateTime(2024, 2, 29, 17, 41, 15, 739, DateTimeKind.Local).AddTicks(1699),
+                            FechaHora = new DateTime(2024, 2, 29, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4096),
                             ObraId = 1
                         },
                         new
                         {
                             SesionId = 2,
-                            FechaHora = new DateTime(2024, 3, 7, 17, 41, 15, 739, DateTimeKind.Local).AddTicks(1751),
+                            FechaHora = new DateTime(2024, 3, 7, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4150),
                             ObraId = 2
                         });
                 });
