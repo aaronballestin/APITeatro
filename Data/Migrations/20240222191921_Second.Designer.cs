@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeatroApi.Data;
 
@@ -11,9 +12,11 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    partial class TeatroContextModelSnapshot : ModelSnapshot
+    [Migration("20240222191921_Second")]
+    partial class Second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

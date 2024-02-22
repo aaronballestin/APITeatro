@@ -20,15 +20,16 @@ namespace TeatroApi.Models
         [Required]
         public string RutaFotoObra {get; set;}
 
-        public List<Sesion> Sesiones {get; set;}
+
+        public List<Sesion>? Sesiones {get; set;}
 
 
         
         [ForeignKey("CategoriaId")]
-        public Categoria Categoria {get; set;}
+        public Categoria? Categoria {get; set;}
 
         public Obra(){
-
+            Sesiones = new List<Sesion>();
         }
     }
 }
