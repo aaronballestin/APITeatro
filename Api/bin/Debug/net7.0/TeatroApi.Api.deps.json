@@ -11,7 +11,9 @@
           "Microsoft.AspNetCore.OpenApi": "7.0.7",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
-          "TeatroApi.Business": "1.0.0"
+          "TeatroApi.Business": "1.0.0",
+          "TeatroApi.Data": "1.0.0",
+          "TeatroApi.Models": "1.0.0"
         },
         "runtime": {
           "TeatroApi.Api.dll": {}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "agI+rflsPyoXrhCbOu2sYDPHqWlTuKXxqrE/hwVXyphbNIQTsHclAhpwJ+GN6v8m76LePIOonRmA/cwLTFpgcg==",
+  "dgSpecHash": "klvRCRss3mZgYqOL9LQXf36gFSMGgfOPcGpYBzi6flJqZdjUwjXHLulFo3dwxcxfWUiAe+T9Zq5BGgw8sY3dtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj",
+  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\teatroapi\\APITeatro\\Models\\TeatroApi.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

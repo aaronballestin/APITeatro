@@ -13,6 +13,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Business\TeatroApi.Business.csproj" />
+    <ProjectReference Include="..\Models\TeatroApi.Models.csproj" />
+    <ProjectReference Include="..\Data\TeatroApi.Data.csproj" />
+
   </ItemGroup>
 
   <ItemGroup>

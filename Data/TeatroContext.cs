@@ -16,8 +16,8 @@ namespace TeatroApi.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Usuario>().HasData(
-                new Usuario { UsuarioId = 1, NombreUsuario = "Juan", EmailUsuario = "juan@example.com" },
-                new Usuario { UsuarioId = 2, NombreUsuario = "María", EmailUsuario = "maria@example.com" }
+                new Usuario { UsuarioId = 1, NombreUsuario = "Juan", EmailUsuario = "juan@example.com", PasswordUsuario = "1234", Rol = "Guest" },
+                new Usuario { UsuarioId = 2, NombreUsuario = "María", EmailUsuario = "maria@example.com", PasswordUsuario = "1234", Rol = "Admin" }
             );
 
             modelBuilder.Entity<Categoria>().HasData(
@@ -69,7 +69,7 @@ namespace TeatroApi.Data
 
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Asiento)
-                .WithMany(s => Compras)
+                .WithMany(s => s.Compras)
                 .HasForeignKey(c => c.AsientoId);
 
             //Tabla intermedia de sesionAsientos
