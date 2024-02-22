@@ -9,15 +9,15 @@ namespace TeatroApi.Controllers
     [Route("[controller]")]
     public class ObraController : ControllerBase
     {
-        private readonly ObraService _obraService;
+        private readonly IObraService _obraService;
 
-        public ObraController(ObraService obraService)
+        public ObraController(IObraService obraService)
         {
             _obraService = obraService;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Obra>> GetObras()
+        public ActionResult<List<Obra>> GetObras()
         {
             var obras = _obraService.GetObras();
             return Ok(obras);
