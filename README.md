@@ -6,6 +6,8 @@
 
 ## Diagrama BBDD
 ![Diagrama ER](./complementos/Diagrama-ER.png)
+![Diagrama ER2](./complementos/Diagrama-ER2.png)
+
 
 ## Comandos utilizados para crear el proyecto
 
@@ -36,4 +38,20 @@ dotnet add ./Business/TeatroApi.Business.csproj reference ./Data/TeatroApi.Data.
 
 dotnet add ./Data/TeatroApi.Data.csproj reference ./Models/TeatroApi.Models.csproj
 
+```
+
+
+## Comandos utilizados para dockerizar
+```plaintext
+docker-compose up --build --force-recreate -d
+
+docker-compose down -v
+
+dotnet ef migrations remove  -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
+
+dotnet tool install --global dotnet-ef --version 6.*
+
+dotnet ef migrations add InitialCreate -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
+
+dotnet ef database update  -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
 ```

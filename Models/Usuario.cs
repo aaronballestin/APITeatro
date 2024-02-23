@@ -21,7 +21,7 @@ namespace TeatroApi.Models{
         [Required]
         public string Rol {get; set;}
 
-        public List<Entrada> Entradas {get; set;}
+        public List<Compra> Compras {get; set;}
 
         public Usuario(){
 

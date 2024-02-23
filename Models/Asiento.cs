@@ -14,7 +14,8 @@ namespace TeatroApi.Models
         [Required]
         public int Columna {get; set;}
 
-        public List<Entrada> Entradas {get; set;}
+        public List<Compra> Compras {get; set;}
+        public List<SesionAsiento> SesionAsientos {get; set;}
 
         public Asiento (){
 

@@ -12,6 +12,10 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
+        public Categoria GetCategoria(int categoriaId){
+           return  _repository.GetCategoria(categoriaId);
+        }
+
         
     }
 }
