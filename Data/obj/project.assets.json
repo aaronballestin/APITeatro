@@ -3696,11 +3696,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Data\\TeatroApi.Data.csproj",
+      "projectUniqueName": "C:\\Users\\S2-PC00\\Desktop\\apiteatro2\\APITeatro\\Data\\TeatroApi.Data.csproj",
       "projectName": "TeatroApi.Data",
-      "projectPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Data\\TeatroApi.Data.csproj",
+      "projectPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro2\\APITeatro\\Data\\TeatroApi.Data.csproj",
       "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Data\\obj\\",
+      "outputPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro2\\APITeatro\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3721,8 +3721,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj": {
-              "projectPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Models\\TeatroApi.Models.csproj"
+            "C:\\Users\\S2-PC00\\Desktop\\apiteatro2\\APITeatro\\Models\\TeatroApi.Models.csproj": {
+              "projectPath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro2\\APITeatro\\Models\\TeatroApi.Models.csproj"
             }
           }
         }

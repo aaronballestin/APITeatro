@@ -10,5 +10,7 @@ namespace TeatroApi.Data
         void RemoveCategoria(int categoriaId);
         void SaveChanges();
         List<Categoria> GetCategorias();
+
+        List<Obra> GetObrasByCategoria(int categoriaId);
     }
 }

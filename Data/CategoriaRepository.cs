@@ -47,9 +47,26 @@ namespace TeatroApi.Data
 
         }
 
+        public List<Obra> GetObrasByCategoria(int categoriaId){
+            List<Obra> obrasTodas = _context.Obras.ToList();
+            List<Obra> obrasCategoria = new List<Obra>();
+
+            foreach (var obra in obrasCategoria)
+            {
+                if(obra.CategoriaId == categoriaId){
+                    obrasCategoria.Add(obra);
+                }
+            }
+
+            return obrasCategoria;
+
+        }
+
         public void SaveChanges()
         {
             _context.SaveChanges();
         }
+
+
     }
 }
