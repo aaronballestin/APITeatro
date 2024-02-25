@@ -9,6 +9,6 @@ namespace TeatroApi.Data
         void UpdateSesion(Sesion asiento);
         void RemoveSesion(int asientoId);
         void SaveChanges();
-        List<Sesion> GetSesion();
+        List<Sesion> GetSesiones();
     }
 }
