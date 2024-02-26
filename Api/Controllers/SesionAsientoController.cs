@@ -16,7 +16,7 @@ namespace TeatroApi.Controllers
             _sesionAsientoService = sesionAsientoService;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public ActionResult<List<SesionAsiento>> GetSesionAsientosByAsiento(int asientoId)
         {
             var sesionAsientos = _sesionAsientoService.GetSesionAsientosByAsiento(asientoId);
