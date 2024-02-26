@@ -22,6 +22,20 @@ namespace TeatroApi.Data
             return _context.Categorias.FirstOrDefault(categoria => categoria.CategoriaId == categoriaId);
         }
 
+        /*public Categoria GetCategoria(int categoriaId){
+            var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.CategoriaId == categoriaId);
+            var obras = _context.Obras.ToList();
+
+            foreach (var obra in obras)
+            {
+                if(obra.CategoriaId == categoriaId){
+                    categoria.Obras.Add(obra);
+                }
+            }
+
+            return categoria;
+        }*/
+
         public List<Categoria> GetCategorias()
         {
             return _context.Categorias.ToList();
