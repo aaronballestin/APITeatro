@@ -12,8 +12,14 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
-        public Categoria GetCategoria(int categoriaId){
-           return  _repository.GetCategoria(categoriaId);
+        public Categoria GetCategoria(int categoriaId)
+        {
+            return _repository.GetCategoria(categoriaId);
+        }
+
+        public CategoriaGetDTO GetCategoriaDTO(int categoriaId)
+        {
+            return _repository.GetCategoriaDTO(categoriaId);
         }
 
 
@@ -45,11 +51,12 @@ namespace TeatroApi.Business
             _repository.SaveChanges();
         }
 
-        public List<Obra> GetObrasByCategoria(int categoriaId){
+        public List<Obra> GetObrasByCategoria(int categoriaId)
+        {
             return _repository.GetObrasByCategoria(categoriaId);
         }
     }
 
-        
-    
+
+
 }

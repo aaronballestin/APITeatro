@@ -22,24 +22,33 @@ namespace TeatroApi.Data
             return _context.Categorias.FirstOrDefault(categoria => categoria.CategoriaId == categoriaId);
         }
 
-        /*public Categoria GetCategoria(int categoriaId){
-            var categoria = _context.Categorias.FirstOrDefault(categoria => categoria.CategoriaId == categoriaId);
-            var obras = _context.Obras.ToList();
+        public CategoriaGetDTO GetCategoriaDTO(int categoriaId)
+        {
+            var categoria = _context.Categorias.FirstOrDefault(c => c.CategoriaId == categoriaId);
+            if (categoria == null) return null; 
 
-            foreach (var obra in obras)
+            var obras = _context.Obras.Where(o => o.CategoriaId == categoriaId)
+                                        .Select(o => new ObraGetDTO(o.ObraId, o.NombreObra, o.DescripcionObra, o.RutaFotoObra))
+                                        .ToList(); 
+
+            return new CategoriaGetDTO
             {
-                if(obra.CategoriaId == categoriaId){
-                    categoria.Obras.Add(obra);
-                }
-            }
+                _id = categoria.CategoriaId,
+                _nombre = categoria.NombreCategoria,
+                _obras = obras
+            };
+        }
 
-            return categoria;
-        }*/
 
         public List<Categoria> GetCategorias()
         {
             return _context.Categorias.ToList();
         }
+
+        /*public List<Categoria> GetCategorias()
+        {
+            return _context.Categorias.ToList();
+        }*/
 
         public void UpdateCategoria(Categoria categoria)
         {

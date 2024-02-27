@@ -24,9 +24,9 @@ namespace TeatroApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Obra> GetCategoria(int id)
+        public ActionResult<CategoriaGetDTO> GetCategoria(int id)
         {
-            var categoria = _categoriaService.GetCategoria(id);
+            var categoria = _categoriaService.GetCategoriaDTO(id);
             if (categoria == null)
             {
                 return NotFound();
