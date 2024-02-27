@@ -27,7 +27,8 @@ namespace TeatroApi.Data
 
         public List<Obra> GetObras()
         {
-            return _context.Obras.ToList();
+            var obras = _context.Obras.ToList(); 
+            return obras;
         }
 
         public void UpdateObra(Obra obra)
