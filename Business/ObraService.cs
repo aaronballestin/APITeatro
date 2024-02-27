@@ -33,9 +33,9 @@ namespace TeatroApi.Business
             return obrasByCategoria;
         }
 
-        public Obra GetObra(int obraId)
+        public ObraGetSesionDTO GetObra(int obraId)
         {
-            return _obraRepository.GetObra(obraId);
+            return _obraRepository.GetObraDTO(obraId);
         }
 
         public int AddObra(Obra obra)

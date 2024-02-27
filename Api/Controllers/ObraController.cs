@@ -24,7 +24,7 @@ namespace TeatroApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Obra> GetObra(int id)
+        public ActionResult<ObraGetSesionDTO> GetObra(int id)
         {
             var obra = _obraService.GetObra(id);
             if (obra == null)

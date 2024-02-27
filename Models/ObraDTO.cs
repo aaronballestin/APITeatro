@@ -23,4 +23,17 @@ namespace TeatroApi.Models
             this._rutaFoto = rutaFoto;
         }
     }
+
+    public class ObraGetSesionDTO
+    {
+        public int _id { get; set; }
+
+        public string _nombre { get; set; }
+
+        public string _descripcion { get; set; }
+
+        public string _rutaFoto { get; set; }
+
+        public List<SesionGetDTO> _sesiones {get; set;}
+    }
 }
