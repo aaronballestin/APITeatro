@@ -58,6 +58,14 @@ var app = builder.Build();
 
 app.UseAuthorization();
 
+app.UseCors(options =>
+{
+    options.WithOrigins("http://localhost:5174")
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+           .AllowCredentials();
+});
+
 app.MapControllers();
 
 app.Run();
