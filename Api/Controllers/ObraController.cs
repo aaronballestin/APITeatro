@@ -24,7 +24,7 @@ namespace TeatroApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Obra> GetObra(int id)
+        public ActionResult<ObraGetSesionDTO> GetObra(int id)
         {
             var obra = _obraService.GetObra(id);
             if (obra == null)
@@ -36,7 +36,7 @@ namespace TeatroApi.Controllers
         }
 
         [HttpPost]
-        public ActionResult<int> AddObra( Obra obra)
+        public ActionResult<int> AddObra(Obra obra)
         {
             var newObraId = _obraService.AddObra(obra);
             return CreatedAtAction(nameof(GetObra), new { id = newObraId }, obra);
@@ -59,13 +59,6 @@ namespace TeatroApi.Controllers
         {
             _obraService.DeleteObra(id);
             return NoContent();
-        }
-
-        [HttpGet("categoria/{categoriaId}")]
-        public ActionResult<IEnumerable<Obra>> GetObrasByCategoria(int categoriaId)
-        {
-            var obrasByCategoria = _obraService.GetObrasByCategoria(categoriaId);
-            return Ok(obrasByCategoria);
         }
     }
 }

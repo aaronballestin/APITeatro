@@ -22,10 +22,33 @@ namespace TeatroApi.Data
             return _context.Categorias.FirstOrDefault(categoria => categoria.CategoriaId == categoriaId);
         }
 
+        public CategoriaGetDTO GetCategoriaDTO(int categoriaId)
+        {
+            var categoria = _context.Categorias.FirstOrDefault(c => c.CategoriaId == categoriaId);
+            if (categoria == null) return null; 
+
+            var obras = _context.Obras.Where(o => o.CategoriaId == categoriaId)
+                                        .Select(o => new ObraGetDTO(o.ObraId, o.NombreObra, o.DescripcionObra, o.RutaFotoObra))
+                                        .ToList(); 
+
+            return new CategoriaGetDTO
+            {
+                _id = categoria.CategoriaId,
+                _nombre = categoria.NombreCategoria,
+                _obras = obras
+            };
+        }
+
+
         public List<Categoria> GetCategorias()
         {
             return _context.Categorias.ToList();
         }
+
+        /*public List<Categoria> GetCategorias()
+        {
+            return _context.Categorias.ToList();
+        }*/
 
         public void UpdateCategoria(Categoria categoria)
         {
@@ -47,9 +70,26 @@ namespace TeatroApi.Data
 
         }
 
+        public List<Obra> GetObrasByCategoria(int categoriaId){
+            List<Obra> obrasTodas = _context.Obras.ToList();
+            List<Obra> obrasCategoria = new List<Obra>();
+
+            foreach (var obra in obrasCategoria)
+            {
+                if(obra.CategoriaId == categoriaId){
+                    obrasCategoria.Add(obra);
+                }
+            }
+
+            return obrasCategoria;
+
+        }
+
         public void SaveChanges()
         {
             _context.SaveChanges();
         }
+
+
     }
 }

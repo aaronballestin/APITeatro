@@ -20,14 +20,34 @@ namespace TeatroApi.Data
 
             _context.Obras.Add(obra);
         }
+
         public Obra GetObra(int obraId)
         {
             return _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
         }
 
+        public ObraGetSesionDTO GetObraDTO(int obraId)
+        {
+            var obra = _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
+            _context.Sesiones.ToList();
+
+            var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
+                                        .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora))
+                                        .ToList(); 
+            return new ObraGetSesionDTO
+            {
+                _id = obra.ObraId,
+                _nombre = obra.NombreObra,
+                _descripcion = obra.DescripcionObra,
+                _rutaFoto = obra.RutaFotoObra,
+                _sesiones = sesiones
+            };
+        }
+
         public List<Obra> GetObras()
         {
-            return _context.Obras.ToList();
+            var obras = _context.Obras.ToList();
+            return obras;
         }
 
         public void UpdateObra(Obra obra)

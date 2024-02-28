@@ -22,7 +22,7 @@ namespace TeatroApi.Data
             return _context.Sesiones.FirstOrDefault(sesion => sesion.SesionId == sesionId);
         }
 
-        public List<Sesion> GetSesion()
+        public List<Sesion> GetSesiones()
         {
             return _context.Sesiones.ToList();
         }

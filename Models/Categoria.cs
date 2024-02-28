@@ -12,7 +12,7 @@ namespace TeatroApi.Models
         public string NombreCategoria {get; set;}
         public List<Obra> Obras {get; set;}
         public Categoria(){
-
+            Obras = new List<Obra>();
         }
 
         
