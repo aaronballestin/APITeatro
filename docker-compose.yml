@@ -22,18 +22,19 @@ services:
         environment:    #more secure if you use an .env file
             - ACCEPT_EULA=Y
             - MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>
-    api:
-        #container_name: apiContainer
-        #image: apidb-dockerdemo:1.2
-        ports:
-            - 8001:80   #never change internal port!!!
-        networks:
-            - backend
-        build:
-          context: .
-          dockerfile: Api/Dockerfile
-        depends_on:
-            - db    #API without db running is useless
+            
+    # api:
+    #     #container_name: apiContainer
+    #     #image: apidb-dockerdemo:1.2
+    #     ports:
+    #         - 8001:80   #never change internal port!!!
+    #     networks:
+    #         - backend
+    #     build:
+    #       context: .
+    #       dockerfile: Api/Dockerfile
+    #     depends_on:
+    #         - db    #API without db running is useless
 
    # web:
         #container_name: webContainer
