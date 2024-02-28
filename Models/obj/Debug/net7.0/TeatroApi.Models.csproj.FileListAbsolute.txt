@@ -58,3 +58,15 @@ C:\Users\S2-PC00\Desktop\api\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.
 C:\Users\S2-PC00\Desktop\api\APITeatro\Models\obj\Debug\net7.0\refint\TeatroApi.Models.dll
 C:\Users\S2-PC00\Desktop\api\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.pdb
 C:\Users\S2-PC00\Desktop\api\APITeatro\Models\obj\Debug\net7.0\ref\TeatroApi.Models.dll
+C:\Users\S2-PC00\Desktop\apiteatro\Models\bin\Debug\net7.0\TeatroApi.Models.deps.json
+C:\Users\S2-PC00\Desktop\apiteatro\Models\bin\Debug\net7.0\TeatroApi.Models.dll
+C:\Users\S2-PC00\Desktop\apiteatro\Models\bin\Debug\net7.0\TeatroApi.Models.pdb
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.csproj.AssemblyReference.cache
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.AssemblyInfoInputs.cache
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.AssemblyInfo.cs
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.csproj.CoreCompileInputs.cache
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.dll
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\refint\TeatroApi.Models.dll
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.pdb
+C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\ref\TeatroApi.Models.dll

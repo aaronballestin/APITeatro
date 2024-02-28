@@ -36,11 +36,11 @@ namespace TeatroApi.Data
                                         .ToList(); 
             return new ObraGetSesionDTO
             {
-                _id = obra.ObraId,
-                _nombre = obra.NombreObra,
-                _descripcion = obra.DescripcionObra,
-                _rutaFoto = obra.RutaFotoObra,
-                _sesiones = sesiones
+                id = obra.ObraId,
+                nombre = obra.NombreObra,
+                descripcion = obra.DescripcionObra,
+                rutaFoto = obra.RutaFotoObra,
+                sesiones = sesiones
             };
         }
 

@@ -2,13 +2,13 @@ namespace TeatroApi.Models
 {
     public class ObraGetDTO
     {
-        public int _id { get; set; }
+        public int id { get; set; }
 
-        public string _nombre { get; set; }
+        public string nombre { get; set; }
 
-        public string _descripcion { get; set; }
+        public string descripcion { get; set; }
 
-        public string _rutaFoto { get; set; }
+        public string rutaFoto { get; set; }
 
         public ObraGetDTO()
         {
@@ -17,23 +17,23 @@ namespace TeatroApi.Models
 
         public ObraGetDTO(int id, string nombre, string descripcion, string rutaFoto)
         {
-            this._id = id;
-            this._nombre = nombre;
-            this._descripcion = descripcion;
-            this._rutaFoto = rutaFoto;
+            this.id = id;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.rutaFoto = rutaFoto;
         }
     }
 
     public class ObraGetSesionDTO
     {
-        public int _id { get; set; }
+        public int id { get; set; }
 
-        public string _nombre { get; set; }
+        public string nombre { get; set; }
 
-        public string _descripcion { get; set; }
+        public string descripcion { get; set; }
 
-        public string _rutaFoto { get; set; }
+        public string rutaFoto { get; set; }
 
-        public List<SesionGetDTO> _sesiones {get; set;}
+        public List<SesionGetDTO> sesiones {get; set;}
     }
 }

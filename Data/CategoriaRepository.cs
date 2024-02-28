@@ -33,9 +33,9 @@ namespace TeatroApi.Data
 
             return new CategoriaGetDTO
             {
-                _id = categoria.CategoriaId,
-                _nombre = categoria.NombreCategoria,
-                _obras = obras
+                id = categoria.CategoriaId,
+                nombre = categoria.NombreCategoria,
+                obras = obras
             };
         }
 
