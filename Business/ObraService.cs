@@ -13,25 +13,25 @@ namespace TeatroApi.Business
             _obraRepository = obraRepository;
         }
 
-        public List<Obra> GetObras()
+        public List<ObraGetDTO> GetObras()
         {
             return _obraRepository.GetObras();
         }
 
-        public List<Obra> GetObrasByCategoria(int categoriaId){
-            List<Obra> obrasByCategoria = new List<Obra>();
+        // public List<Obra> GetObrasByCategoria(int categoriaId){
+        //     List<Obra> obrasByCategoria = new List<Obra>();
 
-            List<Obra> obras = _obraRepository.GetObras();
+        //     List<Obra> obras = _obraRepository.GetObras();
             
-            foreach (var obra in obras)
-            {
-                if(obra.CategoriaId == categoriaId){
-                    obrasByCategoria.Add(obra);
-                }
-            }
+        //     foreach (var obra in obras)
+        //     {
+        //         if(obra.CategoriaId == categoriaId){
+        //             obrasByCategoria.Add(obra);
+        //         }
+        //     }
 
-            return obrasByCategoria;
-        }
+        //     return obrasByCategoria;
+        // }
 
         public ObraGetSesionDTO GetObra(int obraId)
         {

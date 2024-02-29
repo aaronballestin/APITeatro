@@ -20,6 +20,11 @@ namespace TeatroApi.Data
                 new Usuario { UsuarioId = 2, NombreUsuario = "María", EmailUsuario = "maria@example.com", PasswordUsuario = "1234", Rol = "Admin" }
             );
 
+            modelBuilder.Entity<Sala>().HasData(
+                new Sala { SalaId = 1 },
+                new Sala { SalaId = 2 }
+            );
+
             modelBuilder.Entity<Categoria>().HasData(
                 new Categoria { CategoriaId = 1, NombreCategoria = "Drama" },
                 new Categoria { CategoriaId = 2, NombreCategoria = "Comedia" }
@@ -31,27 +36,37 @@ namespace TeatroApi.Data
             );
 
             modelBuilder.Entity<Asiento>().HasData(
-                new Asiento { AsientoId = 1, Fila = 1, Columna = 1 },
-                new Asiento { AsientoId = 2, Fila = 1, Columna = 2 },
-                new Asiento { AsientoId = 3, Fila = 2, Columna = 1 },
-                new Asiento { AsientoId = 4, Fila = 2, Columna = 2 }
+                new Asiento { AsientoId = 1, SalaId = 1, TipoAsiento = 1 },
+                new Asiento { AsientoId = 2, SalaId = 1, TipoAsiento = 1 },
+                new Asiento { AsientoId = 3, SalaId = 1, TipoAsiento = 1 },
+                new Asiento { AsientoId = 4, SalaId = 1, TipoAsiento = 1 }
             );
 
             modelBuilder.Entity<Sesion>().HasData(
-                new Sesion { SesionId = 1, ObraId = 1, FechaHora = DateTime.Now.AddDays(7) },
-                new Sesion { SesionId = 2, ObraId = 2, FechaHora = DateTime.Now.AddDays(14) }
+                new Sesion { SesionId = 1, ObraId = 1, FechaHora = DateTime.Now.AddDays(7), SalaId = 1 },
+                new Sesion { SesionId = 2, ObraId = 2, FechaHora = DateTime.Now.AddDays(14), SalaId = 1 },
+                new Sesion { SesionId = 3, ObraId = 1, FechaHora = DateTime.Now.AddDays(7), SalaId = 1 },
+                new Sesion { SesionId = 4, ObraId = 1, FechaHora = DateTime.Now.AddDays(7), SalaId = 1 }
+
             );
 
             modelBuilder.Entity<Compra>().HasData(
-                new Compra { EntradaId = 1, AsientoId = 1, SesionId = 1, UsuarioId = 1 },
-                new Compra { EntradaId = 2, AsientoId = 2, SesionId = 1, UsuarioId = 2 }
+                new Compra { AsientoId = 1, SesionId = 1, UsuarioId = 1 },
+                new Compra { AsientoId = 2, SesionId = 1, UsuarioId = 2 }
             );
 
-            modelBuilder.Entity<SesionAsiento>().HasData(
-                new SesionAsiento { SesionId = 1, AsientoId = 1, Ocupado = true },
-                new SesionAsiento { SesionId = 1, AsientoId = 2, Ocupado = false }
-            );
 
+
+            // Relación entre Sesion y Sala
+            modelBuilder.Entity<Sesion>()
+                .HasOne(s => s.Sala)
+                .WithMany(sala => sala.Sesiones)
+                .HasForeignKey(s => s.SalaId)
+                .IsRequired(); // Esto asegura que el SalaId sea obligatorio en la relación
+
+            modelBuilder.Entity<Sesion>()
+                .Property(s => s.SalaId)
+                .IsRequired(); // Esto también asegura que el SalaId sea obligatorio en la tabla Sesion
 
             //Tabla intermedia de compras
             modelBuilder.Entity<Compra>()
@@ -65,27 +80,16 @@ namespace TeatroApi.Data
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Sesion)
                 .WithMany(s => s.Compras)
-                .HasForeignKey(c => c.SesionId);
+                .HasForeignKey(c => c.SesionId)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Asiento)
                 .WithMany(s => s.Compras)
                 .HasForeignKey(c => c.AsientoId);
 
-            //Tabla intermedia de sesionAsientos
-            modelBuilder.Entity<SesionAsiento>()
-                .HasKey(pi => new { pi.SesionId, pi.AsientoId });
-
-            modelBuilder.Entity<SesionAsiento>()
-                .HasOne(pi => pi.Sesion)
-                .WithMany(p => p.SesionAsientos)
-                .HasForeignKey(pi => pi.SesionId);
-
-            modelBuilder.Entity<SesionAsiento>()
-                .HasOne(pi => pi.Asiento)
-                .WithMany(p => p.SesionAsientos)
-                .HasForeignKey(pi => pi.AsientoId);
-
+            modelBuilder.Entity<Sala>()
+                   .HasKey(s => s.SalaId);
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
@@ -94,6 +98,6 @@ namespace TeatroApi.Data
         public DbSet<Asiento> Asientos { get; set; }
         public DbSet<Sesion> Sesiones { get; set; }
         public DbSet<Compra> Compras { get; set; }
-        public DbSet<SesionAsiento> SesionAsientos { get; set; }
+        public DbSet<Sala> Salas { get; set; }
     }
 }

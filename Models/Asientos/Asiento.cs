@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace TeatroApi.Models
@@ -8,14 +9,13 @@ namespace TeatroApi.Models
         [Key]
         public int AsientoId {get; set;}
 
-        [Required]
-        public int Fila {get; set;}
+        [ForeignKey("SalaId")]
+        public int SalaId {get; set;}
+        public Sala Sala {get; set;}
 
-        [Required]
-        public int Columna {get; set;}
+        public int TipoAsiento {get; set;}
 
         public List<Compra> Compras {get; set;}
-        public List<SesionAsiento> SesionAsientos {get; set;}
 
         public Asiento (){
 

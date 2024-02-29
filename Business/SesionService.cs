@@ -22,6 +22,11 @@ namespace TeatroApi.Business
             return _repository.GetSesion(id);
         }
 
+        public SesionGetAsientosDTO GetSesionDTO(int id)
+        {
+            return _repository.GetSesionDTO(id);
+        }
+
         public int AddSesion(Sesion sesion)
         {
             _repository.AddSesion(sesion);

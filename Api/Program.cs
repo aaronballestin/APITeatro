@@ -25,7 +25,6 @@ builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<ICompraRepository, CompraRepository>(); 
 builder.Services.AddScoped<IObraRepository, ObraRepository>(); 
 builder.Services.AddScoped<ISesionRepository, SesionRepository>(); 
-builder.Services.AddScoped<ISesionAsientoRepository, SesionAsientoRepository>(); 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>(); 
 
 

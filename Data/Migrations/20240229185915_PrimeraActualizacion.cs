@@ -8,25 +8,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TeatroApi.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Mulaton : Migration
+    public partial class PrimeraActualizacion : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Asientos",
-                columns: table => new
-                {
-                    AsientoId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Fila = table.Column<int>(type: "int", nullable: false),
-                    Columna = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Asientos", x => x.AsientoId);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Categorias",
                 columns: table => new
@@ -38,6 +24,18 @@ namespace TeatroApi.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categorias", x => x.CategoriaId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Salas",
+                columns: table => new
+                {
+                    SalaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Salas", x => x.SalaId);
                 });
 
             migrationBuilder.CreateTable(
@@ -79,13 +77,34 @@ namespace TeatroApi.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Asientos",
+                columns: table => new
+                {
+                    AsientoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SalaId = table.Column<int>(type: "int", nullable: false),
+                    TipoAsiento = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Asientos", x => x.AsientoId);
+                    table.ForeignKey(
+                        name: "FK_Asientos_Salas_SalaId",
+                        column: x => x.SalaId,
+                        principalTable: "Salas",
+                        principalColumn: "SalaId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Sesiones",
                 columns: table => new
                 {
                     SesionId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ObraId = table.Column<int>(type: "int", nullable: false),
-                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    SalaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -96,6 +115,12 @@ namespace TeatroApi.Data.Migrations
                         principalTable: "Obras",
                         principalColumn: "ObraId",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Sesiones_Salas_SalaId",
+                        column: x => x.SalaId,
+                        principalTable: "Salas",
+                        principalColumn: "SalaId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -104,8 +129,7 @@ namespace TeatroApi.Data.Migrations
                 {
                     AsientoId = table.Column<int>(type: "int", nullable: false),
                     SesionId = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    EntradaId = table.Column<int>(type: "int", nullable: false)
+                    UsuarioId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -120,50 +144,13 @@ namespace TeatroApi.Data.Migrations
                         name: "FK_Compras_Sesiones_SesionId",
                         column: x => x.SesionId,
                         principalTable: "Sesiones",
-                        principalColumn: "SesionId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SesionId");
                     table.ForeignKey(
                         name: "FK_Compras_Usuarios_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "Usuarios",
                         principalColumn: "UsuarioId",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SesionAsientos",
-                columns: table => new
-                {
-                    SesionId = table.Column<int>(type: "int", nullable: false),
-                    AsientoId = table.Column<int>(type: "int", nullable: false),
-                    Ocupado = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SesionAsientos", x => new { x.SesionId, x.AsientoId });
-                    table.ForeignKey(
-                        name: "FK_SesionAsientos_Asientos_AsientoId",
-                        column: x => x.AsientoId,
-                        principalTable: "Asientos",
-                        principalColumn: "AsientoId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_SesionAsientos_Sesiones_SesionId",
-                        column: x => x.SesionId,
-                        principalTable: "Sesiones",
-                        principalColumn: "SesionId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.InsertData(
-                table: "Asientos",
-                columns: new[] { "AsientoId", "Columna", "Fila" },
-                values: new object[,]
-                {
-                    { 1, 1, 1 },
-                    { 2, 2, 1 },
-                    { 3, 1, 2 },
-                    { 4, 2, 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -176,12 +163,32 @@ namespace TeatroApi.Data.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Salas",
+                column: "SalaId",
+                values: new object[]
+                {
+                    1,
+                    2
+                });
+
+            migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "EmailUsuario", "NombreUsuario", "PasswordUsuario", "Rol" },
                 values: new object[,]
                 {
                     { 1, "juan@example.com", "Juan", "1234", "Guest" },
                     { 2, "maria@example.com", "María", "1234", "Admin" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Asientos",
+                columns: new[] { "AsientoId", "SalaId", "TipoAsiento" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 1, 1 },
+                    { 3, 1, 1 },
+                    { 4, 1, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -195,30 +202,28 @@ namespace TeatroApi.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Sesiones",
-                columns: new[] { "SesionId", "FechaHora", "ObraId" },
+                columns: new[] { "SesionId", "FechaHora", "ObraId", "SalaId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 2, 29, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4096), 1 },
-                    { 2, new DateTime(2024, 3, 7, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4150), 2 }
+                    { 1, new DateTime(2024, 3, 7, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9894), 1, 1 },
+                    { 2, new DateTime(2024, 3, 14, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9945), 2, 1 },
+                    { 3, new DateTime(2024, 3, 7, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9947), 1, 1 },
+                    { 4, new DateTime(2024, 3, 7, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9949), 1, 1 }
                 });
 
             migrationBuilder.InsertData(
                 table: "Compras",
-                columns: new[] { "AsientoId", "SesionId", "UsuarioId", "EntradaId" },
+                columns: new[] { "AsientoId", "SesionId", "UsuarioId" },
                 values: new object[,]
                 {
-                    { 1, 1, 1, 1 },
-                    { 2, 1, 2, 2 }
+                    { 1, 1, 1 },
+                    { 2, 1, 2 }
                 });
 
-            migrationBuilder.InsertData(
-                table: "SesionAsientos",
-                columns: new[] { "AsientoId", "SesionId", "Ocupado" },
-                values: new object[,]
-                {
-                    { 1, 1, true },
-                    { 2, 1, false }
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_Asientos_SalaId",
+                table: "Asientos",
+                column: "SalaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Compras_AsientoId",
@@ -236,14 +241,14 @@ namespace TeatroApi.Data.Migrations
                 column: "CategoriaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SesionAsientos_AsientoId",
-                table: "SesionAsientos",
-                column: "AsientoId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Sesiones_ObraId",
                 table: "Sesiones",
                 column: "ObraId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sesiones_SalaId",
+                table: "Sesiones",
+                column: "SalaId");
         }
 
         /// <inheritdoc />
@@ -253,19 +258,19 @@ namespace TeatroApi.Data.Migrations
                 name: "Compras");
 
             migrationBuilder.DropTable(
-                name: "SesionAsientos");
-
-            migrationBuilder.DropTable(
-                name: "Usuarios");
-
-            migrationBuilder.DropTable(
                 name: "Asientos");
 
             migrationBuilder.DropTable(
                 name: "Sesiones");
 
             migrationBuilder.DropTable(
+                name: "Usuarios");
+
+            migrationBuilder.DropTable(
                 name: "Obras");
+
+            migrationBuilder.DropTable(
+                name: "Salas");
 
             migrationBuilder.DropTable(
                 name: "Categorias");

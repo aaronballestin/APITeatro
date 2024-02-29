@@ -6,9 +6,12 @@ namespace TeatroApi.Data
     {
         void AddSesion(Sesion asiento);
         Sesion GetSesion(int asientoId);
+        SesionGetAsientosDTO GetSesionDTO(int asientoId);
+
         void UpdateSesion(Sesion asiento);
         void RemoveSesion(int asientoId);
         void SaveChanges();
         List<Sesion> GetSesiones();
+
     }
 }

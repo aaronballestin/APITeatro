@@ -12,8 +12,8 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    [Migration("20240222193846_Mulaton")]
-    partial class Mulaton
+    [Migration("20240229185915_PrimeraActualizacion")]
+    partial class PrimeraActualizacion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,13 +33,15 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AsientoId"));
 
-                    b.Property<int>("Columna")
+                    b.Property<int>("SalaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Fila")
+                    b.Property<int>("TipoAsiento")
                         .HasColumnType("int");
 
                     b.HasKey("AsientoId");
+
+                    b.HasIndex("SalaId");
 
                     b.ToTable("Asientos");
 
@@ -47,26 +49,26 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             AsientoId = 1,
-                            Columna = 1,
-                            Fila = 1
+                            SalaId = 1,
+                            TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 2,
-                            Columna = 2,
-                            Fila = 1
+                            SalaId = 1,
+                            TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 3,
-                            Columna = 1,
-                            Fila = 2
+                            SalaId = 1,
+                            TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 4,
-                            Columna = 2,
-                            Fila = 2
+                            SalaId = 1,
+                            TipoAsiento = 1
                         });
                 });
 
@@ -110,9 +112,6 @@ namespace TeatroApi.Data.Migrations
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.Property<int>("EntradaId")
-                        .HasColumnType("int");
-
                     b.HasKey("SesionId", "AsientoId", "UsuarioId");
 
                     b.HasIndex("AsientoId");
@@ -126,15 +125,13 @@ namespace TeatroApi.Data.Migrations
                         {
                             SesionId = 1,
                             AsientoId = 1,
-                            UsuarioId = 1,
-                            EntradaId = 1
+                            UsuarioId = 1
                         },
                         new
                         {
                             SesionId = 1,
                             AsientoId = 2,
-                            UsuarioId = 2,
-                            EntradaId = 2
+                            UsuarioId = 2
                         });
                 });
 
@@ -186,6 +183,29 @@ namespace TeatroApi.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("TeatroApi.Models.Sala", b =>
+                {
+                    b.Property<int>("SalaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SalaId"));
+
+                    b.HasKey("SalaId");
+
+                    b.ToTable("Salas");
+
+                    b.HasData(
+                        new
+                        {
+                            SalaId = 1
+                        },
+                        new
+                        {
+                            SalaId = 2
+                        });
+                });
+
             modelBuilder.Entity("TeatroApi.Models.Sesion", b =>
                 {
                     b.Property<int>("SesionId")
@@ -200,9 +220,14 @@ namespace TeatroApi.Data.Migrations
                     b.Property<int>("ObraId")
                         .HasColumnType("int");
 
+                    b.Property<int>("SalaId")
+                        .HasColumnType("int");
+
                     b.HasKey("SesionId");
 
                     b.HasIndex("ObraId");
+
+                    b.HasIndex("SalaId");
 
                     b.ToTable("Sesiones");
 
@@ -210,46 +235,30 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
-                            FechaHora = new DateTime(2024, 2, 29, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4096),
-                            ObraId = 1
+                            FechaHora = new DateTime(2024, 3, 7, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9894),
+                            ObraId = 1,
+                            SalaId = 1
                         },
                         new
                         {
                             SesionId = 2,
-                            FechaHora = new DateTime(2024, 3, 7, 20, 38, 45, 949, DateTimeKind.Local).AddTicks(4150),
-                            ObraId = 2
-                        });
-                });
-
-            modelBuilder.Entity("TeatroApi.Models.SesionAsiento", b =>
-                {
-                    b.Property<int>("SesionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AsientoId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Ocupado")
-                        .HasColumnType("bit");
-
-                    b.HasKey("SesionId", "AsientoId");
-
-                    b.HasIndex("AsientoId");
-
-                    b.ToTable("SesionAsientos");
-
-                    b.HasData(
-                        new
-                        {
-                            SesionId = 1,
-                            AsientoId = 1,
-                            Ocupado = true
+                            FechaHora = new DateTime(2024, 3, 14, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9945),
+                            ObraId = 2,
+                            SalaId = 1
                         },
                         new
                         {
-                            SesionId = 1,
-                            AsientoId = 2,
-                            Ocupado = false
+                            SesionId = 3,
+                            FechaHora = new DateTime(2024, 3, 7, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9947),
+                            ObraId = 1,
+                            SalaId = 1
+                        },
+                        new
+                        {
+                            SesionId = 4,
+                            FechaHora = new DateTime(2024, 3, 7, 19, 59, 15, 748, DateTimeKind.Local).AddTicks(9949),
+                            ObraId = 1,
+                            SalaId = 1
                         });
                 });
 
@@ -300,6 +309,17 @@ namespace TeatroApi.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("TeatroApi.Models.Asiento", b =>
+                {
+                    b.HasOne("TeatroApi.Models.Sala", "Sala")
+                        .WithMany()
+                        .HasForeignKey("SalaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sala");
+                });
+
             modelBuilder.Entity("TeatroApi.Models.Compra", b =>
                 {
                     b.HasOne("TeatroApi.Models.Asiento", "Asiento")
@@ -311,7 +331,7 @@ namespace TeatroApi.Data.Migrations
                     b.HasOne("TeatroApi.Models.Sesion", "Sesion")
                         .WithMany("Compras")
                         .HasForeignKey("SesionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TeatroApi.Models.Usuario", "Usuario")
@@ -346,33 +366,20 @@ namespace TeatroApi.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("TeatroApi.Models.Sala", "Sala")
+                        .WithMany("Sesiones")
+                        .HasForeignKey("SalaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Obra");
-                });
 
-            modelBuilder.Entity("TeatroApi.Models.SesionAsiento", b =>
-                {
-                    b.HasOne("TeatroApi.Models.Asiento", "Asiento")
-                        .WithMany("SesionAsientos")
-                        .HasForeignKey("AsientoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TeatroApi.Models.Sesion", "Sesion")
-                        .WithMany("SesionAsientos")
-                        .HasForeignKey("SesionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Asiento");
-
-                    b.Navigation("Sesion");
+                    b.Navigation("Sala");
                 });
 
             modelBuilder.Entity("TeatroApi.Models.Asiento", b =>
                 {
                     b.Navigation("Compras");
-
-                    b.Navigation("SesionAsientos");
                 });
 
             modelBuilder.Entity("TeatroApi.Models.Categoria", b =>
@@ -385,11 +392,14 @@ namespace TeatroApi.Data.Migrations
                     b.Navigation("Sesiones");
                 });
 
+            modelBuilder.Entity("TeatroApi.Models.Sala", b =>
+                {
+                    b.Navigation("Sesiones");
+                });
+
             modelBuilder.Entity("TeatroApi.Models.Sesion", b =>
                 {
                     b.Navigation("Compras");
-
-                    b.Navigation("SesionAsientos");
                 });
 
             modelBuilder.Entity("TeatroApi.Models.Usuario", b =>

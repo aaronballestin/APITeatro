@@ -17,7 +17,7 @@ namespace TeatroApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Obra>> GetObras()
+        public ActionResult<List<ObraGetDTO>> GetObras()
         {
             var obras = _obraService.GetObras();
             return Ok(obras);

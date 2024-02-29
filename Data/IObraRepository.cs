@@ -11,7 +11,7 @@ namespace TeatroApi.Data
         void UpdateObra(Obra obra);
         void RemoveObra(int asientoId);
         void SaveChanges();
-        List<Obra> GetObras();
+        List<ObraGetDTO> GetObras();
 
     }
 }

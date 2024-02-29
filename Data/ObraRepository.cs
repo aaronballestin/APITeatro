@@ -44,10 +44,26 @@ namespace TeatroApi.Data
             };
         }
 
-        public List<Obra> GetObras()
+        /*public List<Obra> GetObras()
         {
             var obras = _context.Obras.ToList();
             return obras;
+        }*/
+
+        public List<ObraGetDTO> GetObras(){
+            var obras =_context.Obras.ToList();
+            var obrasDTO = new List<ObraGetDTO>();
+            foreach (var obra in obras)
+            {
+                var obraDTO = new ObraGetDTO {
+                    id = obra.ObraId,
+                    nombre = obra.NombreObra,
+                    descripcion = obra.DescripcionObra,
+                    rutaFoto = obra.RutaFotoObra
+                };
+                obrasDTO.Add(obraDTO);
+            }
+            return obrasDTO;
         }
 
         public void UpdateObra(Obra obra)
