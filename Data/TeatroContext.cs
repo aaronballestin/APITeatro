@@ -212,7 +212,8 @@ namespace TeatroApi.Data
                 .HasOne(s => s.Sala)
                 .WithMany(sala => sala.Sesiones)
                 .HasForeignKey(s => s.SalaId)
-                .IsRequired(); // Esto asegura que el SalaId sea obligatorio en la relación
+                .IsRequired() // Esto asegura que el SalaId sea obligatorio en la relación
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Sesion>()
                 .Property(s => s.SalaId)
@@ -221,7 +222,7 @@ namespace TeatroApi.Data
             //Tabla intermedia de compras
             modelBuilder.Entity<Compra>()
                 .HasKey(pi => new { pi.SesionId, pi.AsientoId, pi.UsuarioId });
-
+                
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Usuario)
                 .WithMany(u => u.Compras)
