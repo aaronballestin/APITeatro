@@ -12,8 +12,8 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    [Migration("20240306173604_Actualizacion")]
-    partial class Actualizacion
+    [Migration("20240306183706_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
