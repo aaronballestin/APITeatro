@@ -70,3 +70,14 @@ C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.dll
 C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\refint\TeatroApi.Models.dll
 C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\TeatroApi.Models.pdb
 C:\Users\S2-PC00\Desktop\apiteatro\Models\obj\Debug\net7.0\ref\TeatroApi.Models.dll
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\bin\Debug\net7.0\TeatroApi.Models.deps.json
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\bin\Debug\net7.0\TeatroApi.Models.dll
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\bin\Debug\net7.0\TeatroApi.Models.pdb
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.AssemblyInfoInputs.cache
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.AssemblyInfo.cs
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.csproj.CoreCompileInputs.cache
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.dll
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\refint\TeatroApi.Models.dll
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\TeatroApi.Models.pdb
+C:\Users\aaron\OneDrive\Escritorio\Teatro\APITeatro\Models\obj\Debug\net7.0\ref\TeatroApi.Models.dll

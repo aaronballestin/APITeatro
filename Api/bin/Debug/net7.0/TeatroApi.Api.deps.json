@@ -717,7 +717,8 @@
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
           }
         },
         "runtimeTargets": {
