@@ -48,8 +48,9 @@ namespace TeatroApi.Controllers
         }
 
         [HttpPost]
-        public ActionResult<int> AddSesion(Sesion sesion)
+        public ActionResult<int> AddSesion(SesionPostDTO sesionDTO)
         {
+            var sesion = new Sesion {ObraId = sesionDTO.obraId, FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId};
             var newSesionId = _sesionService.AddSesion(sesion);
             return CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
         }

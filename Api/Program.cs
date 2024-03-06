@@ -8,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddScoped<IAsientoService, AsientoService>(); 
-builder.Services.AddScoped<ICategoriaService, CategoriaService>(); 
 builder.Services.AddScoped<ICompraService, CompraService>(); 
 builder.Services.AddScoped<IObraService, ObraService>(); 
 builder.Services.AddScoped<ISesionService, SesionService>(); 
@@ -21,7 +20,6 @@ var connectionString = builder.Configuration.GetConnectionString("ServerDB");
 builder.Services.AddDbContext<TeatroContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IAsientoRepository, AsientoRepository>(); 
-builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>(); 
 builder.Services.AddScoped<ICompraRepository, CompraRepository>(); 
 builder.Services.AddScoped<IObraRepository, ObraRepository>(); 
 builder.Services.AddScoped<ISesionRepository, SesionRepository>(); 

@@ -36,8 +36,9 @@ namespace TeatroApi.Controllers
         }
 
         [HttpPost]
-        public ActionResult<int> AddObra(Obra obra)
+        public ActionResult<int> AddObra(ObraPostDTO obraDTO)
         {
+            var obra = new Obra {NombreObra = obraDTO.nombre, DescripcionObra = obraDTO.descripcion, RutaFotoObra = obraDTO.rutaFoto};
             var newObraId = _obraService.AddObra(obra);
             return CreatedAtAction(nameof(GetObra), new { id = newObraId }, obra);
         }

@@ -765,40 +765,6 @@ namespace TeatroApi.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TeatroApi.Models.Categoria", b =>
-                {
-                    b.Property<int>("CategoriaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriaId"));
-
-                    b.Property<string>("NombreCategoria")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CategoriaId");
-
-                    b.ToTable("Categorias");
-
-                    b.HasData(
-                        new
-                        {
-                            CategoriaId = 1,
-                            NombreCategoria = "Drama"
-                        },
-                        new
-                        {
-                            CategoriaId = 2,
-                            NombreCategoria = "Comedia"
-                        },
-                        new
-                        {
-                            CategoriaId = 3,
-                            NombreCategoria = "Romantica"
-                        });
-                });
-
             modelBuilder.Entity("TeatroApi.Models.Compra", b =>
                 {
                     b.Property<int>("SesionId")
@@ -841,9 +807,6 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ObraId"));
 
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
-
                     b.Property<string>("DescripcionObra")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -858,15 +821,12 @@ namespace TeatroApi.Data.Migrations
 
                     b.HasKey("ObraId");
 
-                    b.HasIndex("CategoriaId");
-
                     b.ToTable("Obras");
 
                     b.HasData(
                         new
                         {
                             ObraId = 1,
-                            CategoriaId = 1,
                             DescripcionObra = "Una tragedia clásica",
                             NombreObra = "Hamlet",
                             RutaFotoObra = "ruta/foto/hamlet.jpg"
@@ -874,7 +834,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 2,
-                            CategoriaId = 2,
                             DescripcionObra = "Un drama familiar",
                             NombreObra = "La Casa de Bernarda Alba",
                             RutaFotoObra = "ruta/foto/bernarda_alba.jpg"
@@ -882,7 +841,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 3,
-                            CategoriaId = 1,
                             DescripcionObra = "Amor prohibido entre dos familias rivales",
                             NombreObra = "Romeo y Julieta",
                             RutaFotoObra = "ruta/foto/romeo_julieta.jpg"
@@ -890,7 +848,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 4,
-                            CategoriaId = 3,
                             DescripcionObra = "Una historia de amor y tragedia en la Ópera de París",
                             NombreObra = "El Fantasma de la Ópera",
                             RutaFotoObra = "ruta/foto/fantasma_opera.jpg"
@@ -898,7 +855,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 5,
-                            CategoriaId = 2,
                             DescripcionObra = "Dos personajes esperan a alguien que nunca llega",
                             NombreObra = "Esperando a Godot",
                             RutaFotoObra = "ruta/foto/esperando_godot.jpg"
@@ -906,7 +862,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 6,
-                            CategoriaId = 1,
                             DescripcionObra = "Una tragedia sobre ambición y traición",
                             NombreObra = "Macbeth",
                             RutaFotoObra = "ruta/foto/macbeth.jpg"
@@ -914,7 +869,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 7,
-                            CategoriaId = 3,
                             DescripcionObra = "La historia de Jean Valjean y su redención",
                             NombreObra = "Los Miserables",
                             RutaFotoObra = "ruta/foto/los_miserables.jpg"
@@ -922,7 +876,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 8,
-                            CategoriaId = 1,
                             DescripcionObra = "Celos y traición en la Venecia del siglo XVI",
                             NombreObra = "Otelo",
                             RutaFotoObra = "ruta/foto/otelo.jpg"
@@ -930,7 +883,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 9,
-                            CategoriaId = 2,
                             DescripcionObra = "Drama de amor y desilusión en la sociedad rusa del siglo XIX",
                             NombreObra = "La Gaviota",
                             RutaFotoObra = "ruta/foto/la_gaviota.jpg"
@@ -938,7 +890,6 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 10,
-                            CategoriaId = 3,
                             DescripcionObra = "Una ópera sobre el crimen y la pobreza en Londres",
                             NombreObra = "La Opera de los Tres Centavos",
                             RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg"
@@ -1305,17 +1256,6 @@ namespace TeatroApi.Data.Migrations
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("TeatroApi.Models.Obra", b =>
-                {
-                    b.HasOne("TeatroApi.Models.Categoria", "Categoria")
-                        .WithMany("Obras")
-                        .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Categoria");
-                });
-
             modelBuilder.Entity("TeatroApi.Models.Sesion", b =>
                 {
                     b.HasOne("TeatroApi.Models.Obra", "Obra")
@@ -1338,11 +1278,6 @@ namespace TeatroApi.Data.Migrations
             modelBuilder.Entity("TeatroApi.Models.Asiento", b =>
                 {
                     b.Navigation("Compras");
-                });
-
-            modelBuilder.Entity("TeatroApi.Models.Categoria", b =>
-                {
-                    b.Navigation("Obras");
                 });
 
             modelBuilder.Entity("TeatroApi.Models.Obra", b =>

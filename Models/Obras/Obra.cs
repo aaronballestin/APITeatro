@@ -9,8 +9,6 @@ namespace TeatroApi.Models
         [Key]
         public int ObraId { get; set; }
         
-        [ForeignKey("CategoriaId")]
-        public int CategoriaId { get; set; }
 
         [Required]
         public string NombreObra { get; set; }
@@ -22,8 +20,6 @@ namespace TeatroApi.Models
         public string RutaFotoObra {get; set;}
 
         public List<Sesion>? Sesiones {get; set;}
-
-        public Categoria? Categoria {get; set;}
 
         public Obra(){
             Sesiones = new List<Sesion>();

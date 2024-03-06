@@ -38,24 +38,18 @@ namespace TeatroApi.Data
 
             );
 
-            modelBuilder.Entity<Categoria>().HasData(
-                new Categoria { CategoriaId = 1, NombreCategoria = "Drama" },
-                new Categoria { CategoriaId = 2, NombreCategoria = "Comedia" },
-                new Categoria { CategoriaId = 3, NombreCategoria = "Romantica" }
-
-            );
 
             modelBuilder.Entity<Obra>().HasData(
-                new Obra { ObraId = 1, CategoriaId = 1, NombreObra = "Hamlet", DescripcionObra = "Una tragedia clásica", RutaFotoObra = "ruta/foto/hamlet.jpg" },
-                new Obra { ObraId = 2, CategoriaId = 2, NombreObra = "La Casa de Bernarda Alba", DescripcionObra = "Un drama familiar", RutaFotoObra = "ruta/foto/bernarda_alba.jpg" },
-                new Obra { ObraId = 3, CategoriaId = 1, NombreObra = "Romeo y Julieta", DescripcionObra = "Amor prohibido entre dos familias rivales", RutaFotoObra = "ruta/foto/romeo_julieta.jpg" },
-                new Obra { ObraId = 4, CategoriaId = 3, NombreObra = "El Fantasma de la Ópera", DescripcionObra = "Una historia de amor y tragedia en la Ópera de París", RutaFotoObra = "ruta/foto/fantasma_opera.jpg" },
-                new Obra { ObraId = 5, CategoriaId = 2, NombreObra = "Esperando a Godot", DescripcionObra = "Dos personajes esperan a alguien que nunca llega", RutaFotoObra = "ruta/foto/esperando_godot.jpg" },
-                new Obra { ObraId = 6, CategoriaId = 1, NombreObra = "Macbeth", DescripcionObra = "Una tragedia sobre ambición y traición", RutaFotoObra = "ruta/foto/macbeth.jpg" },
-                new Obra { ObraId = 7, CategoriaId = 3, NombreObra = "Los Miserables", DescripcionObra = "La historia de Jean Valjean y su redención", RutaFotoObra = "ruta/foto/los_miserables.jpg" },
-                new Obra { ObraId = 8, CategoriaId = 1, NombreObra = "Otelo", DescripcionObra = "Celos y traición en la Venecia del siglo XVI", RutaFotoObra = "ruta/foto/otelo.jpg" },
-                new Obra { ObraId = 9, CategoriaId = 2, NombreObra = "La Gaviota", DescripcionObra = "Drama de amor y desilusión en la sociedad rusa del siglo XIX", RutaFotoObra = "ruta/foto/la_gaviota.jpg" },
-                new Obra { ObraId = 10, CategoriaId = 3, NombreObra = "La Opera de los Tres Centavos", DescripcionObra = "Una ópera sobre el crimen y la pobreza en Londres", RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg" }
+                new Obra { ObraId = 1, NombreObra = "Hamlet", DescripcionObra = "Una tragedia clásica", RutaFotoObra = "ruta/foto/hamlet.jpg" },
+                new Obra { ObraId = 2, NombreObra = "La Casa de Bernarda Alba", DescripcionObra = "Un drama familiar", RutaFotoObra = "ruta/foto/bernarda_alba.jpg" },
+                new Obra { ObraId = 3, NombreObra = "Romeo y Julieta", DescripcionObra = "Amor prohibido entre dos familias rivales", RutaFotoObra = "ruta/foto/romeo_julieta.jpg" },
+                new Obra { ObraId = 4, NombreObra = "El Fantasma de la Ópera", DescripcionObra = "Una historia de amor y tragedia en la Ópera de París", RutaFotoObra = "ruta/foto/fantasma_opera.jpg" },
+                new Obra { ObraId = 5, NombreObra = "Esperando a Godot", DescripcionObra = "Dos personajes esperan a alguien que nunca llega", RutaFotoObra = "ruta/foto/esperando_godot.jpg" },
+                new Obra { ObraId = 6, NombreObra = "Macbeth", DescripcionObra = "Una tragedia sobre ambición y traición", RutaFotoObra = "ruta/foto/macbeth.jpg" },
+                new Obra { ObraId = 7, NombreObra = "Los Miserables", DescripcionObra = "La historia de Jean Valjean y su redención", RutaFotoObra = "ruta/foto/los_miserables.jpg" },
+                new Obra { ObraId = 8, NombreObra = "Otelo", DescripcionObra = "Celos y traición en la Venecia del siglo XVI", RutaFotoObra = "ruta/foto/otelo.jpg" },
+                new Obra { ObraId = 9, NombreObra = "La Gaviota", DescripcionObra = "Drama de amor y desilusión en la sociedad rusa del siglo XIX", RutaFotoObra = "ruta/foto/la_gaviota.jpg" },
+                new Obra { ObraId = 10, NombreObra = "La Opera de los Tres Centavos", DescripcionObra = "Una ópera sobre el crimen y la pobreza en Londres", RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg" }
             );
 
             modelBuilder.Entity<Asiento>().HasData(
@@ -249,7 +243,6 @@ namespace TeatroApi.Data
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Obra> Obras { get; set; }
         public DbSet<Asiento> Asientos { get; set; }
         public DbSet<Sesion> Sesiones { get; set; }
