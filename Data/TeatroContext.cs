@@ -28,7 +28,7 @@ namespace TeatroApi.Data
                 new Usuario { UsuarioId = 10, NombreUsuario = "Diego", EmailUsuario = "diego@example.com", PasswordUsuario = "1234", Rol = "Guest" },
                 new Usuario { UsuarioId = 11, NombreUsuario = "Paula", EmailUsuario = "paula@example.com", PasswordUsuario = "1234", Rol = "Guest" },
                 new Usuario { UsuarioId = 12, NombreUsuario = "Manuel", EmailUsuario = "manuel@example.com", PasswordUsuario = "1234", Rol = "Guest" }
-   
+
             );
 
             modelBuilder.Entity<Sala>().HasData(
@@ -177,26 +177,26 @@ namespace TeatroApi.Data
 
 
             modelBuilder.Entity<Sesion>().HasData(
-                new Sesion { SesionId = 1, ObraId = 1, FechaHora = new DateTime(2024, 4, 1, 18, 0, 0), SalaId = 1 }, 
-                new Sesion { SesionId = 2, ObraId = 2, FechaHora = new DateTime(2024, 4, 2, 19, 0, 0), SalaId = 2 }, 
-                new Sesion { SesionId = 3, ObraId = 1, FechaHora = new DateTime(2024, 4, 3, 20, 0, 0), SalaId = 3 }, 
-                new Sesion { SesionId = 4, ObraId = 1, FechaHora = new DateTime(2024, 4, 4, 17, 30, 0), SalaId = 1 }, 
-                new Sesion { SesionId = 5, ObraId = 3, FechaHora = new DateTime(2024, 4, 5, 18, 0, 0), SalaId = 2 }, 
-                new Sesion { SesionId = 6, ObraId = 3, FechaHora = new DateTime(2024, 4, 6, 19, 30, 0), SalaId = 3 }, 
-                new Sesion { SesionId = 7, ObraId = 4, FechaHora = new DateTime(2024, 4, 7, 20, 0, 0), SalaId = 1 }, 
-                new Sesion { SesionId = 8, ObraId = 4, FechaHora = new DateTime(2024, 4, 8, 17, 0, 0), SalaId = 2 }, 
-                new Sesion { SesionId = 9, ObraId = 5, FechaHora = new DateTime(2024, 4, 9, 18, 30, 0), SalaId = 3 }, 
-                new Sesion { SesionId = 10, ObraId = 5, FechaHora = new DateTime(2024, 4, 10, 19, 0, 0), SalaId = 1 }, 
-                new Sesion { SesionId = 11, ObraId = 6, FechaHora = new DateTime(2024, 4, 11, 20, 0, 0), SalaId = 2 }, 
-                new Sesion { SesionId = 12, ObraId = 6, FechaHora = new DateTime(2024, 4, 12, 17, 30, 0), SalaId = 3 }, 
-                new Sesion { SesionId = 13, ObraId = 7, FechaHora = new DateTime(2024, 4, 13, 18, 0, 0), SalaId = 1 }, 
-                new Sesion { SesionId = 14, ObraId = 7, FechaHora = new DateTime(2024, 4, 14, 19, 30, 0), SalaId = 2 }, 
-                new Sesion { SesionId = 15, ObraId = 8, FechaHora = new DateTime(2024, 4, 15, 20, 0, 0), SalaId = 3 }, 
-                new Sesion { SesionId = 16, ObraId = 8, FechaHora = new DateTime(2024, 4, 16, 17, 0, 0), SalaId = 1 }, 
+                new Sesion { SesionId = 1, ObraId = 1, FechaHora = new DateTime(2024, 4, 1, 18, 0, 0), SalaId = 1 },
+                new Sesion { SesionId = 2, ObraId = 2, FechaHora = new DateTime(2024, 4, 2, 19, 0, 0), SalaId = 2 },
+                new Sesion { SesionId = 3, ObraId = 1, FechaHora = new DateTime(2024, 4, 3, 20, 0, 0), SalaId = 3 },
+                new Sesion { SesionId = 4, ObraId = 1, FechaHora = new DateTime(2024, 4, 4, 17, 30, 0), SalaId = 1 },
+                new Sesion { SesionId = 5, ObraId = 3, FechaHora = new DateTime(2024, 4, 5, 18, 0, 0), SalaId = 2 },
+                new Sesion { SesionId = 6, ObraId = 3, FechaHora = new DateTime(2024, 4, 6, 19, 30, 0), SalaId = 3 },
+                new Sesion { SesionId = 7, ObraId = 4, FechaHora = new DateTime(2024, 4, 7, 20, 0, 0), SalaId = 1 },
+                new Sesion { SesionId = 8, ObraId = 4, FechaHora = new DateTime(2024, 4, 8, 17, 0, 0), SalaId = 2 },
+                new Sesion { SesionId = 9, ObraId = 5, FechaHora = new DateTime(2024, 4, 9, 18, 30, 0), SalaId = 3 },
+                new Sesion { SesionId = 10, ObraId = 5, FechaHora = new DateTime(2024, 4, 10, 19, 0, 0), SalaId = 1 },
+                new Sesion { SesionId = 11, ObraId = 6, FechaHora = new DateTime(2024, 4, 11, 20, 0, 0), SalaId = 2 },
+                new Sesion { SesionId = 12, ObraId = 6, FechaHora = new DateTime(2024, 4, 12, 17, 30, 0), SalaId = 3 },
+                new Sesion { SesionId = 13, ObraId = 7, FechaHora = new DateTime(2024, 4, 13, 18, 0, 0), SalaId = 1 },
+                new Sesion { SesionId = 14, ObraId = 7, FechaHora = new DateTime(2024, 4, 14, 19, 30, 0), SalaId = 2 },
+                new Sesion { SesionId = 15, ObraId = 8, FechaHora = new DateTime(2024, 4, 15, 20, 0, 0), SalaId = 3 },
+                new Sesion { SesionId = 16, ObraId = 8, FechaHora = new DateTime(2024, 4, 16, 17, 0, 0), SalaId = 1 },
                 new Sesion { SesionId = 17, ObraId = 9, FechaHora = new DateTime(2024, 4, 17, 18, 30, 0), SalaId = 2 },
-                new Sesion { SesionId = 18, ObraId = 9, FechaHora = new DateTime(2024, 4, 18, 19, 0, 0), SalaId = 3 }, 
+                new Sesion { SesionId = 18, ObraId = 9, FechaHora = new DateTime(2024, 4, 18, 19, 0, 0), SalaId = 3 },
                 new Sesion { SesionId = 19, ObraId = 10, FechaHora = new DateTime(2024, 4, 19, 20, 0, 0), SalaId = 1 },
-                new Sesion { SesionId = 20, ObraId = 10, FechaHora = new DateTime(2024, 4, 20, 17, 0, 0), SalaId = 2 } 
+                new Sesion { SesionId = 20, ObraId = 10, FechaHora = new DateTime(2024, 4, 20, 17, 0, 0), SalaId = 2 }
             );
 
 
@@ -222,22 +222,27 @@ namespace TeatroApi.Data
             //Tabla intermedia de compras
             modelBuilder.Entity<Compra>()
                 .HasKey(pi => new { pi.SesionId, pi.AsientoId, pi.UsuarioId });
-                
+
+
             modelBuilder.Entity<Compra>()
-                .HasOne(c => c.Usuario)
-                .WithMany(u => u.Compras)
-                .HasForeignKey(c => c.UsuarioId);
+                .HasOne(c => c.Asiento)
+                .WithMany() // No hay navegación inversa, ya que un asiento puede estar asociado a múltiples compras pero una compra solo puede tener un asiento.
+                .HasForeignKey(c => c.AsientoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Sesion)
                 .WithMany(s => s.Compras)
                 .HasForeignKey(c => c.SesionId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Asiento)
                 .WithMany(s => s.Compras)
-                .HasForeignKey(c => c.AsientoId);
+                .HasForeignKey(c => c.AsientoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             modelBuilder.Entity<Sala>()
                    .HasKey(s => s.SalaId);
