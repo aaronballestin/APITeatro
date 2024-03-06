@@ -81,6 +81,9 @@ namespace TeatroApi.Data
             {
                 throw new KeyNotFoundException("Account not found.");
             }
+            _context.Sesiones.Where(s => s.ObraId == obraId)
+                            .ToList();
+
             _context.Obras.Remove(account);
             SaveChanges();
 
