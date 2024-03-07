@@ -22,7 +22,7 @@ namespace TeatroApi.Business
         //     List<Obra> obrasByCategoria = new List<Obra>();
 
         //     List<Obra> obras = _obraRepository.GetObras();
-            
+
         //     foreach (var obra in obras)
         //     {
         //         if(obra.CategoriaId == categoriaId){
@@ -36,6 +36,11 @@ namespace TeatroApi.Business
         public ObraGetSesionDTO GetObra(int obraId)
         {
             return _obraRepository.GetObraDTO(obraId);
+        }
+
+        public Obra GetObraById(int obraId)
+        {
+            return _obraRepository.GetObra(obraId);
         }
 
         public int AddObra(Obra obra)
@@ -58,6 +63,6 @@ namespace TeatroApi.Business
         }
 
 
-        
+
     }
 }

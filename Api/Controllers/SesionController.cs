@@ -56,12 +56,17 @@ namespace TeatroApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateSesion(int id, Sesion sesion)
+        public IActionResult UpdateSesion(int id, SesionPostDTO sesionDTO)
         {
+            var sesion = _sesionService.GetSesion(id);
             if (id != sesion.SesionId)
             {
                 return BadRequest();
             }
+            
+            sesion.SalaId = sesionDTO.salaId;
+            sesion.FechaHora = sesionDTO.horario;
+            sesion.ObraId = sesionDTO.obraId; 
 
             _sesionService.UpdateSesion(sesion);
             return NoContent();

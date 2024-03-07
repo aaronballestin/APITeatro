@@ -44,13 +44,18 @@ namespace TeatroApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateObra(int id, Obra obra)
+        public IActionResult UpdateObra(int id, ObraPostDTO obraDTO)
         {
+            Obra obra = _obraService.GetObraById(id);
             if (id != obra.ObraId)
             {
                 return BadRequest();
             }
 
+            obra.NombreObra = obraDTO.nombre;
+            obra.DescripcionObra = obraDTO.descripcion;
+            obra.RutaFotoObra = obraDTO.rutaFoto;
+            
             _obraService.UpdateObra(obra);
             return NoContent();
         }

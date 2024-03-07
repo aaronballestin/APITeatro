@@ -6,6 +6,7 @@ namespace TeatroApi.Business
     {
         public List<ObraGetDTO> GetObras();
         public ObraGetSesionDTO GetObra(int obraId);
+        public Obra GetObraById (int id);
         public void UpdateObra(Obra obra);
         public void DeleteObra(int obraId);
 
