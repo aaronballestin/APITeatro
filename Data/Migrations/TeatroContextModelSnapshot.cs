@@ -33,6 +33,9 @@ namespace TeatroApi.Data.Migrations
                     b.Property<int>("SalaId")
                         .HasColumnType("int");
 
+                    b.Property<double>("Suplemento")
+                        .HasColumnType("float");
+
                     b.Property<int>("TipoAsiento")
                         .HasColumnType("int");
 
@@ -47,720 +50,840 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 1,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 2,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 3,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 4,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 5,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 6,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 7,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 8,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 9,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 10,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 11,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 12,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 13,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 14,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 15,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 16,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 17,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 18,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 19,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 20,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 21,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 22,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 23,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 24,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 25,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 26,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 27,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 28,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 29,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 30,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 31,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 32,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 33,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 34,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 35,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 36,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 37,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 38,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 39,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 40,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 41,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 42,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 43,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 44,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 45,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 46,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 47,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 48,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 49,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 50,
                             SalaId = 1,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 51,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 52,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 53,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 54,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 55,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 56,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 57,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 58,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 59,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 60,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 61,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 62,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 63,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 64,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 65,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 66,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 67,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 68,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 69,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 70,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 71,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 72,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 73,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 74,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 75,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 76,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 77,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 78,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 79,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 80,
                             SalaId = 2,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 81,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 82,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 83,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 84,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 85,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 86,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 87,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 88,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 89,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 90,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 91,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 92,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 93,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 94,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 95,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 96,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 97,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 98,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 99,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 100,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 101,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 102,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 103,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 104,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 105,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 106,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 107,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 108,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 109,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 110,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 111,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 112,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 113,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 114,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 115,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 116,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 117,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 118,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 119,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 120,
                             SalaId = 3,
+                            Suplemento = 0.0,
                             TipoAsiento = 1
                         });
                 });
@@ -807,6 +930,13 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ObraId"));
 
+                    b.Property<DateTime>("AuditoriaHorario")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AuditoriaUsuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DescripcionObra")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -827,6 +957,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 1,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una tragedia clásica",
                             NombreObra = "Hamlet",
                             RutaFotoObra = "ruta/foto/hamlet.jpg"
@@ -834,6 +966,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 2,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Un drama familiar",
                             NombreObra = "La Casa de Bernarda Alba",
                             RutaFotoObra = "ruta/foto/bernarda_alba.jpg"
@@ -841,6 +975,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 3,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Amor prohibido entre dos familias rivales",
                             NombreObra = "Romeo y Julieta",
                             RutaFotoObra = "ruta/foto/romeo_julieta.jpg"
@@ -848,6 +984,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 4,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una historia de amor y tragedia en la Ópera de París",
                             NombreObra = "El Fantasma de la Ópera",
                             RutaFotoObra = "ruta/foto/fantasma_opera.jpg"
@@ -855,6 +993,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 5,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Dos personajes esperan a alguien que nunca llega",
                             NombreObra = "Esperando a Godot",
                             RutaFotoObra = "ruta/foto/esperando_godot.jpg"
@@ -862,6 +1002,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 6,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una tragedia sobre ambición y traición",
                             NombreObra = "Macbeth",
                             RutaFotoObra = "ruta/foto/macbeth.jpg"
@@ -869,6 +1011,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 7,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "La historia de Jean Valjean y su redención",
                             NombreObra = "Los Miserables",
                             RutaFotoObra = "ruta/foto/los_miserables.jpg"
@@ -876,6 +1020,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 8,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Celos y traición en la Venecia del siglo XVI",
                             NombreObra = "Otelo",
                             RutaFotoObra = "ruta/foto/otelo.jpg"
@@ -883,6 +1029,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 9,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Drama de amor y desilusión en la sociedad rusa del siglo XIX",
                             NombreObra = "La Gaviota",
                             RutaFotoObra = "ruta/foto/la_gaviota.jpg"
@@ -890,6 +1038,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 10,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una ópera sobre el crimen y la pobreza en Londres",
                             NombreObra = "La Opera de los Tres Centavos",
                             RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg"
@@ -931,11 +1081,21 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SesionId"));
 
+                    b.Property<DateTime>("AuditoriaHorario")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AuditoriaUsuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("FechaHora")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ObraId")
                         .HasColumnType("int");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
 
                     b.Property<int>("SalaId")
                         .HasColumnType("int");
@@ -952,141 +1112,201 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 2,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 2,
+                            Precio = 30.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 3,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
+                            Precio = 30.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 4,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 4, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 5,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 5, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
+                            Precio = 30.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 6,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 6, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
+                            Precio = 30.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 7,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 7, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 8,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 8, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
+                            Precio = 30.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 9,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 9, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
+                            Precio = 30.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 10,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 10, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 11,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
+                            Precio = 30.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 12,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 12, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
+                            Precio = 30.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 13,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 14,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 14, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
+                            Precio = 30.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 15,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
+                            Precio = 30.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 16,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 16, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 17,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 17, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 9,
+                            Precio = 30.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 18,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 18, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 9,
+                            Precio = 30.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 19,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 19, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 10,
+                            Precio = 30.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 20,
+                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 20, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 10,
+                            Precio = 30.0,
                             SalaId = 2
                         });
                 });

@@ -50,7 +50,7 @@ namespace TeatroApi.Controllers
         [HttpPost]
         public ActionResult<int> AddSesion(SesionPostDTO sesionDTO)
         {
-            var sesion = new Sesion {ObraId = sesionDTO.obraId, FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId};
+            var sesion = new Sesion {ObraId = sesionDTO.obraId, FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId, Precio = sesionDTO.precio, AuditoriaUsuario = sesionDTO.auditoriaUsuario, AuditoriaHorario = DateTime.Now};
             var newSesionId = _sesionService.AddSesion(sesion);
             return CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
         }
@@ -67,6 +67,9 @@ namespace TeatroApi.Controllers
             sesion.SalaId = sesionDTO.salaId;
             sesion.FechaHora = sesionDTO.horario;
             sesion.ObraId = sesionDTO.obraId; 
+            sesion.Precio = sesionDTO.precio;
+            sesion.AuditoriaUsuario = sesionDTO.auditoriaUsuario;
+            sesion.AuditoriaHorario = DateTime.Now;
 
             _sesionService.UpdateSesion(sesion);
             return NoContent();

@@ -9,7 +9,9 @@ namespace TeatroApi.Models
 
         public string nombreObra {get; set;}
 
-        public DateTime date{get; set;} 
+        public DateTime date{get; set;}
+        
+        public double precio {get; set;} 
 
         public List<AsientoGetDTO> asientos {get; set;}
 
@@ -17,12 +19,13 @@ namespace TeatroApi.Models
 
         }
 
-        public SesionGetAsientosDTO(int id, int salaId, int obraId, string nombreObra, DateTime date){
+        public SesionGetAsientosDTO(int id, int salaId, int obraId, string nombreObra, DateTime date, double precio){
             this.id = id;
             this.salaId = salaId;
             this.obraId = obraId;
             this.nombreObra = nombreObra;
             this.date = date;
+            this.precio = precio;
         }
     }
 }

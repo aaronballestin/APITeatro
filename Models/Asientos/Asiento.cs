@@ -14,7 +14,7 @@ namespace TeatroApi.Models
         public Sala Sala {get; set;}
 
         public int TipoAsiento {get; set;}
-
+        public double Suplemento {get; set;}
         public List<Compra> Compras {get; set;}
 
         public Asiento (){

@@ -21,6 +21,10 @@ namespace TeatroApi.Models
 
         public List<Sesion>? Sesiones {get; set;}
 
+        public string AuditoriaUsuario {get; set;}
+
+        public DateTime AuditoriaHorario {get; set;}
+
         public Obra(){
             Sesiones = new List<Sesion>();
         }

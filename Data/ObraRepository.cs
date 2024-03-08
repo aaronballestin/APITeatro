@@ -32,7 +32,7 @@ namespace TeatroApi.Data
             _context.Sesiones.ToList();
 
             var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
-                                        .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora))
+                                        .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio))
                                         .ToList(); 
             return new ObraGetSesionDTO
             {
