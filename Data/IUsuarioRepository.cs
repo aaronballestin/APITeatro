@@ -6,10 +6,9 @@ namespace TeatroApi.Data
     {
         void AddUsuario(Usuario usuario);
         Usuario GetUsuario(int usuarioId);
-        Usuario GetUsuario(string emailUsuario, string passwordUsuario);
-        void UpdateUsuario(Usuario usuario);
-        void RemoveUsuario(int asientoId);
+        UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario);
+
         void SaveChanges();
-        List<Usuario> GetUsuarios();
+
     }
 }

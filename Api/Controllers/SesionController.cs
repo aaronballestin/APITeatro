@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TeatroApi.Models;
 using TeatroApi.Business;
 
-namespace TeatroApi.Controllers
+namespace TeatroApi.Api
 {
     [ApiController]
     [Route("[controller]")]
