@@ -19,6 +19,8 @@ namespace TeatroApi.Models
         [Required]
         public string RutaFotoObra {get; set;}
 
+        public int DuracionObra {get; set;}
+
         public List<Sesion>? Sesiones {get; set;}
 
         public string AuditoriaUsuario {get; set;}

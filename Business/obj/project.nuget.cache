@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eBxGcq/PzZVKPiLX31eIuA1Kaz8g3BdtlKP4ygaOyl2vvALNmhavHVZP+vj/qMrUDTLMie2Ih41yXrRkLDhL0Q==",
+  "dgSpecHash": "QretaJ0LK9Ny1eePI77N2ZT0lweqwK3t8AmuXtvJVxR8Vkcd+fFREV2tgLwKySTvNVbbUJ+RdfvtPdZLkfmxPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\Business\\TeatroApi.Business.csproj",
+  "projectFilePath": "C:\\Users\\S2-PC00\\Desktop\\apiteatro\\APITeatro\\Business\\TeatroApi.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S2-PC00\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\S2-PC00\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

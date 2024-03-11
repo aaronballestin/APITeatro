@@ -11,6 +11,8 @@ namespace TeatroApi.Api
     {
         private readonly IObraService _obraService;
 
+        private readonly ILogger<ObraController> _logger;
+
         public ObraController(IObraService obraService)
         {
             _obraService = obraService;
@@ -19,54 +21,103 @@ namespace TeatroApi.Api
         [HttpGet]
         public ActionResult<List<ObraGetDTO>> GetObras()
         {
-            var obras = _obraService.GetObras();
-            return Ok(obras);
+            try
+            {
+                var obras = _obraService.GetObras();
+                return Ok(obras);
+
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogInformation(ex.Message);
+                return NotFound("No hay obras disponibles");
+            }
+
         }
 
         [HttpGet("{id}")]
         public ActionResult<ObraGetSesionDTO> GetObra(int id)
         {
-            var obra = _obraService.GetObra(id);
-            if (obra == null)
+            try
             {
-                return NotFound();
+                var obra = _obraService.GetObra(id);
+                return Ok(obra);
             }
-            return Ok(obra);
-            
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogInformation(ex.Message);
+                return NotFound("No hay obra disponible con el id: " + id);
+
+            }
+
+
+
         }
 
         [HttpPost]
         public ActionResult<int> AddObra(ObraPostDTO obraDTO)
         {
-            var obra = new Obra {NombreObra = obraDTO.nombre, DescripcionObra = obraDTO.descripcion, RutaFotoObra = obraDTO.rutaFoto, AuditoriaUsuario = obraDTO.auditoriaUsuario,  AuditoriaHorario = DateTime.Now};
-            var newObraId = _obraService.AddObra(obra);
-            return CreatedAtAction(nameof(GetObra), new { id = newObraId }, obra);
+            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+
+            try
+            {
+                var obra = new Obra { NombreObra = obraDTO.nombre, DescripcionObra = obraDTO.descripcion, RutaFotoObra = obraDTO.rutaFoto, AuditoriaUsuario = obraDTO.auditoriaUsuario, AuditoriaHorario = DateTime.Now, DuracionObra = obraDTO.duracion };
+                var newObraId = _obraService.AddObra(obra);
+                return CreatedAtAction(nameof(GetObra), new { id = newObraId }, obra);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation(ex.Message);
+                return BadRequest(ex.Message);
+            }
+
+
+
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateObra(int id, ObraPostDTO obraDTO)
         {
-            Obra obra = _obraService.GetObraById(id);
-            if (id != obra.ObraId)
+            if (!ModelState.IsValid) { return BadRequest(ModelState); }
+            try
             {
-                return BadRequest();
+                Obra obra = _obraService.GetObraById(id);
+                if (id != obra.ObraId)
+                {
+                    return BadRequest();
+                }
+
+                obra.NombreObra = obraDTO.nombre;
+                obra.DescripcionObra = obraDTO.descripcion;
+                obra.RutaFotoObra = obraDTO.rutaFoto;
+                obra.DuracionObra = obraDTO.duracion;
+                obra.AuditoriaUsuario = obraDTO.auditoriaUsuario;
+                obra.AuditoriaHorario = DateTime.Now;
+                _obraService.UpdateObra(obra);
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogInformation(ex.Message);
+                return NotFound();
             }
 
-            obra.NombreObra = obraDTO.nombre;
-            obra.DescripcionObra = obraDTO.descripcion;
-            obra.RutaFotoObra = obraDTO.rutaFoto;
-            obra.AuditoriaUsuario = obraDTO.auditoriaUsuario;
-            obra.AuditoriaHorario = DateTime.Now;
-            
-            _obraService.UpdateObra(obra);
-            return NoContent();
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteObra(int id)
         {
-            _obraService.DeleteObra(id);
-            return NoContent();
+            try
+            {
+                _obraService.DeleteObra(id);
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogInformation(ex.Message);
+                return NotFound();
+            }
+
         }
     }
 }

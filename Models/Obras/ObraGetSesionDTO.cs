@@ -10,6 +10,8 @@ namespace TeatroApi.Models
 
         public string rutaFoto { get; set; }
 
+        public int duracion {get; set;}
+
         public List<SesionGetDTO> sesiones { get; set; }
     }
 }

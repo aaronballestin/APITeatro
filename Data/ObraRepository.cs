@@ -40,6 +40,7 @@ namespace TeatroApi.Data
                 nombre = obra.NombreObra,
                 descripcion = obra.DescripcionObra,
                 rutaFoto = obra.RutaFotoObra,
+                duracion = obra.DuracionObra,
                 sesiones = sesiones
             };
         }
@@ -59,7 +60,8 @@ namespace TeatroApi.Data
                     id = obra.ObraId,
                     nombre = obra.NombreObra,
                     descripcion = obra.DescripcionObra,
-                    rutaFoto = obra.RutaFotoObra
+                    rutaFoto = obra.RutaFotoObra,
+                    duracion = obra.DuracionObra
                 };
                 obrasDTO.Add(obraDTO);
             }
