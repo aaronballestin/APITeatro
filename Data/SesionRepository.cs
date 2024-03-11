@@ -40,9 +40,22 @@ namespace TeatroApi.Data
             return sesionDTO;
         }
 
-        public List<Sesion> GetSesiones()
+        public List<SesionIntranetDTO> GetSesiones()
         {
-            return _context.Sesiones.ToList();
+            var sesiones = _context.Sesiones.ToList();
+            var obras = _context.Obras.ToList();
+
+            var sesionesDTO = new List<SesionIntranetDTO>();
+
+            foreach (var sesion in sesiones)
+            {
+                string nombreObra = obras.FirstOrDefault(o => o.ObraId == sesion.ObraId).NombreObra;
+                SesionIntranetDTO sesionIntranetDTO = new SesionIntranetDTO (sesion.SesionId, sesion.ObraId, sesion.SalaId, sesion.FechaHora, nombreObra, sesion.Precio); 
+
+                sesionesDTO.Add(sesionIntranetDTO);
+            }
+
+            return sesionesDTO;
         }
 
         public void UpdateSesion(Sesion sesionId)

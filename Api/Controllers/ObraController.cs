@@ -11,7 +11,6 @@ namespace TeatroApi.Api
     {
         private readonly IObraService _obraService;
 
-        private readonly ILogger<ObraController> _logger;
 
         public ObraController(IObraService obraService)
         {
@@ -29,7 +28,6 @@ namespace TeatroApi.Api
             }
             catch (KeyNotFoundException ex)
             {
-                _logger.LogInformation(ex.Message);
                 return NotFound("No hay obras disponibles");
             }
 
@@ -38,6 +36,7 @@ namespace TeatroApi.Api
         [HttpGet("{id}")]
         public ActionResult<ObraGetSesionDTO> GetObra(int id)
         {
+            
             try
             {
                 var obra = _obraService.GetObra(id);
@@ -45,7 +44,6 @@ namespace TeatroApi.Api
             }
             catch (KeyNotFoundException ex)
             {
-                _logger.LogInformation(ex.Message);
                 return NotFound("No hay obra disponible con el id: " + id);
 
             }
@@ -67,7 +65,7 @@ namespace TeatroApi.Api
             }
             catch (Exception ex)
             {
-                _logger.LogInformation(ex.Message);
+
                 return BadRequest(ex.Message);
             }
 
@@ -98,7 +96,7 @@ namespace TeatroApi.Api
             }
             catch (KeyNotFoundException ex)
             {
-                _logger.LogInformation(ex.Message);
+
                 return NotFound();
             }
 
@@ -114,7 +112,7 @@ namespace TeatroApi.Api
             }
             catch (KeyNotFoundException ex)
             {
-                _logger.LogInformation(ex.Message);
+
                 return NotFound();
             }
 

@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using TeatroApi.Models;
 
 namespace TeatroApi.Data
@@ -7,6 +9,8 @@ namespace TeatroApi.Data
     {
 
         private readonly TeatroContext _context;
+        private readonly ILogger<ObraRepository> _logger;
+
         public ObraRepository(TeatroContext context)
         {
             _context = context;
@@ -17,32 +21,56 @@ namespace TeatroApi.Data
             //Recuperamos la categoria
             // CategoriaRepository categoriaRepository = new CategoriaRepository(_context);
             // obra.Categoria = categoriaRepository.GetCategoria(obra.CategoriaId);
-
-            _context.Obras.Add(obra);
+            try
+            {
+                _context.Obras.Add(obra);
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+            }
         }
 
         public Obra GetObra(int obraId)
         {
-            return _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
+            try
+            {
+                return _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
         }
 
         public ObraGetSesionDTO GetObraDTO(int obraId)
         {
-            var obra = _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
-            _context.Sesiones.ToList();
-
-            var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
-                                        .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio))
-                                        .ToList(); 
-            return new ObraGetSesionDTO
+            try
             {
-                id = obra.ObraId,
-                nombre = obra.NombreObra,
-                descripcion = obra.DescripcionObra,
-                rutaFoto = obra.RutaFotoObra,
-                duracion = obra.DuracionObra,
-                sesiones = sesiones
-            };
+                var obra = _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
+                _context.Sesiones.ToList();
+
+                var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
+                                            .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio))
+                                            .ToList();
+                return new ObraGetSesionDTO
+                {
+                    id = obra.ObraId,
+                    nombre = obra.NombreObra,
+                    descripcion = obra.DescripcionObra,
+                    rutaFoto = obra.RutaFotoObra,
+                    duracion = obra.DuracionObra,
+                    sesiones = sesiones
+                };
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
+
         }
 
         /*public List<Obra> GetObras()
@@ -51,43 +79,69 @@ namespace TeatroApi.Data
             return obras;
         }*/
 
-        public List<ObraGetDTO> GetObras(){
-            var obras =_context.Obras.ToList();
-            var obrasDTO = new List<ObraGetDTO>();
-            foreach (var obra in obras)
+        public List<ObraGetDTO> GetObras()
+        {
+            try
             {
-                var obraDTO = new ObraGetDTO {
-                    id = obra.ObraId,
-                    nombre = obra.NombreObra,
-                    descripcion = obra.DescripcionObra,
-                    rutaFoto = obra.RutaFotoObra,
-                    duracion = obra.DuracionObra
-                };
-                obrasDTO.Add(obraDTO);
+                var obras = _context.Obras.ToList();
+                var obrasDTO = new List<ObraGetDTO>();
+                foreach (var obra in obras)
+                {
+                    var obraDTO = new ObraGetDTO
+                    {
+                        id = obra.ObraId,
+                        nombre = obra.NombreObra,
+                        descripcion = obra.DescripcionObra,
+                        rutaFoto = obra.RutaFotoObra,
+                        duracion = obra.DuracionObra
+                    };
+                    obrasDTO.Add(obraDTO);
+                }
+                return obrasDTO;
             }
-            return obrasDTO;
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
+
         }
 
         public void UpdateObra(Obra obra)
         {
-            // En EF Core, si el objeto ya está siendo rastreado, actualizar sus propiedades
-            // y llamar a SaveChanges() es suficiente para actualizarlo en la base de datos.
-            // Asegúrate de que el estado del objeto sea 'Modified' si es necesario.
-            _context.Entry(obra).State = EntityState.Modified;
+            try
+            {
+                _context.Entry(obra).State = EntityState.Modified;
+                SaveChanges();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
         }
 
         public void RemoveObra(int obraId)
         {
-            var account = GetObra(obraId);
-            if (account is null)
+            try
             {
-                throw new KeyNotFoundException("Account not found.");
-            }
-            _context.Sesiones.Where(s => s.ObraId == obraId)
-                            .ToList();
+                var account = GetObra(obraId);
+                if (account is null)
+                {
+                    throw new KeyNotFoundException("Account not found.");
+                }
+                _context.Sesiones.Where(s => s.ObraId == obraId)
+                                .ToList();
 
-            _context.Obras.Remove(account);
-            SaveChanges();
+                _context.Obras.Remove(account);
+                SaveChanges();
+            }
+            catch(Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
+
 
         }
 

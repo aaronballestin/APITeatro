@@ -12,7 +12,7 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
-        public List<Sesion> GetSesiones()
+        public List<SesionIntranetDTO> GetSesiones()
         {
             return _repository.GetSesiones();
         }

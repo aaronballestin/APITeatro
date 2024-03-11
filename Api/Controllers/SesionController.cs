@@ -17,7 +17,7 @@ namespace TeatroApi.Api
         }
 
         [HttpGet]
-        public ActionResult<List<Sesion>> GetSesiones()
+        public ActionResult<List<SesionIntranetDTO>> GetSesiones()
         {
             var sesiones = _sesionService.GetSesiones();
             return Ok(sesiones);

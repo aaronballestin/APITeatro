@@ -5,7 +5,7 @@ namespace TeatroApi.Business
 {
     public interface ISesionService
     {
-        public List<Sesion> GetSesiones();
+        public List<SesionIntranetDTO> GetSesiones();
         public Sesion GetSesion(int id);
         public SesionGetAsientosDTO GetSesionDTO(int id);
 
