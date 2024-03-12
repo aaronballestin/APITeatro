@@ -23,7 +23,6 @@ namespace TeatroApi.Business
         public int AddUsuario(Usuario usuario)
         {
             _repository.AddUsuario(usuario);
-            _repository.SaveChanges();
             return usuario.UsuarioId;
         }
     }

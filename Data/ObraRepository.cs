@@ -11,9 +11,10 @@ namespace TeatroApi.Data
         private readonly TeatroContext _context;
         private readonly ILogger<ObraRepository> _logger;
 
-        public ObraRepository(TeatroContext context)
+        public ObraRepository(ILogger<ObraRepository> logger, TeatroContext context)
         {
             _context = context;
+            _logger = logger;
         }
 
         public void AddObra(Obra obra)

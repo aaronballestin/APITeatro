@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TeatroApi.Models;
+using Microsoft.Extensions.Logging;
+
 
 namespace TeatroApi.Data
 {
@@ -7,50 +9,106 @@ namespace TeatroApi.Data
     {
 
         private readonly TeatroContext _context;
-        public UsuarioRepository(TeatroContext context)
+
+        private readonly ILogger<UsuarioRepository> _logger;
+
+        public UsuarioRepository(ILogger<UsuarioRepository> logger, TeatroContext context)
         {
             _context = context;
+            _logger = logger;
         }
 
         public void AddUsuario(Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
+            try
+            {
+                _context.Usuarios.Add(usuario);
+                SaveChanges();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+            }
         }
 
         public Usuario GetUsuario(int usuarioId)
         {
-            return _context.Usuarios.FirstOrDefault(usuario => usuario.UsuarioId == usuarioId);
+            try
+            {
+                return _context.Usuarios.FirstOrDefault(usuario => usuario.UsuarioId == usuarioId);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
         }
 
-        public UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario){
-            var usuario =  _context.Usuarios.FirstOrDefault(usuario => usuario.EmailUsuario == emailUsuario && usuario.PasswordUsuario == passwordUsuario);
-            var usuarioGetDTO = new UsuarioGetDTO{ nombre = usuario.NombreUsuario, email = usuario.EmailUsuario, password = usuario.PasswordUsuario, rol = usuario.Rol};
+        public UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario)
+        {
+            try
+            {
+                var usuario = _context.Usuarios.FirstOrDefault(usuario => usuario.EmailUsuario == emailUsuario && usuario.PasswordUsuario == passwordUsuario);
+                var usuarioGetDTO = new UsuarioGetDTO { nombre = usuario.NombreUsuario, email = usuario.EmailUsuario, password = usuario.PasswordUsuario, rol = usuario.Rol };
 
-            return usuarioGetDTO;
+                return usuarioGetDTO;
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
+
         }
 
         public List<Usuario> GetUsuarios()
         {
-            return _context.Usuarios.ToList();
+            try
+            {
+                return _context.Usuarios.ToList();
+                SaveChanges();
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
         }
 
         public void UpdateUsuario(Usuario usuario)
         {
-            // En EF Core, si el objeto ya está siendo rastreado, actualizar sus propiedades
-            // y llamar a SaveChanges() es suficiente para actualizarlo en la base de datos.
-            // Asegúrate de que el estado del objeto sea 'Modified' si es necesario.
-            _context.Entry(usuario).State = EntityState.Modified;
+            try
+            {
+                _context.Entry(usuario).State = EntityState.Modified;
+                SaveChanges();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
         }
 
         public void RemoveUsuario(int usuarioId)
         {
-            var account = GetUsuario(usuarioId);
-            if (account is null)
+            try
             {
-                throw new KeyNotFoundException("Account not found.");
+                var account = GetUsuario(usuarioId);
+                if (account is null)
+                {
+                    throw new KeyNotFoundException("Account not found.");
+                }
+                _context.Usuarios.Remove(account);
+                SaveChanges();
             }
-            _context.Usuarios.Remove(account);
-            SaveChanges();
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
+
 
         }
 

@@ -2,10 +2,20 @@ using TeatroApi.Business;
 using TeatroApi.Models;
 using TeatroApi.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddControllers();
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Filter.ByExcluding(Matching.FromSource("Microsoft"))
+    .WriteTo.File("logs/errorlogs.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(dispose: true);
 
 builder.Services.AddScoped<IAsientoService, AsientoService>(); 
 builder.Services.AddScoped<ICompraService, CompraService>(); 

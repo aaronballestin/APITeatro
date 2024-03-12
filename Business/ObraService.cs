@@ -46,20 +46,17 @@ namespace TeatroApi.Business
         public int AddObra(Obra obra)
         {
             _obraRepository.AddObra(obra);
-            _obraRepository.SaveChanges();
             return obra.ObraId;
         }
 
         public void UpdateObra(Obra obra)
         {
             _obraRepository.UpdateObra(obra);
-            _obraRepository.SaveChanges();
         }
 
         public void DeleteObra(int obraId)
         {
             _obraRepository.RemoveObra(obraId);
-            _obraRepository.SaveChanges();
         }
 
 

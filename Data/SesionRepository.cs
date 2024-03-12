@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TeatroApi.Models;
+using Microsoft.Extensions.Logging;
+
 
 namespace TeatroApi.Data
 {
@@ -7,74 +9,130 @@ namespace TeatroApi.Data
     {
 
         private readonly TeatroContext _context;
-        public SesionRepository(TeatroContext context)
+
+        private readonly ILogger<SesionRepository> _logger;
+
+        public SesionRepository(ILogger<SesionRepository> logger, TeatroContext context)
         {
             _context = context;
+            _logger = logger;
         }
 
         public void AddSesion(Sesion sesion)
         {
-            _context.Sesiones.Add(sesion);
+            try
+            {
+                _context.Sesiones.Add(sesion);
+                SaveChanges();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+            }
         }
 
         public Sesion GetSesion(int sesionId)
         {
-            return _context.Sesiones.FirstOrDefault(sesion => sesion.SesionId == sesionId);
+            try
+            {
+                return _context.Sesiones.FirstOrDefault(sesion => sesion.SesionId == sesionId);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
         }
 
-        public SesionGetAsientosDTO GetSesionDTO (int sesionId){
-            var sesion = _context.Sesiones.FirstOrDefault(sesion => sesion.SesionId == sesionId);
-            var obra = _context.Obras.FirstOrDefault(obra => obra.ObraId == sesion.ObraId);
+        public SesionGetAsientosDTO GetSesionDTO(int sesionId)
+        {
+            try
+            {
+                var sesion = _context.Sesiones.FirstOrDefault(sesion => sesion.SesionId == sesionId);
+                var obra = _context.Obras.FirstOrDefault(obra => obra.ObraId == sesion.ObraId);
 
-            var sesionDTO = new SesionGetAsientosDTO(sesion.SesionId, sesion.SalaId, sesion.ObraId, obra.NombreObra, sesion.FechaHora, sesion.Precio);
+                var sesionDTO = new SesionGetAsientosDTO(sesion.SesionId, sesion.SalaId, sesion.ObraId, obra.NombreObra, sesion.FechaHora, sesion.Precio);
 
 
-            var asientos = new List<Asiento>();
-            
-            sesionDTO.asientos = _context.Asientos.Where(o => o.SalaId == sesion.SalaId)
-                                                    .Select(o => new AsientoGetDTO(o.AsientoId, o.TipoAsiento, o.Suplemento))
-                                                    .ToList();
+                var asientos = new List<Asiento>();
 
-            
-            
-            return sesionDTO;
+                sesionDTO.asientos = _context.Asientos.Where(o => o.SalaId == sesion.SalaId)
+                                                        .Select(o => new AsientoGetDTO(o.AsientoId, o.TipoAsiento, o.Suplemento))
+                                                        .ToList();
+
+
+
+                return sesionDTO;
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
+            }
+
+
         }
 
         public List<SesionIntranetDTO> GetSesiones()
         {
-            var sesiones = _context.Sesiones.ToList();
-            var obras = _context.Obras.ToList();
-
-            var sesionesDTO = new List<SesionIntranetDTO>();
-
-            foreach (var sesion in sesiones)
+            try
             {
-                string nombreObra = obras.FirstOrDefault(o => o.ObraId == sesion.ObraId).NombreObra;
-                SesionIntranetDTO sesionIntranetDTO = new SesionIntranetDTO (sesion.SesionId, sesion.ObraId, sesion.SalaId, sesion.FechaHora, nombreObra, sesion.Precio); 
+                var sesiones = _context.Sesiones.ToList();
+                var obras = _context.Obras.ToList();
 
-                sesionesDTO.Add(sesionIntranetDTO);
+                var sesionesDTO = new List<SesionIntranetDTO>();
+
+                foreach (var sesion in sesiones)
+                {
+                    string nombreObra = obras.FirstOrDefault(o => o.ObraId == sesion.ObraId).NombreObra;
+                    SesionIntranetDTO sesionIntranetDTO = new SesionIntranetDTO(sesion.SesionId, sesion.ObraId, sesion.SalaId, sesion.FechaHora, nombreObra, sesion.Precio);
+
+                    sesionesDTO.Add(sesionIntranetDTO);
+                }
+
+                return sesionesDTO;
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+                throw;
             }
 
-            return sesionesDTO;
+
         }
 
         public void UpdateSesion(Sesion sesionId)
         {
-            // En EF Core, si el objeto ya está siendo rastreado, actualizar sus propiedades
-            // y llamar a SaveChanges() es suficiente para actualizarlo en la base de datos.
-            // Asegúrate de que el estado del objeto sea 'Modified' si es necesario.
-            _context.Entry(sesionId).State = EntityState.Modified;
+            try
+            {
+                _context.Entry(sesionId).State = EntityState.Modified;
+                SaveChanges();
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+            }
+
         }
 
         public void RemoveSesion(int sesionId)
         {
-            var account = GetSesion(sesionId);
-            if (account is null)
+            try
             {
-                throw new KeyNotFoundException("Account not found.");
+                var account = GetSesion(sesionId);
+                if (account is null)
+                {
+                    throw new KeyNotFoundException("Account not found.");
+                }
+                _context.Sesiones.Remove(account);
+                SaveChanges();
             }
-            _context.Sesiones.Remove(account);
-            SaveChanges();
+            catch (Exception e)
+            {
+                _logger.LogInformation(e.Message);
+            }
+
 
         }
 

@@ -30,20 +30,17 @@ namespace TeatroApi.Business
         public int AddSesion(Sesion sesion)
         {
             _repository.AddSesion(sesion);
-            _repository.SaveChanges();
             return sesion.ObraId;
         }
 
         public void UpdateSesion(Sesion sesion)
         {
             _repository.UpdateSesion(sesion);
-            _repository.SaveChanges();
         }
 
         public void DeleteSesion(int id)
         {
             _repository.RemoveSesion(id);
-            _repository.SaveChanges();
         }
 
     }
