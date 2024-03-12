@@ -7,7 +7,7 @@ using Serilog.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Logger
 builder.Services.AddControllers();
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -17,6 +17,7 @@ Log.Logger = new LoggerConfiguration()
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(dispose: true);
 
+// Add services to the container.
 builder.Services.AddScoped<IAsientoService, AsientoService>(); 
 builder.Services.AddScoped<ICompraService, CompraService>(); 
 builder.Services.AddScoped<IObraService, ObraService>(); 

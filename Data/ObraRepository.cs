@@ -28,7 +28,8 @@ namespace TeatroApi.Data
             }
             catch (Exception e)
             {
-                _logger.LogInformation(e.Message);
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
             }
         }
 
@@ -41,7 +42,8 @@ namespace TeatroApi.Data
             }
             catch (Exception e)
             {
-                _logger.LogInformation(e.Message);
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
         }
@@ -68,7 +70,8 @@ namespace TeatroApi.Data
             }
             catch (Exception e)
             {
-                _logger.LogInformation(e.Message);
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
 
@@ -102,7 +105,8 @@ namespace TeatroApi.Data
             }
             catch (Exception e)
             {
-                _logger.LogInformation(e.Message);
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
 
@@ -117,7 +121,8 @@ namespace TeatroApi.Data
             }
             catch (Exception e)
             {
-                _logger.LogInformation(e.Message);
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
         }
@@ -139,7 +144,8 @@ namespace TeatroApi.Data
             }
             catch(Exception e)
             {
-                _logger.LogInformation(e.Message);
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
 
