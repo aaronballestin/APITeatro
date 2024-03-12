@@ -15,6 +15,6 @@ namespace TeatroApi.Models
             this.nombreObra = nombreObra;
         }
 
-        
+          
     }
 }
