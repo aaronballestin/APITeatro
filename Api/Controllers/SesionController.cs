@@ -52,7 +52,13 @@ namespace TeatroApi.Api
         {
             var sesion = new Sesion {ObraId = sesionDTO.obraId, FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId, Precio = sesionDTO.precio, AuditoriaUsuario = sesionDTO.auditoriaUsuario, AuditoriaHorario = DateTime.Now};
             var newSesionId = _sesionService.AddSesion(sesion);
-            return CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
+            
+            if(newSesionId != 0){
+                var sesionFinal = CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
+                return Ok(sesionFinal);
+            }else{
+                return BadRequest("No se ha podido añadir una sesion");
+            }
         }
 
         [HttpPut("{id}")]

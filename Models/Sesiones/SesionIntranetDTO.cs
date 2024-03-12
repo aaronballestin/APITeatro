@@ -6,7 +6,6 @@ namespace TeatroApi.Models
         public int obraId {get; set;}
         public string nombreObra {get; set;}
         public DateTime date {get; set;}
-        public double precio {get; set;}
 
         public SesionIntranetDTO(int sesion, int obra, int sala, DateTime horario, string nombreObra, double precio){
             this.id = sesion;
@@ -15,5 +14,7 @@ namespace TeatroApi.Models
             this.date = horario;
             this.nombreObra = nombreObra;
         }
+
+        
     }
 }
