@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.VisualBasic;
 using TeatroApi.Models;
 
 namespace TeatroApi.Data
@@ -25,6 +26,7 @@ namespace TeatroApi.Data
             try
             {
                 _context.Obras.Add(obra);
+                SaveChanges();
             }
             catch (Exception e)
             {
@@ -58,7 +60,7 @@ namespace TeatroApi.Data
                 var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
                                             .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio))
                                             .ToList();
-                return new ObraGetSesionDTO
+                var obraDTO = new ObraGetSesionDTO
                 {
                     id = obra.ObraId,
                     nombre = obra.NombreObra,
@@ -67,6 +69,21 @@ namespace TeatroApi.Data
                     duracion = obra.DuracionObra,
                     sesiones = sesiones
                 };
+
+                foreach (var sesion in sesiones)
+                {
+                    var asientosOcupados = _context.Compras
+                                                  .Where(s => s.SesionId == sesion.sesionId)
+                                                  .Select(c => c.AsientoId)
+                                                  .Distinct()
+                                                  .Count();
+
+                    //Tengo que recuperar la sala y con la sala tendré todos lo asientos
+                    sesion.asientosDisponibles = 100 - asientosOcupados;
+                }
+
+
+                return obraDTO;
             }
             catch (Exception e)
             {
@@ -142,7 +159,7 @@ namespace TeatroApi.Data
                 _context.Obras.Remove(account);
                 SaveChanges();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.LogInformation($"Mensaje: {e.Message}");
                 _logger.LogError($"StackTrace: {e.StackTrace}");

@@ -64,7 +64,11 @@ namespace TeatroApi.Data
                                                         .ToList();
 
 
-
+                foreach (var asiento in sesionDTO.asientos)
+                {
+                    var existe = _context.Compras.FirstOrDefault(c => c.AsientoId == asiento.id && c.SesionId == sesionDTO.id);
+                    if(existe != null) asiento.ocupado=true;
+                }
                 return sesionDTO;
             }
             catch (Exception e)

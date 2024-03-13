@@ -4,6 +4,7 @@ namespace TeatroApi.Models
         public int id {get; set;}
         public int tipoAsiento{get; set;}
         public double suplemento {get; set;}
+        public Boolean ocupado {get; set;}
 
         public AsientoGetDTO(){
 

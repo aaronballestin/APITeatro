@@ -12,6 +12,7 @@ namespace TeatroApi.Models
 
         public int duracion {get; set;}
 
+
         public List<SesionGetDTO> sesiones { get; set; }
     }
 }

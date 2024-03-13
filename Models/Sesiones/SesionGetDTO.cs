@@ -3,8 +3,10 @@ namespace TeatroApi.Models
     public class SesionGetDTO{
         public int sesionId { get; set; }
         public DateTime date {get; set; }
-
+        public int salaId {get; set;}
         public double precio {get; set;}
+        public int asientosDisponibles {get; set;}
+
         public SesionGetDTO(){
 
         }
