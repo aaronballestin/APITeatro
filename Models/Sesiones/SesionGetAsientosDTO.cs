@@ -13,7 +13,8 @@ namespace TeatroApi.Models
         
         public double precio {get; set;} 
 
-        public List<AsientoGetDTO> asientos {get; set;}
+        public SalaSesionDTO sala {get; set;}
+
 
         public SesionGetAsientosDTO(){
 

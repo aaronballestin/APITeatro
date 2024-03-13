@@ -32,7 +32,24 @@ namespace TeatroApi.Data
             }
         }
 
-        public Usuario GetUsuario(int usuarioId)
+        public UsuarioGetDTO GetUsuario(int usuarioId)
+        {
+            try
+            {
+                var usuario = _context.Usuarios.FirstOrDefault(usuario => usuario.UsuarioId == usuarioId);
+                var usuarioGetDTO = new UsuarioGetDTO { id = usuario.UsuarioId, nombre = usuario.NombreUsuario, email = usuario.EmailUsuario, password = usuario.PasswordUsuario, rol = usuario.Rol };
+
+                return usuarioGetDTO;
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
+                throw;
+            }
+        }
+
+        /*public Usuario GetUsuario(int usuarioId)
         {
             try
             {
@@ -56,14 +73,14 @@ namespace TeatroApi.Data
                 _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
-        }
+        }*/
 
         public UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario)
         {
             try
             {
                 var usuario = _context.Usuarios.FirstOrDefault(usuario => usuario.EmailUsuario == emailUsuario && usuario.PasswordUsuario == passwordUsuario);
-                var usuarioGetDTO = new UsuarioGetDTO {id = usuario.UsuarioId, nombre = usuario.NombreUsuario, email = usuario.EmailUsuario, password = usuario.PasswordUsuario, rol = usuario.Rol };
+                var usuarioGetDTO = new UsuarioGetDTO { id = usuario.UsuarioId, nombre = usuario.NombreUsuario, email = usuario.EmailUsuario, password = usuario.PasswordUsuario, rol = usuario.Rol };
 
                 return usuarioGetDTO;
             }
@@ -107,7 +124,7 @@ namespace TeatroApi.Data
             }
         }
 
-        public void RemoveUsuario(int usuarioId)
+        /*public void RemoveUsuario(int usuarioId)
         {
             try
             {
@@ -127,7 +144,7 @@ namespace TeatroApi.Data
             }
 
 
-        }
+        }*/
 
         public void SaveChanges()
         {

@@ -51,7 +51,7 @@ dotnet ef migrations remove  -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.
 
 dotnet tool install --global dotnet-ef --version 6.*
 
-dotnet ef migrations add Actualizacion2 -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
+dotnet ef migrations add ActualizacionNueva -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
 
 dotnet ef database update  -p ./Data/TeatroApi.Data.csproj -s ./Api/TeatroApi.Api.csproj
 ```

@@ -5,6 +5,7 @@ namespace TeatroApi.Models
         public DateTime date {get; set; }
 
         public double precio {get; set;}
+
         public SesionGetDTO(){
 
         }

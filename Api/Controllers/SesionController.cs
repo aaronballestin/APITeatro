@@ -23,7 +23,7 @@ namespace TeatroApi.Api
             return Ok(sesiones);
         }
 
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public ActionResult<Sesion> GetSesion(int id)
         {
             var sesion = _sesionService.GetSesion(id);
@@ -33,19 +33,9 @@ namespace TeatroApi.Api
             }
             return Ok(sesion);
 
-        }*/
-
-        [HttpGet("{id}")]
-        public ActionResult<SesionGetAsientosDTO> GetSesion(int id)
-        {
-            var sesion = _sesionService.GetSesionDTO(id);
-            if (sesion == null)
-            {
-                return NotFound();
-            }
-            return Ok(sesion);
-
         }
+
+
 
         [HttpPost]
         public ActionResult<int> AddSesion(SesionPostDTO sesionDTO)

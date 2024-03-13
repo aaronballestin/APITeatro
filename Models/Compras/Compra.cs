@@ -7,9 +7,6 @@ namespace TeatroApi.Models
     public class Compra{
 
         
-        [ForeignKey("AsientoId")]
-        public int AsientoId {get; set;}
-        
         [ForeignKey("SesionId")]
         public int SesionId {get; set;}
 

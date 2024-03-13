@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Filter.ByExcluding(Matching.FromSource("Microsoft"))
-    .WriteTo.File("logs/errorlogs.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("../logs/errorlogs.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(dispose: true);

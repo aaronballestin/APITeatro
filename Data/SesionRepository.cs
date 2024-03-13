@@ -56,14 +56,8 @@ namespace TeatroApi.Data
 
                 var sesionDTO = new SesionGetAsientosDTO(sesion.SesionId, sesion.SalaId, sesion.ObraId, obra.NombreObra, sesion.FechaHora, sesion.Precio);
 
-
-                var asientos = new List<Asiento>();
-
-                sesionDTO.asientos = _context.Asientos.Where(o => o.SalaId == sesion.SalaId)
-                                                        .Select(o => new AsientoGetDTO(o.AsientoId, o.TipoAsiento, o.Suplemento))
-                                                        .ToList();
-
-
+                var sala = _context.Salas.FirstOrDefault(sala => sala.SalaId == sesion.SalaId);
+                sesionDTO.sala = new SalaSesionDTO {asientosMinusvalidos = sala.AsientosMinusvalidos, asientosVip = sala.AsientosVip, asientosNormales = sala.AsientosNormales};
 
                 return sesionDTO;
             }
