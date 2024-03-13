@@ -32,6 +32,19 @@ namespace TeatroApi.Api
 
         }
 
+        
+        [HttpGet("{id}")]
+        public ActionResult<UsuarioGetDTO> GetUsuario(int id)
+        {
+            var usuario = _usuarioService.GetUsuario(id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+            return Ok(usuario);
+
+        }
+
 
         [HttpPost]
         public ActionResult<int> AddUsuario(UsuarioPostDTO usuarioDTO)

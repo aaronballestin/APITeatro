@@ -45,7 +45,6 @@ namespace TeatroApi.Api
             catch (KeyNotFoundException ex)
             {
                 return NotFound("No hay obra disponible con el id: " + id);
-
             }
 
 

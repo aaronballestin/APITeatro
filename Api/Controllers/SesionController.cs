@@ -23,7 +23,7 @@ namespace TeatroApi.Api
             return Ok(sesiones);
         }
 
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public ActionResult<Sesion> GetSesion(int id)
         {
             var sesion = _sesionService.GetSesion(id);
@@ -33,26 +33,22 @@ namespace TeatroApi.Api
             }
             return Ok(sesion);
 
-        }*/
-
-        [HttpGet("{id}")]
-        public ActionResult<SesionGetAsientosDTO> GetSesion(int id)
-        {
-            var sesion = _sesionService.GetSesionDTO(id);
-            if (sesion == null)
-            {
-                return NotFound();
-            }
-            return Ok(sesion);
-
         }
+
+
 
         [HttpPost]
         public ActionResult<int> AddSesion(SesionPostDTO sesionDTO)
         {
             var sesion = new Sesion {ObraId = sesionDTO.obraId, FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId, Precio = sesionDTO.precio, AuditoriaUsuario = sesionDTO.auditoriaUsuario, AuditoriaHorario = DateTime.Now};
             var newSesionId = _sesionService.AddSesion(sesion);
-            return CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
+            
+            if(newSesionId != 0){
+                var sesionFinal = CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
+                return Ok(sesionFinal);
+            }else{
+                return BadRequest("No se ha podido añadir una sesion");
+            }
         }
 
         [HttpPut("{id}")]
