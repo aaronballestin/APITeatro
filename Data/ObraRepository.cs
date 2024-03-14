@@ -20,9 +20,7 @@ namespace TeatroApi.Data
 
         public void AddObra(Obra obra)
         {
-            //Recuperamos la categoria
-            // CategoriaRepository categoriaRepository = new CategoriaRepository(_context);
-            // obra.Categoria = categoriaRepository.GetCategoria(obra.CategoriaId);
+
             try
             {
                 _context.Obras.Add(obra);
@@ -79,7 +77,6 @@ namespace TeatroApi.Data
                                                   .Distinct()
                                                   .Count();
 
-                    //Tengo que recuperar la sala y con la sala tendré todos lo asientos
                     asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosNormales;
                     asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosVip;
                     asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosMinusvalidos;

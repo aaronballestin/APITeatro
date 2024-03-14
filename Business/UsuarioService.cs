@@ -16,8 +16,8 @@ namespace TeatroApi.Business
             return _repository.GetUsuario(emailUsuario, passwordUsuario);
         }
 
-        public UsuarioGetDTO GetUsuario(int usuarioId ){
-            return _repository.GetUsuario(usuarioId);
+        public UsuarioGetCompras GetUsuario(int usuarioId ){
+            return _repository.GetUsuarioCompras(usuarioId);
         }
 
         public int AddUsuario(Usuario usuario)

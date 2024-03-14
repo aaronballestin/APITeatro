@@ -49,23 +49,33 @@ namespace TeatroApi.Data
             }
         }
 
-        /*public Usuario GetUsuario(int usuarioId)
+        public UsuarioGetCompras GetUsuarioCompras(int usuarioId)
         {
             try
             {
-                var usuario = _context.Usuarios.FirstOrDefault(usuario => usuario.UsuarioId == usuarioId);
-                var compras = _context.Compras.Where(c => c.UsuarioId == usuario.UsuarioId)
-                                                .ToList();
-                var sesiones = List<SesionCompra>();
-                foreach (var compra in compras)
+                var usuario = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == usuarioId);
+                var usuarioGetCompras = new UsuarioGetCompras
                 {
-                    var sesion = _context.Sesiones.FirstOrDefault(s => s.SesionId = compra.SesionId);
-                    var obra = _context.Obras.FirstOrDefault(o => o.ObraId == sesion.ObraId).NombreObra;
-                    sesionDTO = new SesionCompra {salaId = sesion.SalaId, nombreObra = obra, date = FechaHora};
-                }
-                
-                return usuario;
+                    id = usuario.UsuarioId,
+                    nombre = usuario.NombreUsuario,
+                    email = usuario.EmailUsuario,
+                    password = usuario.PasswordUsuario,
+                    compras = _context.Compras
+                                .Where(c => c.UsuarioId == usuarioId)
+                                .Select(c => new CompraUsuario
+                                {
+                                    sesion = new SesionCompra
+                                    {
+                                        salaId = c.Sesion.SalaId,
+                                        nombreObra = c.Sesion.Obra.NombreObra,
+                                        date = c.Sesion.FechaHora
+                                    },
+                                    asiento = c.AsientoId
+                                })
+                                .ToList()
+                };
 
+                return usuarioGetCompras;
             }
             catch (Exception e)
             {
@@ -73,7 +83,9 @@ namespace TeatroApi.Data
                 _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
-        }*/
+        }
+
+
 
         public UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario)
         {
