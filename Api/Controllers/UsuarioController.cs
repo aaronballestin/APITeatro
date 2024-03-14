@@ -42,7 +42,6 @@ namespace TeatroApi.Api
                 return NotFound();
             }
             return Ok(usuario);
-
         }
 
 

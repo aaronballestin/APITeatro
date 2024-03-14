@@ -25,5 +25,9 @@ namespace TeatroApi.Business
             _repository.AddUsuario(usuario);
             return usuario.UsuarioId;
         }
+
+        public void UpdateUsuario(Usuario usuario){
+            _repository.UpdateUsuario(usuario);
+        }
     }
 }

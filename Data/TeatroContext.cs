@@ -199,9 +199,10 @@ namespace TeatroApi.Data
 
 
             modelBuilder.Entity<Compra>().HasData(
-                new Compra { AsientoId = 1, SesionId = 1, UsuarioId = 1 },
-                new Compra { AsientoId = 2, SesionId = 1, UsuarioId = 2 }
+                new Compra {CompraId = 1, AsientoId = 1, SesionId = 1, UsuarioId = 1 },
+                new Compra {CompraId = 2, AsientoId = 2, SesionId = 1, UsuarioId = 2 }
             );
+
             // Relación entre Sesion y Sala
             modelBuilder.Entity<Sesion>()
                 .HasOne(s => s.Sala)
@@ -211,6 +212,7 @@ namespace TeatroApi.Data
             modelBuilder.Entity<Sesion>()
                 .Property(s => s.SalaId)
                 .IsRequired(); // Esto también asegura que el SalaId sea obligatorio en la tabla Sesion
+                
             //Tabla intermedia de compras
             modelBuilder.Entity<Compra>()
                 .HasKey(pi => new { pi.SesionId, pi.AsientoId, pi.UsuarioId });
