@@ -15,7 +15,7 @@ namespace TeatroApi.Models
 
         public SalaSesionDTO sala {get; set;}
 
-
+        public List<AsientoGetDTO> asientos {get; set;}
         public SesionGetAsientosDTO(){
 
         }

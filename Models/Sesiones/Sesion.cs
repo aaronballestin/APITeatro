@@ -15,9 +15,9 @@ namespace TeatroApi.Models
 
         public double Precio {get; set;}
 
-        public string AuditoriaUsuario {get; set;}
+        public string? AuditoriaUsuario {get; set;}
 
-        public DateTime AuditoriaHorario {get; set;}
+        public DateTime? AuditoriaHorario {get; set;}
 
         [ForeignKey("SalaId")]
         public int SalaId {get; set;} 

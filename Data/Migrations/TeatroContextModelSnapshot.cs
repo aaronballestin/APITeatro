@@ -930,11 +930,10 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ObraId"));
 
-                    b.Property<DateTime>("AuditoriaHorario")
+                    b.Property<DateTime?>("AuditoriaHorario")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AuditoriaUsuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DescripcionObra")
@@ -960,100 +959,80 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 1,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una tragedia clásica",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "Hamlet",
                             RutaFotoObra = "ruta/foto/hamlet.jpg"
                         },
                         new
                         {
                             ObraId = 2,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Un drama familiar",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "La Casa de Bernarda Alba",
                             RutaFotoObra = "ruta/foto/bernarda_alba.jpg"
                         },
                         new
                         {
                             ObraId = 3,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Amor prohibido entre dos familias rivales",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "Romeo y Julieta",
                             RutaFotoObra = "ruta/foto/romeo_julieta.jpg"
                         },
                         new
                         {
                             ObraId = 4,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una historia de amor y tragedia en la Ópera de París",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "El Fantasma de la Ópera",
                             RutaFotoObra = "ruta/foto/fantasma_opera.jpg"
                         },
                         new
                         {
                             ObraId = 5,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Dos personajes esperan a alguien que nunca llega",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "Esperando a Godot",
                             RutaFotoObra = "ruta/foto/esperando_godot.jpg"
                         },
                         new
                         {
                             ObraId = 6,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una tragedia sobre ambición y traición",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "Macbeth",
                             RutaFotoObra = "ruta/foto/macbeth.jpg"
                         },
                         new
                         {
                             ObraId = 7,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "La historia de Jean Valjean y su redención",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "Los Miserables",
                             RutaFotoObra = "ruta/foto/los_miserables.jpg"
                         },
                         new
                         {
                             ObraId = 8,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Celos y traición en la Venecia del siglo XVI",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "Otelo",
                             RutaFotoObra = "ruta/foto/otelo.jpg"
                         },
                         new
                         {
                             ObraId = 9,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Drama de amor y desilusión en la sociedad rusa del siglo XIX",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "La Gaviota",
                             RutaFotoObra = "ruta/foto/la_gaviota.jpg"
                         },
                         new
                         {
                             ObraId = 10,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             DescripcionObra = "Una ópera sobre el crimen y la pobreza en Londres",
-                            DuracionObra = 120,
+                            DuracionObra = 0,
                             NombreObra = "La Opera de los Tres Centavos",
                             RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg"
                         });
@@ -1067,6 +1046,15 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SalaId"));
 
+                    b.Property<int>("AsientosMinusvalidos")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AsientosNormales")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AsientosVip")
+                        .HasColumnType("int");
+
                     b.HasKey("SalaId");
 
                     b.ToTable("Salas");
@@ -1074,15 +1062,24 @@ namespace TeatroApi.Data.Migrations
                     b.HasData(
                         new
                         {
-                            SalaId = 1
+                            SalaId = 1,
+                            AsientosMinusvalidos = 10,
+                            AsientosNormales = 50,
+                            AsientosVip = 10
                         },
                         new
                         {
-                            SalaId = 2
+                            SalaId = 2,
+                            AsientosMinusvalidos = 0,
+                            AsientosNormales = 100,
+                            AsientosVip = 0
                         },
                         new
                         {
-                            SalaId = 3
+                            SalaId = 3,
+                            AsientosMinusvalidos = 0,
+                            AsientosNormales = 0,
+                            AsientosVip = 30
                         });
                 });
 
@@ -1094,11 +1091,10 @@ namespace TeatroApi.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SesionId"));
 
-                    b.Property<DateTime>("AuditoriaHorario")
+                    b.Property<DateTime?>("AuditoriaHorario")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AuditoriaUsuario")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("FechaHora")
@@ -1125,201 +1121,161 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 2,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 2,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 3,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 4,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 4, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 5,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 5, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 6,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 6, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 7,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 7, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 8,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 8, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 9,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 9, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 10,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 10, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 11,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 12,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 12, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 13,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 14,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 14, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 15,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 16,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 16, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 17,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 17, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 9,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         },
                         new
                         {
                             SesionId = 18,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 18, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 9,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 3
                         },
                         new
                         {
                             SesionId = 19,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 19, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 10,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 1
                         },
                         new
                         {
                             SesionId = 20,
-                            AuditoriaHorario = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            AuditoriaUsuario = "ADMIN",
                             FechaHora = new DateTime(2024, 4, 20, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 10,
-                            Precio = 30.0,
+                            Precio = 0.0,
                             SalaId = 2
                         });
                 });
@@ -1467,13 +1423,13 @@ namespace TeatroApi.Data.Migrations
                     b.HasOne("TeatroApi.Models.Asiento", "Asiento")
                         .WithMany("Compras")
                         .HasForeignKey("AsientoId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("TeatroApi.Models.Sesion", "Sesion")
                         .WithMany("Compras")
                         .HasForeignKey("SesionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TeatroApi.Models.Usuario", "Usuario")
@@ -1500,7 +1456,7 @@ namespace TeatroApi.Data.Migrations
                     b.HasOne("TeatroApi.Models.Sala", "Sala")
                         .WithMany("Sesiones")
                         .HasForeignKey("SalaId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Obra");

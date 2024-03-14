@@ -24,9 +24,9 @@ namespace TeatroApi.Api
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Sesion> GetSesion(int id)
+        public ActionResult<SesionGetAsientosDTO> GetSesion(int id)
         {
-            var sesion = _sesionService.GetSesion(id);
+            var sesion = _sesionService.GetSesionDTO(id);
             if (sesion == null)
             {
                 return NotFound();

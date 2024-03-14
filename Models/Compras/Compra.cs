@@ -13,7 +13,8 @@ namespace TeatroApi.Models
         [ForeignKey("UsuarioId")]
         public int UsuarioId {get; set;}
 
-
+        [ForeignKey("AsientoId")]
+        public int AsientoId {get; set;}
 
         public Asiento Asiento {get; set;}
 

@@ -58,7 +58,7 @@ namespace TeatroApi.Data
                 _context.Sesiones.ToList();
 
                 var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
-                                            .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio))
+                                            .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio, o.SalaId))
                                             .ToList();
                 var obraDTO = new ObraGetSesionDTO
                 {
@@ -72,6 +72,7 @@ namespace TeatroApi.Data
 
                 foreach (var sesion in sesiones)
                 {
+                    int asientosTotales = 0;
                     var asientosOcupados = _context.Compras
                                                   .Where(s => s.SesionId == sesion.sesionId)
                                                   .Select(c => c.AsientoId)
@@ -79,7 +80,12 @@ namespace TeatroApi.Data
                                                   .Count();
 
                     //Tengo que recuperar la sala y con la sala tendré todos lo asientos
-                    sesion.asientosDisponibles = 100 - asientosOcupados;
+                    asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosNormales;
+                    asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosVip;
+                    asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosMinusvalidos;
+
+
+                    sesion.asientosDisponibles = asientosTotales - asientosOcupados;
                 }
 
 

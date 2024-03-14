@@ -15,6 +15,7 @@ namespace TeatroApi.Data
         public void AddCompra(Compra compra)
         {
             _context.Compras.Add(compra);
+            
         }
 
         //De momento hacemos que no salga la compra por id porque no tiene PK        

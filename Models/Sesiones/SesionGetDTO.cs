@@ -11,10 +11,11 @@ namespace TeatroApi.Models
 
         }
 
-        public SesionGetDTO(int id, DateTime date, double precio){
+        public SesionGetDTO(int id, DateTime date, double precio, int salaId){
             sesionId = id;
             this.date = date; 
             this.precio = precio;
+            this.salaId = salaId;
         }
     }
 }
