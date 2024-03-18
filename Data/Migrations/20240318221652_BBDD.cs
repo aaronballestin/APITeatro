@@ -14,6 +14,19 @@ namespace TeatroApi.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "DetallesCompras",
+                columns: table => new
+                {
+                    CompraId = table.Column<int>(type: "int", nullable: false),
+                    AsientoId = table.Column<int>(type: "int", nullable: false),
+                    SesionId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DetallesCompras", x => new { x.CompraId, x.AsientoId });
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Obras",
                 columns: table => new
                 {
@@ -117,19 +130,22 @@ namespace TeatroApi.Data.Migrations
                 name: "Compras",
                 columns: table => new
                 {
+                    CompraId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     SesionId = table.Column<int>(type: "int", nullable: false),
                     UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    AsientoId = table.Column<int>(type: "int", nullable: false)
+                    FechaCompra = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    PrecioCompra = table.Column<double>(type: "float", nullable: false),
+                    AsientoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Compras", x => new { x.SesionId, x.AsientoId, x.UsuarioId });
+                    table.PrimaryKey("PK_Compras", x => x.CompraId);
                     table.ForeignKey(
                         name: "FK_Compras_Asientos_AsientoId",
                         column: x => x.AsientoId,
                         principalTable: "Asientos",
-                        principalColumn: "AsientoId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "AsientoId");
                     table.ForeignKey(
                         name: "FK_Compras_Sesiones_SesionId",
                         column: x => x.SesionId,
@@ -141,6 +157,17 @@ namespace TeatroApi.Data.Migrations
                         principalTable: "Usuarios",
                         principalColumn: "UsuarioId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "DetallesCompras",
+                columns: new[] { "AsientoId", "CompraId", "SesionId" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 1, 1 },
+                    { 2, 2, 2 },
+                    { 7, 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -345,11 +372,11 @@ namespace TeatroApi.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Compras",
-                columns: new[] { "AsientoId", "SesionId", "UsuarioId" },
+                columns: new[] { "CompraId", "AsientoId", "FechaCompra", "PrecioCompra", "SesionId", "UsuarioId" },
                 values: new object[,]
                 {
-                    { 1, 1, 1 },
-                    { 2, 1, 2 }
+                    { 1, null, null, 0.0, 1, 1 },
+                    { 2, null, null, 0.0, 1, 2 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -361,6 +388,11 @@ namespace TeatroApi.Data.Migrations
                 name: "IX_Compras_AsientoId",
                 table: "Compras",
                 column: "AsientoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Compras_SesionId",
+                table: "Compras",
+                column: "SesionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Compras_UsuarioId",
@@ -383,6 +415,9 @@ namespace TeatroApi.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Compras");
+
+            migrationBuilder.DropTable(
+                name: "DetallesCompras");
 
             migrationBuilder.DropTable(
                 name: "Asientos");

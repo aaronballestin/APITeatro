@@ -27,29 +27,39 @@ namespace TeatroApi.Business
         {
             try
             {
-                // Aquí puedes agregar lógica para validar la compra antes de realizarla,
-                // como verificar la disponibilidad de asientos, calcular el precio total, etc.
-
-                // Por simplicidad, simplemente guardamos la compra en la base de datos
                 var compra = new Compra
                 {
                     SesionId = compraDTO.SesionId,
-                    // Aquí podrías agregar más propiedades según sea necesario
+                    UsuarioId = compraDTO.UsuarioId
                 };
 
                 _repository.AddCompra(compra);
                 _repository.SaveChanges();
 
-                // Una vez que la compra se ha realizado con éxito, puedes devolver la compra creada
+                foreach (var asientoId in compraDTO.Asientos)
+                {
+                    var detalleCompra = new DetallesCompra
+                    {
+                        CompraId = compra.CompraId, 
+                        AsientoId = asientoId, 
+                        SesionId = compra.SesionId               
+                    };
+
+                    _repository.AddDetallesCompra(detalleCompra);
+                }
+
+                _repository.SaveChanges();
+
                 return 1;
             }
             catch (Exception ex)
             {
                 // Si ocurre algún error durante la realización de la compra, lo capturamos y devolvemos un resultado de error
-                // return ServiceResult<CompraDTO>.Failure($"Error al realizar la compra: {ex.Message}");
+                Console.WriteLine(ex.Message);
                 throw;
             }
         }
+
 
         public CompraDTO GetCompra(int compraId)
         {
@@ -58,7 +68,7 @@ namespace TeatroApi.Business
                 var compra = _repository.GetCompra(compraId);
                 if (compra == null)
                 {
-                
+
                 }
 
                 // Mapear la entidad Compra a un DTO CompraDTO y devolverla
@@ -66,7 +76,8 @@ namespace TeatroApi.Business
                 {
                     CompraId = compra.CompraId,
                     SesionId = compra.SesionId,
-                    // Aquí podrías incluir más propiedades en el DTO según sea necesario
+                    UsuarioId = compra.UsuarioId
+
                 };
 
                 return compraDTO;
@@ -77,14 +88,16 @@ namespace TeatroApi.Business
             }
         }
 
-        public List<CompraDTO> GetCompras(){
+        public List<CompraDTO> GetCompras()
+        {
             try
             {
                 var compras = _repository.GetCompras().Select(c => new CompraDTO
                 {
                     CompraId = c.CompraId,
                     SesionId = c.SesionId,
-                    
+                    UsuarioId = c.UsuarioId
+
                 }).ToList();
 
                 return compras;

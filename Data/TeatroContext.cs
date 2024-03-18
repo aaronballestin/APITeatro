@@ -216,14 +216,14 @@ namespace TeatroApi.Data
                 .HasOne(s => s.Sala)
                 .WithMany(sala => sala.Sesiones)
                 .HasForeignKey(s => s.SalaId)
-                .IsRequired(); // Esto asegura que el SalaId sea obligatorio en la relación
+                .IsRequired(); 
             modelBuilder.Entity<Sesion>()
                 .Property(s => s.SalaId)
-                .IsRequired(); // Esto también asegura que el SalaId sea obligatorio en la tabla Sesion
+                .IsRequired(); 
 
             //Tabla intermedia de compras
             modelBuilder.Entity<Compra>()
-                .HasKey(pi => new { pi.SesionId, pi.UsuarioId });
+                .HasKey(c => c.CompraId);
             modelBuilder.Entity<Compra>()
                 .HasOne(c => c.Usuario)
                 .WithMany(u => u.Compras)
@@ -236,7 +236,7 @@ namespace TeatroApi.Data
             modelBuilder.Entity<Sala>()
                    .HasKey(s => s.SalaId);
             modelBuilder.Entity<DetallesCompra>()
-            .HasKey(dc => new { dc.CompraId, dc.AsientoId }); // Definir clave primaria compuesta
+            .HasKey(dc => new { dc.SesionId, dc.AsientoId }); 
 
         }
         public DbSet<Usuario> Usuarios { get; set; }

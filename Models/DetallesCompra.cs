@@ -12,5 +12,9 @@ namespace TeatroApi.Models
         public int SesionId { get; set; }
 
         public int AsientoId { get; set; }
+
+        public DetallesCompra(){
+            
+        }
     }
 }

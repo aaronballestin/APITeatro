@@ -12,7 +12,7 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    [Migration("20240314164930_BBDD")]
+    [Migration("20240318221652_BBDD")]
     partial class BBDD
     {
         /// <inheritdoc />
@@ -893,18 +893,32 @@ namespace TeatroApi.Data.Migrations
 
             modelBuilder.Entity("TeatroApi.Models.Compra", b =>
                 {
-                    b.Property<int>("SesionId")
+                    b.Property<int>("CompraId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("AsientoId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompraId"));
+
+                    b.Property<int?>("AsientoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaCompra")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("PrecioCompra")
+                        .HasColumnType("float");
+
+                    b.Property<int>("SesionId")
                         .HasColumnType("int");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.HasKey("SesionId", "AsientoId", "UsuarioId");
+                    b.HasKey("CompraId");
 
                     b.HasIndex("AsientoId");
+
+                    b.HasIndex("SesionId");
 
                     b.HasIndex("UsuarioId");
 
@@ -913,15 +927,59 @@ namespace TeatroApi.Data.Migrations
                     b.HasData(
                         new
                         {
+                            CompraId = 1,
+                            PrecioCompra = 0.0,
                             SesionId = 1,
-                            AsientoId = 1,
                             UsuarioId = 1
                         },
                         new
                         {
+                            CompraId = 2,
+                            PrecioCompra = 0.0,
                             SesionId = 1,
-                            AsientoId = 2,
                             UsuarioId = 2
+                        });
+                });
+
+            modelBuilder.Entity("TeatroApi.Models.DetallesCompra", b =>
+                {
+                    b.Property<int>("CompraId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AsientoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SesionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CompraId", "AsientoId");
+
+                    b.ToTable("DetallesCompras");
+
+                    b.HasData(
+                        new
+                        {
+                            CompraId = 1,
+                            AsientoId = 1,
+                            SesionId = 1
+                        },
+                        new
+                        {
+                            CompraId = 1,
+                            AsientoId = 2,
+                            SesionId = 1
+                        },
+                        new
+                        {
+                            CompraId = 2,
+                            AsientoId = 2,
+                            SesionId = 2
+                        },
+                        new
+                        {
+                            CompraId = 2,
+                            AsientoId = 7,
+                            SesionId = 1
                         });
                 });
 
@@ -1423,11 +1481,9 @@ namespace TeatroApi.Data.Migrations
 
             modelBuilder.Entity("TeatroApi.Models.Compra", b =>
                 {
-                    b.HasOne("TeatroApi.Models.Asiento", "Asiento")
+                    b.HasOne("TeatroApi.Models.Asiento", null)
                         .WithMany("Compras")
-                        .HasForeignKey("AsientoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AsientoId");
 
                     b.HasOne("TeatroApi.Models.Sesion", "Sesion")
                         .WithMany("Compras")
@@ -1440,8 +1496,6 @@ namespace TeatroApi.Data.Migrations
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Asiento");
 
                     b.Navigation("Sesion");
 

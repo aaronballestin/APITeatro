@@ -890,16 +890,13 @@ namespace TeatroApi.Data.Migrations
 
             modelBuilder.Entity("TeatroApi.Models.Compra", b =>
                 {
-                    b.Property<int>("SesionId")
+                    b.Property<int>("CompraId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompraId"));
 
                     b.Property<int?>("AsientoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CompraId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("FechaCompra")
@@ -908,9 +905,17 @@ namespace TeatroApi.Data.Migrations
                     b.Property<double>("PrecioCompra")
                         .HasColumnType("float");
 
-                    b.HasKey("SesionId", "UsuarioId");
+                    b.Property<int>("SesionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CompraId");
 
                     b.HasIndex("AsientoId");
+
+                    b.HasIndex("SesionId");
 
                     b.HasIndex("UsuarioId");
 
@@ -919,17 +924,17 @@ namespace TeatroApi.Data.Migrations
                     b.HasData(
                         new
                         {
-                            SesionId = 1,
-                            UsuarioId = 1,
                             CompraId = 1,
-                            PrecioCompra = 0.0
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
                         },
                         new
                         {
-                            SesionId = 1,
-                            UsuarioId = 2,
                             CompraId = 2,
-                            PrecioCompra = 0.0
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 2
                         });
                 });
 

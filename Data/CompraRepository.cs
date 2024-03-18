@@ -14,15 +14,30 @@ namespace TeatroApi.Data
 
         public void AddCompra(Compra compra)
         {
-            _context.Compras.Add(compra);
-            
+            try
+            {
+                _context.Compras.Add(compra);
+                SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
+                }
+                throw;
+            }
+
+
         }
 
-        //De momento hacemos que no salga la compra por id porque no tiene PK        
-        /*public Entrada GetCompra(int compraId)
+        public void AddDetallesCompra(DetallesCompra compra)
         {
-            return _context.Entradas.FirstOrDefault(compra => compra.compraId == compraId);
-        }*/
+            _context.DetallesCompras.Add(compra);
+
+        }
+
 
         public List<Compra> GetCompras()
         {
@@ -55,19 +70,6 @@ namespace TeatroApi.Data
         }
 
 
-        //De momento no hago este porque Compra no tiene Id
-
-        /*public void RemoveCompra( )
-        {
-            var account = GetEntrada();
-            if (account is null)
-            {
-                throw new KeyNotFoundException("Account not found.");
-            }
-            _context.Entradas.Remove(account);
-            SaveChanges();
-
-        }*/
 
         public Compra GetCompra(int compraId)
         {
