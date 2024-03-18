@@ -15,7 +15,7 @@ namespace TeatroApi.Models
         [ForeignKey("AsientoId")]
         public int AsientoId {get; set;}
         public DateTime? FechaCompra {get; set;}
-        public double cantidad {get; set;}
+        public double PrecioCompra {get; set;}
 
 
         public Asiento Asiento {get; set;}
