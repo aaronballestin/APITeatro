@@ -4,7 +4,7 @@ namespace TeatroApi.Models
     {
         public int id { get; set; }
         public double precio { get; set; }
-        public int asiento { get; set; }
+        public List<int> asientos { get; set; }
 
         public SesionCompra sesion { get; set; }
 
@@ -13,11 +13,11 @@ namespace TeatroApi.Models
 
         }
 
-        public CompraUsuario(int id, double precio, int asiento)
+        public CompraUsuario(int id, double precio, List<int> asientos)
         {
             this.id = id;
             this.precio = precio;
-            this.asiento = asiento;
+            this.asientos = asientos;
         }
 
     }

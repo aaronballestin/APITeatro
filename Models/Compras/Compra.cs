@@ -12,13 +12,10 @@ namespace TeatroApi.Models
         public int SesionId {get; set;}
         [ForeignKey("UsuarioId")]
         public int UsuarioId {get; set;}
-        [ForeignKey("AsientoId")]
-        public int AsientoId {get; set;}
         public DateTime? FechaCompra {get; set;}
         public double PrecioCompra {get; set;}
 
 
-        public Asiento Asiento {get; set;}
 
         public Sesion Sesion {get; set;}
 

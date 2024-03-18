@@ -52,12 +52,12 @@ namespace TeatroApi.Data
         {
             try
             {
-                var obra = _context.Obras.FirstOrDefault(obra => obra.ObraId == obraId);
-                _context.Sesiones.ToList();
+                var obra = _context.Obras.FirstOrDefault(o => o.ObraId == obraId);
 
-                var sesiones = _context.Sesiones.Where(o => o.ObraId == obraId)
-                                            .Select(o => new SesionGetDTO(o.SesionId, o.FechaHora, o.Precio, o.SalaId))
-                                            .ToList();
+                var sesiones = _context.Sesiones.Where(s => s.ObraId == obraId)
+                                                .Select(s => new SesionGetDTO(s.SesionId, s.FechaHora, s.Precio, s.SalaId))
+                                                .ToList();
+
                 var obraDTO = new ObraGetSesionDTO
                 {
                     id = obra.ObraId,
@@ -71,20 +71,23 @@ namespace TeatroApi.Data
                 foreach (var sesion in sesiones)
                 {
                     int asientosTotales = 0;
-                    var asientosOcupados = _context.Compras
-                                                  .Where(s => s.SesionId == sesion.sesionId)
-                                                  .Select(c => c.AsientoId)
+
+                    var asientosOcupados = _context.DetallesCompras
+                                                  .Where(d => d.SesionId == sesion.sesionId)
+                                                  .Select(d => d.AsientoId)
                                                   .Distinct()
                                                   .Count();
 
-                    asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosNormales;
-                    asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosVip;
-                    asientosTotales += _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId).AsientosMinusvalidos;
-
+                    var sala = _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId);
+                    if (sala != null)
+                    {
+                        asientosTotales += sala.AsientosNormales;
+                        asientosTotales += sala.AsientosVip;
+                        asientosTotales += sala.AsientosMinusvalidos;
+                    }
 
                     sesion.asientosDisponibles = asientosTotales - asientosOcupados;
                 }
-
 
                 return obraDTO;
             }
@@ -94,8 +97,8 @@ namespace TeatroApi.Data
                 _logger.LogError($"StackTrace: {e.StackTrace}");
                 throw;
             }
-
         }
+
 
         /*public List<Obra> GetObras()
         {

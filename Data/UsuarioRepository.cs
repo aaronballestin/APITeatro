@@ -50,40 +50,45 @@ namespace TeatroApi.Data
         }
 
         public UsuarioGetCompras GetUsuarioCompras(int usuarioId)
+{
+    try
+    {
+        var usuario = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == usuarioId);
+        
+        var usuarioGetCompras = new UsuarioGetCompras
         {
-            try
-            {
-                var usuario = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == usuarioId);
-                var usuarioGetCompras = new UsuarioGetCompras
-                {
-                    id = usuario.UsuarioId,
-                    nombre = usuario.NombreUsuario,
-                    email = usuario.EmailUsuario,
-                    password = usuario.PasswordUsuario,
-                    compras = _context.Compras
-                                .Where(c => c.UsuarioId == usuarioId)
-                                .Select(c => new CompraUsuario
-                                {
-                                    sesion = new SesionCompra
-                                    {
-                                        salaId = c.Sesion.SalaId,
-                                        nombreObra = c.Sesion.Obra.NombreObra,
-                                        date = c.Sesion.FechaHora
-                                    },
-                                    asiento = c.AsientoId
-                                })
-                                .ToList()
-                };
+            id = usuario.UsuarioId,
+            nombre = usuario.NombreUsuario,
+            email = usuario.EmailUsuario,
+            password = usuario.PasswordUsuario,
+            compras = _context.Compras
+                        .Where(c => c.UsuarioId == usuarioId)
+                        .Select(c => new CompraUsuario
+                        {
+                            sesion = new SesionCompra
+                            {
+                                salaId = c.Sesion.SalaId,
+                                nombreObra = c.Sesion.Obra.NombreObra,
+                                date = c.Sesion.FechaHora
+                            },
+                            asientos = _context.DetallesCompras
+                                        .Where(d => d.CompraId == c.CompraId)
+                                        .Select(d => d.AsientoId)
+                                        .ToList()
+                        })
+                        .ToList()
+        };
 
-                return usuarioGetCompras;
-            }
-            catch (Exception e)
-            {
-                _logger.LogInformation($"Mensaje: {e.Message}");
-                _logger.LogError($"StackTrace: {e.StackTrace}");
-                throw;
-            }
-        }
+        return usuarioGetCompras;
+    }
+    catch (Exception e)
+    {
+        _logger.LogInformation($"Mensaje: {e.Message}");
+        _logger.LogError($"StackTrace: {e.StackTrace}");
+        throw;
+    }
+}
+
 
 
 

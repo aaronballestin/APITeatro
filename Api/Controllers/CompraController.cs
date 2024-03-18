@@ -20,46 +20,43 @@ namespace TeatroApi.Api
 
 
 
-        /*[HttpGet]
-        public ActionResult<CompraGetDTO> GetCom(string usuario, string password)
-        {
-            var sesion = _usuarioService.GetUsuario(usuario, password);
-            if (sesion == null)
-            {
-                return NotFound();
-            }
-            return Ok(sesion);
-
-        }*/
-
-        
-        /*[HttpGet("{id}")]
-        public ActionResult<UsuarioGetCompras> GetUsuario(int id)
-        {
-            var usuario = _usuarioService.GetUsuario(id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-            return Ok(usuario);
-        }*/
-
 
         [HttpPost]
-        public ActionResult AddCompra(CompraPostDTO comprasDTO)
+        public ActionResult AddCompra(CompraDTO compraDTO)
         {
-            foreach (var asiento in comprasDTO.asientos)
+            try
             {
-                var compra = new Compra {SesionId = comprasDTO.sesionId, AsientoId = asiento, UsuarioId = comprasDTO.usuarioId};
-                _compraService.AddCompra(compra);
-
+                var result = _compraService.AddCompra(compraDTO);
+                return Ok();
             }
-            
+            catch (Exception e)
+            {
+                return StatusCode(500, $"Error interno del servidor: {e.Message}");
+            }
+
 
         }
 
+        [HttpGet("{id}")]
+
+        public ActionResult<CompraDTO> GetCompra(int id)
+        {
+            var compra = _compraService.GetCompra(id);
+            if (compra == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(compra);
+        }
+
+        [HttpGet]
+        public ActionResult<List<CompraDTO>> GetCompras()
+        {
+            var compras = _compraService.GetCompras();
+            return Ok(compras);
+        }
 
 
-    
     }
 }

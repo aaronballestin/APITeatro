@@ -69,6 +69,11 @@ namespace TeatroApi.Data
 
         }*/
 
+        public Compra GetCompra(int compraId)
+        {
+            return _context.Compras.FirstOrDefault(c => c.CompraId == compraId);
+        }
+
         public void SaveChanges()
         {
             _context.SaveChanges();

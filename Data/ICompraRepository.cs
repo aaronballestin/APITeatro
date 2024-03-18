@@ -7,7 +7,7 @@ namespace TeatroApi.Data
         void AddCompra(Compra compra);
 
         //De momento hacemos que no salga la compra por id porque no tiene PK        
-        // Compra GetCompra(int compraId);
+        Compra GetCompra(int compraId);
         
         List<Compra> GetComprasBySesion(int obraId);
         List<Compra> GetComprasByUsuario(int usuarioId);
