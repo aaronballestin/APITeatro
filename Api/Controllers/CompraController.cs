@@ -22,7 +22,7 @@ namespace TeatroApi.Api
 
 
         [HttpPost]
-        public ActionResult AddCompra(CompraDTO compraDTO)
+        public ActionResult AddCompra(CompraPostDTO compraDTO)
         {
             try
             {

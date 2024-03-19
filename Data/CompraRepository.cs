@@ -35,6 +35,8 @@ namespace TeatroApi.Data
         public void AddDetallesCompra(DetallesCompra compra)
         {
             _context.DetallesCompras.Add(compra);
+            SaveChanges();
+
 
         }
 

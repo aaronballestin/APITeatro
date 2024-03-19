@@ -23,20 +23,21 @@ namespace TeatroApi.Business
             return _repository.GetComprasByUsuario(usuarioId);
         }
 
-        public int AddCompra(CompraDTO compraDTO)
+        public int AddCompra(CompraPostDTO compraDTO)
         {
             try
             {
                 var compra = new Compra
                 {
-                    SesionId = compraDTO.SesionId,
-                    UsuarioId = compraDTO.UsuarioId
+                    SesionId = compraDTO.sesionId,
+                    UsuarioId = compraDTO.usuarioId,
+                    PrecioCompra = compraDTO.precioTotal
                 };
 
                 _repository.AddCompra(compra);
                 _repository.SaveChanges();
 
-                foreach (var asientoId in compraDTO.Asientos)
+                foreach (var asientoId in compraDTO.asientos)
                 {
                     var detalleCompra = new DetallesCompra
                     {

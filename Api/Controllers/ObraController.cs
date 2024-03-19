@@ -68,8 +68,6 @@ namespace TeatroApi.Api
                 return BadRequest(ex.Message);
             }
 
-
-
         }
 
         [HttpPut("{id}")]

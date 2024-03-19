@@ -50,70 +50,70 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 1,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 2,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 3,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 4,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 5,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 6,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 7,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 8,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 9,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
                         {
                             AsientoId = 10,
                             SalaId = 1,
-                            Suplemento = 0.0,
+                            Suplemento = -10.0,
                             TipoAsiento = 1
                         },
                         new
@@ -407,274 +407,274 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 52,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 53,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 54,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 55,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 56,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 57,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 58,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 59,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 60,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 61,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 62,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 63,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 64,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 65,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 66,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 67,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 68,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 69,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 70,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 71,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 72,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 73,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 74,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 75,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 76,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 77,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 78,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 79,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 80,
                             SalaId = 2,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 81,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 82,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 83,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 84,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 85,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 86,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 87,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 88,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 89,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 90,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = -10.0,
+                            TipoAsiento = 3
                         },
                         new
                         {
@@ -820,71 +820,71 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 111,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 112,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 113,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 114,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 115,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 116,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 117,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 118,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 119,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 120,
                             SalaId = 3,
-                            Suplemento = 0.0,
-                            TipoAsiento = 1
+                            Suplemento = 20.0,
+                            TipoAsiento = 2
                         });
                 });
 
@@ -934,49 +934,165 @@ namespace TeatroApi.Data.Migrations
                             CompraId = 2,
                             PrecioCompra = 0.0,
                             SesionId = 1,
-                            UsuarioId = 2
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 3,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 4,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 5,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 6,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 7,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 8,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 9,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
+                        },
+                        new
+                        {
+                            CompraId = 10,
+                            PrecioCompra = 0.0,
+                            SesionId = 1,
+                            UsuarioId = 1
                         });
                 });
 
             modelBuilder.Entity("TeatroApi.Models.DetallesCompra", b =>
                 {
-                    b.Property<int>("CompraId")
+                    b.Property<int>("SesionId")
                         .HasColumnType("int");
 
                     b.Property<int>("AsientoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SesionId")
+                    b.Property<int>("CompraId")
                         .HasColumnType("int");
 
-                    b.HasKey("CompraId", "AsientoId");
+                    b.HasKey("SesionId", "AsientoId");
 
                     b.ToTable("DetallesCompras");
 
                     b.HasData(
                         new
                         {
-                            CompraId = 1,
+                            SesionId = 1,
                             AsientoId = 1,
-                            SesionId = 1
+                            CompraId = 1
                         },
                         new
                         {
-                            CompraId = 1,
+                            SesionId = 1,
                             AsientoId = 2,
-                            SesionId = 1
+                            CompraId = 1
                         },
                         new
                         {
-                            CompraId = 2,
-                            AsientoId = 2,
-                            SesionId = 2
+                            SesionId = 2,
+                            AsientoId = 62,
+                            CompraId = 2
                         },
                         new
                         {
-                            CompraId = 2,
+                            SesionId = 1,
                             AsientoId = 7,
-                            SesionId = 1
+                            CompraId = 3
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 17,
+                            CompraId = 4
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 27,
+                            CompraId = 4
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 25,
+                            CompraId = 5
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 10,
+                            CompraId = 6
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 11,
+                            CompraId = 6
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 35,
+                            CompraId = 6
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 45,
+                            CompraId = 7
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 47,
+                            CompraId = 8
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 37,
+                            CompraId = 9
+                        },
+                        new
+                        {
+                            SesionId = 1,
+                            AsientoId = 9,
+                            CompraId = 10
                         });
                 });
 
@@ -1017,80 +1133,100 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 1,
-                            DescripcionObra = "Una tragedia clásica",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8625),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "Una de las obras más famosas de William Shakespeare, Hamlet es una tragedia que narra la historia del príncipe Hamlet de Dinamarca, quien busca vengar la muerte de su padre a manos de su tío Claudio, que luego se convierte en rey. La obra explora temas como la venganza, la locura, la traición y la corrupción'.",
+                            DuracionObra = 180,
                             NombreObra = "Hamlet",
                             RutaFotoObra = "ruta/foto/hamlet.jpg"
                         },
                         new
                         {
                             ObraId = 2,
-                            DescripcionObra = "Un drama familiar",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8677),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "La Casa de Bernarda Alba es una obra de teatro escrita por el dramaturgo español Federico García Lorca. Ambientada en un pueblo de Andalucía, la obra narra la historia de Bernarda Alba, una viuda adinerada y autoritaria que impone un luto riguroso a sus cinco hijas.",
+                            DuracionObra = 150,
                             NombreObra = "La Casa de Bernarda Alba",
                             RutaFotoObra = "ruta/foto/bernarda_alba.jpg"
                         },
                         new
                         {
                             ObraId = 3,
-                            DescripcionObra = "Amor prohibido entre dos familias rivales",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8680),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "Romeo y Julieta es una de las tragedias más conocidas de William Shakespeare. La obra cuenta la historia de dos jóvenes amantes cuyas familias, los Montesco y los Capuleto, están enfrentadas. A pesar de los obstáculos que enfrentan, Romeo y Julieta se enamoran apasionadamente y se casan en secreto.",
+                            DuracionObra = 160,
                             NombreObra = "Romeo y Julieta",
                             RutaFotoObra = "ruta/foto/romeo_julieta.jpg"
                         },
                         new
                         {
                             ObraId = 4,
-                            DescripcionObra = "Una historia de amor y tragedia en la Ópera de París",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8682),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "El Fantasma de la Ópera es un musical de Andrew Lloyd Webber basado en la novela homónima de Gaston Leroux. La historia se desarrolla en la Ópera de París, donde un misterioso fantasma aterroriza a la compañía y se enamora de Christine, una joven cantante.",
+                            DuracionObra = 200,
                             NombreObra = "El Fantasma de la Ópera",
                             RutaFotoObra = "ruta/foto/fantasma_opera.jpg"
                         },
                         new
                         {
                             ObraId = 5,
-                            DescripcionObra = "Dos personajes esperan a alguien que nunca llega",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8684),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "Esperando a Godot es una obra de teatro escrita por Samuel Beckett. La obra sigue a dos personajes, Vladimir y Estragón, que esperan la llegada de alguien llamado Godot, pero nunca llega. Mientras esperan, pasan el tiempo conversando, discutiendo y realizando actividades triviales.",
+                            DuracionObra = 120,
                             NombreObra = "Esperando a Godot",
                             RutaFotoObra = "ruta/foto/esperando_godot.jpg"
                         },
                         new
                         {
                             ObraId = 6,
-                            DescripcionObra = "Una tragedia sobre ambición y traición",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8685),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "Macbeth es una tragedia escrita por William Shakespeare. La obra narra la historia de Macbeth, un noble escocés que, incitado por la profecía de tres brujas, asesina al rey Duncan y se convierte en rey de Escocia. Sin embargo, su sed de poder lo lleva a cometer más crímenes, lo que finalmente conduce a su propia destrucción.",
+                            DuracionObra = 170,
                             NombreObra = "Macbeth",
                             RutaFotoObra = "ruta/foto/macbeth.jpg"
                         },
                         new
                         {
                             ObraId = 7,
-                            DescripcionObra = "La historia de Jean Valjean y su redención",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8687),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "Los Miserables es un musical basado en la novela homónima de Victor Hugo. La historia sigue las vidas entrelazadas de varios personajes, incluido Jean Valjean, un exconvicto que busca redención; Javert, un inspector de policía obsesionado con atraparlo; y Cosette, la hija adoptiva de Valjean.",
+                            DuracionObra = 210,
                             NombreObra = "Los Miserables",
                             RutaFotoObra = "ruta/foto/los_miserables.jpg"
                         },
                         new
                         {
                             ObraId = 8,
-                            DescripcionObra = "Celos y traición en la Venecia del siglo XVI",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8689),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "Otelo es una tragedia escrita por William Shakespeare. La obra cuenta la historia del moro Otelo, un general veneciano que se casa con Desdémona, una joven veneciana. Sin embargo, su matrimonio es amenazado por la manipulación de Yago, un subordinado celoso de Otelo, que alimenta los celos de Otelo y lo lleva a cometer un acto trágico de violencia. ",
+                            DuracionObra = 190,
                             NombreObra = "Otelo",
                             RutaFotoObra = "ruta/foto/otelo.jpg"
                         },
                         new
                         {
                             ObraId = 9,
-                            DescripcionObra = "Drama de amor y desilusión en la sociedad rusa del siglo XIX",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8691),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "La Gaviota es una obra de teatro escrita por el dramaturgo ruso Anton Chejov. Ambientada en una finca rural en Rusia, la obra sigue las vidas entrelazadas de varios personajes, incluida la famosa actriz Irina Arkádina, su amante Boris Trigorin y el aspirante a escritor Konstantín Tréplev.",
+                            DuracionObra = 180,
                             NombreObra = "La Gaviota",
                             RutaFotoObra = "ruta/foto/la_gaviota.jpg"
                         },
                         new
                         {
                             ObraId = 10,
-                            DescripcionObra = "Una ópera sobre el crimen y la pobreza en Londres",
-                            DuracionObra = 0,
+                            AuditoriaHorario = new DateTime(2024, 3, 19, 18, 49, 28, 726, DateTimeKind.Local).AddTicks(8693),
+                            AuditoriaUsuario = "Admin",
+                            DescripcionObra = "La Opera de los Tres Centavos es una ópera escrita por el dramaturgo alemán Bertolt Brecht, con música de Kurt Weill. Basada en la ópera del siglo XVIII El mendigo ladrón, la obra satiriza la sociedad capitalista y sigue las aventuras del criminal Mackie Messer, también conocido como Mack the Knife.",
+                            DuracionObra = 200,
                             NombreObra = "La Opera de los Tres Centavos",
                             RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg"
                         });
@@ -1121,23 +1257,23 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SalaId = 1,
-                            AsientosMinusvalidos = 10,
+                            AsientosMinusvalidos = 0,
                             AsientosNormales = 50,
-                            AsientosVip = 10
+                            AsientosVip = 0
                         },
                         new
                         {
                             SalaId = 2,
                             AsientosMinusvalidos = 0,
-                            AsientosNormales = 100,
-                            AsientosVip = 0
+                            AsientosNormales = 0,
+                            AsientosVip = 30
                         },
                         new
                         {
                             SalaId = 3,
-                            AsientosMinusvalidos = 0,
-                            AsientosNormales = 0,
-                            AsientosVip = 30
+                            AsientosMinusvalidos = 10,
+                            AsientosNormales = 30,
+                            AsientosVip = 10
                         });
                 });
 
@@ -1181,7 +1317,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 1,
                             FechaHora = new DateTime(2024, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1189,7 +1325,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 2,
                             FechaHora = new DateTime(2024, 4, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 2,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         },
                         new
@@ -1197,7 +1333,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 3,
                             FechaHora = new DateTime(2024, 4, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 3
                         },
                         new
@@ -1205,7 +1341,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 4,
                             FechaHora = new DateTime(2024, 4, 4, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1213,7 +1349,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 5,
                             FechaHora = new DateTime(2024, 4, 5, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         },
                         new
@@ -1221,7 +1357,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 6,
                             FechaHora = new DateTime(2024, 4, 6, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 3
                         },
                         new
@@ -1229,7 +1365,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 7,
                             FechaHora = new DateTime(2024, 4, 7, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1237,7 +1373,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 8,
                             FechaHora = new DateTime(2024, 4, 8, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         },
                         new
@@ -1245,7 +1381,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 9,
                             FechaHora = new DateTime(2024, 4, 9, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 3
                         },
                         new
@@ -1253,7 +1389,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 10,
                             FechaHora = new DateTime(2024, 4, 10, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1261,7 +1397,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 11,
                             FechaHora = new DateTime(2024, 4, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         },
                         new
@@ -1269,7 +1405,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 12,
                             FechaHora = new DateTime(2024, 4, 12, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 3
                         },
                         new
@@ -1277,7 +1413,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 13,
                             FechaHora = new DateTime(2024, 4, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1285,7 +1421,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 14,
                             FechaHora = new DateTime(2024, 4, 14, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         },
                         new
@@ -1293,7 +1429,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 15,
                             FechaHora = new DateTime(2024, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 3
                         },
                         new
@@ -1301,7 +1437,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 16,
                             FechaHora = new DateTime(2024, 4, 16, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1309,7 +1445,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 17,
                             FechaHora = new DateTime(2024, 4, 17, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 9,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         },
                         new
@@ -1317,7 +1453,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 18,
                             FechaHora = new DateTime(2024, 4, 18, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 9,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 3
                         },
                         new
@@ -1325,7 +1461,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 19,
                             FechaHora = new DateTime(2024, 4, 19, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 10,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 1
                         },
                         new
@@ -1333,7 +1469,7 @@ namespace TeatroApi.Data.Migrations
                             SesionId = 20,
                             FechaHora = new DateTime(2024, 4, 20, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 10,
-                            Precio = 0.0,
+                            Precio = 50.0,
                             SalaId = 2
                         });
                 });
@@ -1370,8 +1506,8 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             UsuarioId = 1,
-                            EmailUsuario = "juan@example.com",
-                            NombreUsuario = "Juan",
+                            EmailUsuario = "default@example.com",
+                            NombreUsuario = "Default",
                             PasswordUsuario = "1234",
                             Rol = "Guest"
                         },

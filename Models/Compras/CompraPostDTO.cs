@@ -7,7 +7,7 @@ namespace TeatroApi.Models
 
         public int usuarioId {get; set;}
 
-        // public int precioTotal {}
+        public int precioTotal {get; set;}
 
         public CompraPostDTO(){
 
