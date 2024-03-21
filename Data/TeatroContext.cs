@@ -14,7 +14,7 @@ namespace TeatroApi.Data
         {
             modelBuilder.Entity<Usuario>().HasData(
                 new Usuario { UsuarioId = 1, NombreUsuario = "Default", EmailUsuario = "default@example.com", PasswordUsuario = "1234", Rol = "Guest" },
-                new Usuario { UsuarioId = 2, NombreUsuario = "María", EmailUsuario = "maria@example.com", PasswordUsuario = "1234", Rol = "Admin" },
+                new Usuario { UsuarioId = 2, NombreUsuario = "María", EmailUsuario = "admin@example.com", PasswordUsuario = "1234", Rol = "Admin" },
                 new Usuario { UsuarioId = 3, NombreUsuario = "Carlos", EmailUsuario = "carlos@example.com", PasswordUsuario = "1234", Rol = "Guest" },
                 new Usuario { UsuarioId = 4, NombreUsuario = "Laura", EmailUsuario = "laura@example.com", PasswordUsuario = "1234", Rol = "Guest" },
                 new Usuario { UsuarioId = 5, NombreUsuario = "Pedro", EmailUsuario = "pedro@example.com", PasswordUsuario = "1234", Rol = "Guest" },
@@ -143,7 +143,7 @@ namespace TeatroApi.Data
 
             modelBuilder.Entity<Asiento>().HasData(
                 new Asiento { AsientoId = 1, SalaId = 1, TipoAsiento = 1, Suplemento = -10 },
-                new Asiento { AsientoId = 2, SalaId = 1, TipoAsiento = 1, Suplemento = -10},
+                new Asiento { AsientoId = 2, SalaId = 1, TipoAsiento = 1, Suplemento = -10 },
                 new Asiento { AsientoId = 3, SalaId = 1, TipoAsiento = 1, Suplemento = -10 },
                 new Asiento { AsientoId = 4, SalaId = 1, TipoAsiento = 1, Suplemento = -10 },
                 new Asiento { AsientoId = 5, SalaId = 1, TipoAsiento = 1, Suplemento = -10 },
@@ -236,11 +236,11 @@ namespace TeatroApi.Data
                 new Asiento { AsientoId = 92, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 93, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 94, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
-                new Asiento { AsientoId = 95, SalaId = 3, TipoAsiento = 1, Suplemento = 0  },
-                new Asiento { AsientoId = 96, SalaId = 3, TipoAsiento = 1, Suplemento = 0  },
-                new Asiento { AsientoId = 97, SalaId = 3, TipoAsiento = 1, Suplemento = 0  },
-                new Asiento { AsientoId = 98, SalaId = 3, TipoAsiento = 1, Suplemento = 0  },
-                new Asiento { AsientoId = 99, SalaId = 3, TipoAsiento = 1, Suplemento = 0  },
+                new Asiento { AsientoId = 95, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
+                new Asiento { AsientoId = 96, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
+                new Asiento { AsientoId = 97, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
+                new Asiento { AsientoId = 98, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
+                new Asiento { AsientoId = 99, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 100, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 101, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 102, SalaId = 3, TipoAsiento = 1, Suplemento = 0 },
@@ -290,16 +290,36 @@ namespace TeatroApi.Data
 
 
             modelBuilder.Entity<Compra>().HasData(
-                new Compra { CompraId = 1, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 2, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 3, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 4, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 5, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 6, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 7, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 8, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 9, SesionId = 1, UsuarioId = 1 },
-                new Compra { CompraId = 10, SesionId = 1, UsuarioId = 1 }
+                new Compra { CompraId = 1, SesionId = 1, UsuarioId = 1, PrecioCompra=100 },
+                new Compra { CompraId = 2, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 3, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 4, SesionId = 1, UsuarioId = 1, PrecioCompra=100},
+                new Compra { CompraId = 5, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 6, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 7, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 8, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 9, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 10, SesionId = 1, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 11, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 12, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 13, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 14, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 15, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 16, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 17, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 18, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 19, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 20, SesionId = 2, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 21, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 22, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 23, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 24, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 25, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 26, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 27, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 28, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 29, SesionId = 3, UsuarioId = 1, PrecioCompra=50},
+                new Compra { CompraId = 30, SesionId = 3, UsuarioId = 1, PrecioCompra=50}
 
             );
 
@@ -313,12 +333,38 @@ namespace TeatroApi.Data
                 new DetallesCompra { CompraId = 5, SesionId = 1, AsientoId = 25 },
                 new DetallesCompra { CompraId = 6, SesionId = 1, AsientoId = 10 },
                 new DetallesCompra { CompraId = 6, SesionId = 1, AsientoId = 11 },
-                new DetallesCompra { CompraId = 6, SesionId = 1, AsientoId = 35},
+                new DetallesCompra { CompraId = 6, SesionId = 1, AsientoId = 35 },
                 new DetallesCompra { CompraId = 7, SesionId = 1, AsientoId = 45 },
                 new DetallesCompra { CompraId = 8, SesionId = 1, AsientoId = 47 },
                 new DetallesCompra { CompraId = 9, SesionId = 1, AsientoId = 37 },
-                new DetallesCompra { CompraId = 10, SesionId = 1, AsientoId = 9 }
-                
+                new DetallesCompra { CompraId = 10, SesionId = 1, AsientoId = 59 },
+                new DetallesCompra { CompraId = 11, SesionId = 1, AsientoId = 51 },
+                new DetallesCompra { CompraId = 11, SesionId = 1, AsientoId = 52 },
+                new DetallesCompra { CompraId = 12, SesionId = 2, AsientoId = 72 },
+                new DetallesCompra { CompraId = 13, SesionId = 1, AsientoId = 67 },
+                new DetallesCompra { CompraId = 14, SesionId = 1, AsientoId = 77 },
+                new DetallesCompra { CompraId = 15, SesionId = 1, AsientoId = 75 },
+                new DetallesCompra { CompraId = 16, SesionId = 1, AsientoId = 80 },
+                new DetallesCompra { CompraId = 16, SesionId = 1, AsientoId = 61 },
+                new DetallesCompra { CompraId = 16, SesionId = 1, AsientoId = 55 },
+                new DetallesCompra { CompraId = 17, SesionId = 1, AsientoId = 73 },
+                new DetallesCompra { CompraId = 18, SesionId = 1, AsientoId = 56 },
+                new DetallesCompra { CompraId = 19, SesionId = 1, AsientoId = 57 },
+                new DetallesCompra { CompraId = 20, SesionId = 1, AsientoId = 79 },
+                new DetallesCompra { CompraId = 21, SesionId = 1, AsientoId = 101 },
+                new DetallesCompra { CompraId = 21, SesionId = 1, AsientoId = 102 },
+                new DetallesCompra { CompraId = 22, SesionId = 2, AsientoId = 82 },
+                new DetallesCompra { CompraId = 23, SesionId = 1, AsientoId = 97 },
+                new DetallesCompra { CompraId = 24, SesionId = 1, AsientoId = 107 },
+                new DetallesCompra { CompraId = 25, SesionId = 1, AsientoId = 115 },
+                new DetallesCompra { CompraId = 26, SesionId = 1, AsientoId = 100 },
+                new DetallesCompra { CompraId = 26, SesionId = 1, AsientoId = 81 },
+                new DetallesCompra { CompraId = 26, SesionId = 1, AsientoId = 85 },
+                new DetallesCompra { CompraId = 27, SesionId = 1, AsientoId = 83 },
+                new DetallesCompra { CompraId = 28, SesionId = 1, AsientoId = 86 },
+                new DetallesCompra { CompraId = 29, SesionId = 1, AsientoId = 98 },
+                new DetallesCompra { CompraId = 30, SesionId = 1, AsientoId = 119 }
+
             );
 
             // Relación entre Sesion y Sala
