@@ -20,5 +20,10 @@ namespace TeatroApi.Models
         public Asiento (){
 
         }
+
+        public static implicit operator Asiento(AsientoGetDTO v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

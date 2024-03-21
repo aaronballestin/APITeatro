@@ -12,10 +12,18 @@ namespace TeatroApi.Data
             _context = context;
         }
 
-        public void AddCompra(Compra compra)
+        public void AddCompra(CompraPostDTO compraDTO)
         {
             try
             {
+                var asientosCompra = new AsientoRepository(_context);
+                double sumatorio = 0;
+                foreach (var asientoId in compraDTO.asientos)
+                {
+                    sumatorio =+ asientosCompra.GetAsientos().Where(a => a.id == asientoId).Select(s => s.suplemento).FirstOrDefault();
+                    
+                }
+                var compra = new Compra{SesionId = compraDTO.sesionId, FechaCompra = DateTime.Now, PrecioCompra = sumatorio, UsuarioId = compraDTO.usuarioId};
                 _context.Compras.Add(compra);
                 SaveChanges();
             }

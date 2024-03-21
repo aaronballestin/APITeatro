@@ -9,6 +9,6 @@ namespace TeatroApi.Data
         void UpdateAsiento(Asiento asiento);
         void RemoveAsiento(int asientoId);
         void SaveChanges();
-        List<Asiento> GetAsientos();
+        List<AsientoDTO> GetAsientos();
     }
 }

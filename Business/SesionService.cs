@@ -27,14 +27,13 @@ namespace TeatroApi.Business
             return _repository.GetSesionDTO(id);
         }
 
-        public int AddSesion(Sesion sesion)
+        public void AddSesion(SesionPostDTO sesion)
         {
             _repository.AddSesion(sesion);
-            return sesion.ObraId;
         }
 
         public void UpdateSesion(Sesion sesion)
-        {
+        {            
             _repository.UpdateSesion(sesion);
         }
 

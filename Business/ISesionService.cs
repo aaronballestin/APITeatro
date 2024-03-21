@@ -9,7 +9,7 @@ namespace TeatroApi.Business
         public Sesion GetSesion(int id);
         public SesionGetAsientosDTO GetSesionDTO(int id);
 
-        public int AddSesion(Sesion sesion);
+        public void AddSesion(SesionPostDTO sesion);
         public void UpdateSesion(Sesion sesion);
         public void DeleteSesion(int id);
 

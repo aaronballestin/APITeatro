@@ -12,6 +12,8 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
-        
+        public List<AsientoDTO> GetAsientos(){
+            return _repository.GetAsientos();
+        }
     }
 }

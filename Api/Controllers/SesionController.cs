@@ -38,31 +38,30 @@ namespace TeatroApi.Api
 
 
         [HttpPost]
-        public ActionResult<int> AddSesion(SesionPostDTO sesionDTO)
+        public ActionResult AddSesion(SesionPostDTO sesionDTO)
         {
-            var sesion = new Sesion {ObraId = sesionDTO.obraId, FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId, Precio = sesionDTO.precio, AuditoriaUsuario = sesionDTO.auditoriaUsuario, AuditoriaHorario = DateTime.Now};
-            var newSesionId = _sesionService.AddSesion(sesion);
-            
-            if(newSesionId != 0){
-                var sesionFinal = CreatedAtAction(nameof(GetSesion), new { id = newSesionId }, sesion);
-                return Ok(sesionFinal);
-            }else{
+            // var sesion = new Sesion {FechaHora = sesionDTO.horario, SalaId = sesionDTO.salaId, Precio = sesionDTO.precio, AuditoriaUsuario = sesionDTO.auditoriaUsuario, AuditoriaHorario = DateTime.Now};
+             try{
+             _sesionService.AddSesion(sesionDTO);
+                return Ok();
+
+             }catch(Exception e){
                 return BadRequest("No se ha podido añadir una sesion");
-            }
+
+             }
+            
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateSesion(int id, SesionPostDTO sesionDTO)
+        public IActionResult UpdateSesion(int id, SesionPutDTO sesionDTO)
         {
             var sesion = _sesionService.GetSesion(id);
             if (id != sesion.SesionId)
             {
                 return BadRequest();
             }
-            
             sesion.SalaId = sesionDTO.salaId;
-            sesion.FechaHora = sesionDTO.horario;
-            sesion.ObraId = sesionDTO.obraId; 
+            sesion.FechaHora = sesionDTO.horario; 
             sesion.Precio = sesionDTO.precio;
             sesion.AuditoriaUsuario = sesionDTO.auditoriaUsuario;
             sesion.AuditoriaHorario = DateTime.Now;

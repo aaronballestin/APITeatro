@@ -18,10 +18,13 @@ namespace TeatroApi.Data
             _logger = logger;
         }
 
-        public void AddSesion(Sesion sesion)
+        public void AddSesion(SesionPostDTO sesionDTO)
         {
             try
             {
+
+                var obra = _context.Obras.FirstOrDefault(o => o.NombreObra == sesionDTO.nombreObra).ObraId;
+                var sesion = new Sesion {ObraId = obra, FechaHora= sesionDTO.horario, SalaId = sesionDTO.salaId, AuditoriaHorario = DateTime.Now, Precio = sesionDTO.precio, AuditoriaUsuario = sesionDTO.auditoriaUsuario};
                 _context.Sesiones.Add(sesion);
                 SaveChanges();
             }

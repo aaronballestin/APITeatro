@@ -4,7 +4,7 @@ namespace TeatroApi.Data
 {
     public interface ISesionRepository
     {
-        void AddSesion(Sesion asiento);
+        void AddSesion(SesionPostDTO asiento);
         Sesion GetSesion(int asientoId);
         SesionGetAsientosDTO GetSesionDTO(int asientoId);
 
