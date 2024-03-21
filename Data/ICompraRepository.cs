@@ -4,7 +4,7 @@ namespace TeatroApi.Data
 {
     public interface ICompraRepository
     {
-        void AddCompra(CompraPostDTO compra);
+        int AddCompra(CompraPostDTO compra);
 
         Compra GetCompra(int compraId);
         

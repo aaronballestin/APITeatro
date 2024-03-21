@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TeatroApi.Models;
+using Microsoft.Extensions.Logging;
 
 namespace TeatroApi.Data
 {
@@ -7,24 +8,33 @@ namespace TeatroApi.Data
     {
 
         private readonly TeatroContext _context;
+        private readonly ILogger<SesionRepository> _logger;
+
         public CompraRepository(TeatroContext context)
         {
             _context = context;
         }
 
-        public void AddCompra(CompraPostDTO compraDTO)
+        public int AddCompra(CompraPostDTO compraDTO)
         {
             try
             {
+                
                 var asientosCompra = new AsientoRepository(_context);
+                var sesion = new SesionRepository( _logger, _context);
+
+                var asi = asientosCompra.GetAsientos();
                 double sumatorio = 0;
                 foreach (var asientoId in compraDTO.asientos)
                 {
-                    sumatorio =+ asientosCompra.GetAsientos().Where(a => a.id == asientoId).Select(s => s.suplemento).FirstOrDefault();
+                    sumatorio =+ asientosCompra.GetAsientos().FirstOrDefault(a => a.id == asientoId).suplemento;
                     
                 }
+                sumatorio =+ sesion.GetSesionDTO(compraDTO.sesionId).precio;
                 var compra = new Compra{SesionId = compraDTO.sesionId, FechaCompra = DateTime.Now, PrecioCompra = sumatorio, UsuarioId = compraDTO.usuarioId};
                 _context.Compras.Add(compra);
+
+                return compra.CompraId;
                 SaveChanges();
             }
             catch (Exception ex)

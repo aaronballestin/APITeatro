@@ -28,7 +28,7 @@ namespace TeatroApi.Business
             try
             {
 
-                _repository.AddCompra(compraDTO);
+                var id = _repository.AddCompra(compraDTO);
                 _repository.SaveChanges();
 
 
@@ -36,6 +36,7 @@ namespace TeatroApi.Business
                 {
                     var detalleCompra = new DetallesCompra
                     {
+                        CompraId = id,
                         AsientoId = asientoId, 
                         SesionId = compraDTO.sesionId               
                     };
@@ -71,7 +72,8 @@ namespace TeatroApi.Business
                 {
                     CompraId = compra.CompraId,
                     SesionId = compra.SesionId,
-                    UsuarioId = compra.UsuarioId
+                    UsuarioId = compra.UsuarioId,
+                    precio = compra.PrecioCompra
 
                 };
 
@@ -91,7 +93,8 @@ namespace TeatroApi.Business
                 {
                     CompraId = c.CompraId,
                     SesionId = c.SesionId,
-                    UsuarioId = c.UsuarioId
+                    UsuarioId = c.UsuarioId,
+                    precio = c.PrecioCompra
 
                 }).ToList();
 
