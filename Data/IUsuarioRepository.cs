@@ -9,6 +9,8 @@ namespace TeatroApi.Data
         UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario);
         void UpdateUsuario(Usuario usuario); 
 
+        List<UsuarioDTO> GetUsuarios();
+
         void SaveChanges();
 
     }

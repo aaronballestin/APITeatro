@@ -110,12 +110,11 @@ namespace TeatroApi.Data
 
         }
 
-        public List<Usuario> GetUsuarios()
+        public List<UsuarioDTO> GetUsuarios()
         {
             try
             {
-                return _context.Usuarios.ToList();
-                SaveChanges();
+                return _context.Usuarios.Select(u => new UsuarioDTO {id= u.UsuarioId, email=u.EmailUsuario, nombre=u.NombreUsuario, password=u.PasswordUsuario}).ToList();
 
             }
             catch (Exception e)

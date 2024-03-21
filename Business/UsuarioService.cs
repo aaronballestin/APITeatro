@@ -12,11 +12,18 @@ namespace TeatroApi.Business
             _repository = repository;
         }
 
-        public UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario ){
+        public UsuarioGetDTO GetUsuario(string emailUsuario, string passwordUsuario)
+        {
             return _repository.GetUsuario(emailUsuario, passwordUsuario);
         }
 
-        public UsuarioGetCompras GetUsuario(int usuarioId ){
+        public List<UsuarioDTO> GetUsuarios()
+        {
+            return _repository.GetUsuarios();
+        }
+
+        public UsuarioGetCompras GetUsuario(int usuarioId)
+        {
             return _repository.GetUsuarioCompras(usuarioId);
         }
 
@@ -26,7 +33,8 @@ namespace TeatroApi.Business
             return usuario.UsuarioId;
         }
 
-        public void UpdateUsuario(Usuario usuario){
+        public void UpdateUsuario(Usuario usuario)
+        {
             _repository.UpdateUsuario(usuario);
         }
     }

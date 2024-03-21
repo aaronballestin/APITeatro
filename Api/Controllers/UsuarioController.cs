@@ -20,10 +20,12 @@ namespace TeatroApi.Api
 
 
 
+
+        
         [HttpGet]
-        public ActionResult<UsuarioGetDTO> GetUsuario(string usuario, string password)
+        public ActionResult<List<UsuarioDTO>> GetUsuario()
         {
-            var sesion = _usuarioService.GetUsuario(usuario, password);
+            var sesion = _usuarioService.GetUsuarios();
             if (sesion == null)
             {
                 return NotFound();

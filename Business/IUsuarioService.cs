@@ -9,6 +9,8 @@ namespace TeatroApi.Business
         public int AddUsuario(Usuario usuario);
         public void UpdateUsuario(Usuario usuario);
 
+        public List<UsuarioDTO> GetUsuarios();
+
 
     }
 }
