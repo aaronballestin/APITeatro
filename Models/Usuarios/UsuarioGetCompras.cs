@@ -4,8 +4,6 @@ namespace TeatroApi.Models
     {
         public int id { get; set; }
         public string nombre { get; set;}
-        public string email {get; set;}
-        public string password {get; set;}
 
         public List<CompraUsuario> compras {get; set;}
 
@@ -13,8 +11,6 @@ namespace TeatroApi.Models
         {
             this.id = id;
             this.nombre = nombre;
-            this.email = email;
-            this.password = password;
         }
 
         public UsuarioGetCompras(){

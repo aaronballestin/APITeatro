@@ -6,7 +6,7 @@ namespace TeatroApi.Models
         public int UsuarioId { get; set; }
         public int SesionId { get; set; }
         public double precio {get; set;}
-        public List<int> Asientos { get; set; }
+
     }
 
 
