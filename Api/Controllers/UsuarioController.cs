@@ -36,7 +36,7 @@ namespace TeatroApi.Api
 
         
         [HttpGet("{id}")]
-        public ActionResult<UsuarioGetCompras> GetUsuario(int id)
+        public ActionResult<List<CompraUsuario>> GetUsuario(int id)
         {
             var usuario = _usuarioService.GetUsuario(id);
             if (usuario == null)

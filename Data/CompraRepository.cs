@@ -32,9 +32,9 @@ namespace TeatroApi.Data
                 sumatorio =+ sesion.GetSesionDTO(compraDTO.sesionId).precio;
                 var compra = new Compra{SesionId = compraDTO.sesionId, FechaCompra = DateTime.Now, PrecioCompra = sumatorio, UsuarioId = compraDTO.usuarioId};
                 _context.Compras.Add(compra);
-
-                return compra.CompraId;
                 SaveChanges();
+
+                return _context.Compras.FirstOrDefault(c => c.FechaCompra == compra.FechaCompra).CompraId;
             }
             catch (Exception ex)
             {

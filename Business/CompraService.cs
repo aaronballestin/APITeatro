@@ -1,6 +1,7 @@
 using TeatroApi.Data;
 using TeatroApi.Models;
 
+
 namespace TeatroApi.Business
 {
     public class CompraService : ICompraService
@@ -28,9 +29,7 @@ namespace TeatroApi.Business
             try
             {
 
-                var id = _repository.AddCompra(compraDTO);
-                _repository.SaveChanges();
-
+                var id =  _repository.AddCompra(compraDTO);
 
                 foreach (var asientoId in compraDTO.asientos)
                 {

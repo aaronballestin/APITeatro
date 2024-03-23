@@ -22,7 +22,7 @@ namespace TeatroApi.Business
             return _repository.GetUsuarios();
         }
 
-        public UsuarioGetCompras GetUsuario(int usuarioId)
+        public List<CompraUsuario> GetUsuario(int usuarioId)
         {
             return _repository.GetUsuarioCompras(usuarioId);
         }
