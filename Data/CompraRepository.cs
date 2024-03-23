@@ -23,7 +23,6 @@ namespace TeatroApi.Data
                 var asientosCompra = new AsientoRepository(_context);
                 var sesion = new SesionRepository( _logger, _context);
 
-                var asi = asientosCompra.GetAsientos();
                 double sumatorio = 0;
                 foreach (var asientoId in compraDTO.asientos)
                 {

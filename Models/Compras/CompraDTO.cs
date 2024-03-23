@@ -7,6 +7,8 @@ namespace TeatroApi.Models
         public int SesionId { get; set; }
         public double precio {get; set;}
 
+        public DateTime? fecha {get; set;}
+
     }
 
 

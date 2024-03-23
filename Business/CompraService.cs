@@ -67,14 +67,13 @@ namespace TeatroApi.Business
 
                 }
 
-                // Mapear la entidad Compra a un DTO CompraDTO y devolverla
                 var compraDTO = new CompraDTO
                 {
                     CompraId = compra.CompraId,
                     SesionId = compra.SesionId,
                     UsuarioId = compra.UsuarioId,
-                    precio = compra.PrecioCompra
-
+                    precio = compra.PrecioCompra,
+                    fecha = compra.FechaCompra
                 };
 
                 return compraDTO;
