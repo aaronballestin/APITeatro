@@ -47,6 +47,22 @@ namespace TeatroApi.Api
                 return NotFound("No hay obra disponible con el id: " + id);
             }
 
+        }
+
+        [HttpGet("/buscador/{nombre}")]
+        public ActionResult<List<ObraGetDTO>> GetObraBuscador(string nombre)
+        {
+            
+            try
+            {
+                var obra = _obraService.GetObraBuscador(nombre);
+                return Ok(obra);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound("No hay obra disponible con el nombre: " + nombre);
+            }
+
 
 
         }

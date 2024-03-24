@@ -38,6 +38,12 @@ namespace TeatroApi.Business
             return _obraRepository.GetObraDTO(obraId);
         }
 
+        public List<ObraGetDTO> GetObraBuscador(string nombre)
+        {
+            return _obraRepository.GetObras().Where(o => o.nombre.StartsWith(nombre)).ToList();
+        }
+
+
         public Obra GetObraById(int obraId)
         {
             return _obraRepository.GetObra(obraId);

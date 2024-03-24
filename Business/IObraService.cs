@@ -9,7 +9,7 @@ namespace TeatroApi.Business
         public Obra GetObraById (int id);
         public void UpdateObra(Obra obra);
         public void DeleteObra(int obraId);
-
+        public List<ObraGetDTO> GetObraBuscador(string obra);
         public int AddObra (Obra obra);
         // public void GetAsientosObra(int obraId);
 
