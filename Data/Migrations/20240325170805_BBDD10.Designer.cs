@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeatroApi.Data;
 
@@ -11,9 +12,11 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    partial class TeatroContextModelSnapshot : ModelSnapshot
+    [Migration("20240325170805_BBDD10")]
+    partial class BBDD10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -400,8 +403,8 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 51,
                             SalaId = 2,
-                            Suplemento = 20.0,
-                            TipoAsiento = 2
+                            Suplemento = 0.0,
+                            TipoAsiento = 1
                         },
                         new
                         {
@@ -1429,7 +1432,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 1,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9512),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 104, DateTimeKind.Local).AddTicks(9975),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Una de las obras más famosas de William Shakespeare, Hamlet es una tragedia que narra la historia del príncipe Hamlet de Dinamarca, quien busca vengar la muerte de su padre a manos de su tío Claudio, que luego se convierte en rey.",
                             DuracionObra = 180,
@@ -1439,7 +1442,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 2,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9566),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(31),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Casa de Bernarda Alba es una obra de teatro escrita por el dramaturgo español Federico García Lorca. Ambientada en un pueblo de Andalucía, la obra narra la historia de Bernarda Alba, una viuda adinerada y autoritaria que impone un luto riguroso a sus cinco hijas.",
                             DuracionObra = 150,
@@ -1449,7 +1452,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 3,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9569),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(33),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Romeo y Julieta es una de las tragedias más conocidas de William Shakespeare. La obra cuenta la historia de dos jóvenes amantes cuyas familias, los Montesco y los Capuleto, están enfrentadas.",
                             DuracionObra = 160,
@@ -1459,7 +1462,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 4,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9571),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(36),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "El Fantasma de la Ópera es un musical de Andrew Lloyd Webber basado en la novela homónima de Gaston Leroux. La historia se desarrolla en la Ópera de París, donde un misterioso fantasma aterroriza a la compañía y se enamora de Christine, una joven cantante.",
                             DuracionObra = 200,
@@ -1469,7 +1472,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 5,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9573),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(37),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Esperando a Godot es una obra de teatro escrita por Samuel Beckett. La obra sigue a dos personajes, Vladimir y Estragón, que esperan la llegada de alguien llamado Godot, pero nunca llega.",
                             DuracionObra = 120,
@@ -1479,7 +1482,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 6,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9575),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(40),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Macbeth es una tragedia escrita por William Shakespeare. La obra narra la historia de Macbeth, un noble escocés que, incitado por la profecía de tres brujas, asesina al rey Duncan y se convierte en rey de Escocia. ",
                             DuracionObra = 170,
@@ -1489,7 +1492,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 7,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9577),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(42),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Los Miserables es un musical basado en la novela homónima de Victor Hugo. La historia sigue las vidas entrelazadas de varios personajes, incluido Jean Valjean, un exconvicto que busca redención; Javert, un inspector de policía obsesionado con atraparlo; y Cosette, la hija adoptiva de Valjean.",
                             DuracionObra = 210,
@@ -1499,7 +1502,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 8,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9579),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(44),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Otelo es una tragedia escrita por William Shakespeare. La obra cuenta la historia del moro Otelo, un general veneciano que se casa con Desdémona, una joven veneciana. ",
                             DuracionObra = 190,
@@ -1509,7 +1512,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 9,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9582),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(46),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Gaviota es una obra de teatro escrita por el dramaturgo ruso Anton Chejov. Ambientada en una finca rural en Rusia, la obra sigue las vidas entrelazadas de varios personajes, incluida la famosa actriz Irina Arkádina, su amante Boris Trigorin y el aspirante a escritor Konstantín Tréplev.",
                             DuracionObra = 180,
@@ -1519,7 +1522,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 10,
-                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 9, 30, 990, DateTimeKind.Local).AddTicks(9584),
+                            AuditoriaHorario = new DateTime(2024, 3, 25, 18, 8, 5, 105, DateTimeKind.Local).AddTicks(48),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Opera de los Tres Centavos es una ópera escrita por el dramaturgo alemán Bertolt Brecht, con música de Kurt Weill.",
                             DuracionObra = 200,

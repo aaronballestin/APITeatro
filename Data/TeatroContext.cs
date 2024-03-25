@@ -42,8 +42,8 @@ namespace TeatroApi.Data
                 {
                     ObraId = 1,
                     NombreObra = "Hamlet",
-                    DescripcionObra = "Una de las obras más famosas de William Shakespeare, Hamlet es una tragedia que narra la historia del príncipe Hamlet de Dinamarca, quien busca vengar la muerte de su padre a manos de su tío Claudio, que luego se convierte en rey. La obra explora temas como la venganza, la locura, la traición y la corrupción'.",
-                    RutaFotoObra = "ruta/foto/hamlet.jpg",
+                    DescripcionObra = "Una de las obras más famosas de William Shakespeare, Hamlet es una tragedia que narra la historia del príncipe Hamlet de Dinamarca, quien busca vengar la muerte de su padre a manos de su tío Claudio, que luego se convierte en rey.",
+                    RutaFotoObra = "/src/assets/images/hamlet.jpg",
                     DuracionObra = 180,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -53,7 +53,7 @@ namespace TeatroApi.Data
                     ObraId = 2,
                     NombreObra = "La Casa de Bernarda Alba",
                     DescripcionObra = "La Casa de Bernarda Alba es una obra de teatro escrita por el dramaturgo español Federico García Lorca. Ambientada en un pueblo de Andalucía, la obra narra la historia de Bernarda Alba, una viuda adinerada y autoritaria que impone un luto riguroso a sus cinco hijas.",
-                    RutaFotoObra = "ruta/foto/bernarda_alba.jpg",
+                    RutaFotoObra = "/src/assets/images/LaCasaDeBernardaAlba.jpg",
                     DuracionObra = 150,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -62,8 +62,8 @@ namespace TeatroApi.Data
                 {
                     ObraId = 3,
                     NombreObra = "Romeo y Julieta",
-                    DescripcionObra = "Romeo y Julieta es una de las tragedias más conocidas de William Shakespeare. La obra cuenta la historia de dos jóvenes amantes cuyas familias, los Montesco y los Capuleto, están enfrentadas. A pesar de los obstáculos que enfrentan, Romeo y Julieta se enamoran apasionadamente y se casan en secreto.",
-                    RutaFotoObra = "ruta/foto/romeo_julieta.jpg",
+                    DescripcionObra = "Romeo y Julieta es una de las tragedias más conocidas de William Shakespeare. La obra cuenta la historia de dos jóvenes amantes cuyas familias, los Montesco y los Capuleto, están enfrentadas.",
+                    RutaFotoObra = "/src/assets/images/RomeoyJulieta.jpg",
                     DuracionObra = 160,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -73,7 +73,7 @@ namespace TeatroApi.Data
                     ObraId = 4,
                     NombreObra = "El Fantasma de la Ópera",
                     DescripcionObra = "El Fantasma de la Ópera es un musical de Andrew Lloyd Webber basado en la novela homónima de Gaston Leroux. La historia se desarrolla en la Ópera de París, donde un misterioso fantasma aterroriza a la compañía y se enamora de Christine, una joven cantante.",
-                    RutaFotoObra = "ruta/foto/fantasma_opera.jpg",
+                    RutaFotoObra = "/src/assets/images/ElFantasmaDeLaOpera.jpg",
                     DuracionObra = 200,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -82,8 +82,8 @@ namespace TeatroApi.Data
                 {
                     ObraId = 5,
                     NombreObra = "Esperando a Godot",
-                    DescripcionObra = "Esperando a Godot es una obra de teatro escrita por Samuel Beckett. La obra sigue a dos personajes, Vladimir y Estragón, que esperan la llegada de alguien llamado Godot, pero nunca llega. Mientras esperan, pasan el tiempo conversando, discutiendo y realizando actividades triviales.",
-                    RutaFotoObra = "ruta/foto/esperando_godot.jpg",
+                    DescripcionObra = "Esperando a Godot es una obra de teatro escrita por Samuel Beckett. La obra sigue a dos personajes, Vladimir y Estragón, que esperan la llegada de alguien llamado Godot, pero nunca llega.",
+                    RutaFotoObra = "/src/assets/images/EsperandoAGodot.jpg",
                     DuracionObra = 120,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -92,8 +92,8 @@ namespace TeatroApi.Data
                 {
                     ObraId = 6,
                     NombreObra = "Macbeth",
-                    DescripcionObra = "Macbeth es una tragedia escrita por William Shakespeare. La obra narra la historia de Macbeth, un noble escocés que, incitado por la profecía de tres brujas, asesina al rey Duncan y se convierte en rey de Escocia. Sin embargo, su sed de poder lo lleva a cometer más crímenes, lo que finalmente conduce a su propia destrucción.",
-                    RutaFotoObra = "ruta/foto/macbeth.jpg",
+                    DescripcionObra = "Macbeth es una tragedia escrita por William Shakespeare. La obra narra la historia de Macbeth, un noble escocés que, incitado por la profecía de tres brujas, asesina al rey Duncan y se convierte en rey de Escocia. ",
+                    RutaFotoObra = "/src/assets/images/Macbeth.jpg",
                     DuracionObra = 170,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -103,7 +103,7 @@ namespace TeatroApi.Data
                     ObraId = 7,
                     NombreObra = "Los Miserables",
                     DescripcionObra = "Los Miserables es un musical basado en la novela homónima de Victor Hugo. La historia sigue las vidas entrelazadas de varios personajes, incluido Jean Valjean, un exconvicto que busca redención; Javert, un inspector de policía obsesionado con atraparlo; y Cosette, la hija adoptiva de Valjean.",
-                    RutaFotoObra = "ruta/foto/los_miserables.jpg",
+                    RutaFotoObra = "/src/assets/images/LosMiserables.jpg",
                     DuracionObra = 210,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -112,8 +112,8 @@ namespace TeatroApi.Data
                 {
                     ObraId = 8,
                     NombreObra = "Otelo",
-                    DescripcionObra = "Otelo es una tragedia escrita por William Shakespeare. La obra cuenta la historia del moro Otelo, un general veneciano que se casa con Desdémona, una joven veneciana. Sin embargo, su matrimonio es amenazado por la manipulación de Yago, un subordinado celoso de Otelo, que alimenta los celos de Otelo y lo lleva a cometer un acto trágico de violencia. ",
-                    RutaFotoObra = "ruta/foto/otelo.jpg",
+                    DescripcionObra = "Otelo es una tragedia escrita por William Shakespeare. La obra cuenta la historia del moro Otelo, un general veneciano que se casa con Desdémona, una joven veneciana. ",
+                    RutaFotoObra = "/src/assets/images/Otelo.jpg",
                     DuracionObra = 190,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -123,7 +123,7 @@ namespace TeatroApi.Data
                     ObraId = 9,
                     NombreObra = "La Gaviota",
                     DescripcionObra = "La Gaviota es una obra de teatro escrita por el dramaturgo ruso Anton Chejov. Ambientada en una finca rural en Rusia, la obra sigue las vidas entrelazadas de varios personajes, incluida la famosa actriz Irina Arkádina, su amante Boris Trigorin y el aspirante a escritor Konstantín Tréplev.",
-                    RutaFotoObra = "ruta/foto/la_gaviota.jpg",
+                    RutaFotoObra = "/src/assets/images/LaGaviota.jpg",
                     DuracionObra = 180,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -132,8 +132,8 @@ namespace TeatroApi.Data
                 {
                     ObraId = 10,
                     NombreObra = "La Opera de los Tres Centavos",
-                    DescripcionObra = "La Opera de los Tres Centavos es una ópera escrita por el dramaturgo alemán Bertolt Brecht, con música de Kurt Weill. Basada en la ópera del siglo XVIII El mendigo ladrón, la obra satiriza la sociedad capitalista y sigue las aventuras del criminal Mackie Messer, también conocido como Mack the Knife.",
-                    RutaFotoObra = "ruta/foto/Fopera_tres_centavos.jpg",
+                    DescripcionObra = "La Opera de los Tres Centavos es una ópera escrita por el dramaturgo alemán Bertolt Brecht, con música de Kurt Weill.",
+                    RutaFotoObra = "/src/assets/images/LaOperaDeLosTresCentavos.jpg",
                     DuracionObra = 200,
                     AuditoriaUsuario = "Admin",
                     AuditoriaHorario = DateTime.Now
@@ -192,7 +192,7 @@ namespace TeatroApi.Data
                 new Asiento { AsientoId = 48, SalaId = 1, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 49, SalaId = 1, TipoAsiento = 1, Suplemento = 0 },
                 new Asiento { AsientoId = 50, SalaId = 1, TipoAsiento = 1, Suplemento = 0 },
-                new Asiento { AsientoId = 51, SalaId = 2, TipoAsiento = 1, Suplemento = 0 },
+                new Asiento { AsientoId = 51, SalaId = 2, TipoAsiento = 2, Suplemento = 20 },
                 new Asiento { AsientoId = 52, SalaId = 2, TipoAsiento = 2, Suplemento = 20 },
                 new Asiento { AsientoId = 53, SalaId = 2, TipoAsiento = 2, Suplemento = 20 },
                 new Asiento { AsientoId = 54, SalaId = 2, TipoAsiento = 2, Suplemento = 20 },
