@@ -40,7 +40,7 @@ namespace TeatroApi.Business
 
         public List<ObraGetDTO> GetObraBuscador(string nombre)
         {
-            return _obraRepository.GetObras().Where(o => o.nombre.StartsWith(nombre)).ToList();
+            return _obraRepository.GetObras().Where(o => o.nombre.ToUpper().StartsWith(nombre.ToUpper())).ToList();
         }
 
 

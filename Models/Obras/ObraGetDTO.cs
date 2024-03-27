@@ -12,6 +12,8 @@ namespace TeatroApi.Models
 
         public int duracion {get; set;}
 
+        public DateTime fecha {get; set;}
+
         public ObraGetDTO()
         {
 

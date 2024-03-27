@@ -108,7 +108,7 @@ namespace TeatroApi.Data
         {
             try
             {
-                return _context.Usuarios.Select(u => new UsuarioDTO { id = u.UsuarioId, email = u.EmailUsuario, nombre = u.NombreUsuario, password = u.PasswordUsuario }).ToList();
+                return _context.Usuarios.Select(u => new UsuarioDTO { id = u.UsuarioId, email = u.EmailUsuario, nombre = u.NombreUsuario, rol = u.Rol }).ToList();
 
             }
             catch (Exception e)

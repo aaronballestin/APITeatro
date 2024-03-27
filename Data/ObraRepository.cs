@@ -58,6 +58,7 @@ namespace TeatroApi.Data
                                                 .Select(s => new SesionGetDTO(s.SesionId, s.FechaHora, s.Precio, s.SalaId))
                                                 .ToList();
 
+                sesiones.OrderBy(s => s.date);
                 var obraDTO = new ObraGetSesionDTO
                 {
                     id = obra.ObraId,
@@ -120,7 +121,8 @@ namespace TeatroApi.Data
                         nombre = obra.NombreObra,
                         descripcion = obra.DescripcionObra,
                         rutaFoto = obra.RutaFotoObra,
-                        duracion = obra.DuracionObra
+                        duracion = obra.DuracionObra, 
+                        fecha = _context.Sesiones.Where(s => s.ObraId == obra.ObraId && s.FechaHora >= DateTime.Today).Select(s => s.FechaHora).FirstOrDefault(),
                     };
                     obrasDTO.Add(obraDTO);
                 }

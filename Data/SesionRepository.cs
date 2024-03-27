@@ -88,7 +88,7 @@ namespace TeatroApi.Data
         {
             try
             {
-                var sesiones = _context.Sesiones.ToList();
+                var sesiones = _context.Sesiones.ToList().OrderBy(s => s.FechaHora);
                 var obras = _context.Obras.ToList();
 
                 var sesionesDTO = new List<SesionIntranetDTO>();
