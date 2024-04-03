@@ -92,6 +92,7 @@ namespace TeatroApi.Business
                     CompraId = c.CompraId,
                     SesionId = c.SesionId,
                     UsuarioId = c.UsuarioId,
+                    fecha = c.FechaCompra,
                     precio = c.PrecioCompra
 
                 }).ToList();

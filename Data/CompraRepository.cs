@@ -26,10 +26,10 @@ namespace TeatroApi.Data
                 double sumatorio = 0;
                 foreach (var asientoId in compraDTO.asientos)
                 {
-                    sumatorio =+ asientosCompra.GetAsientos().FirstOrDefault(a => a.id == asientoId).suplemento;
+                    sumatorio += asientosCompra.GetAsientos().FirstOrDefault(a => a.id == asientoId).suplemento;
                     
                 }
-                sumatorio =+ sesion.GetSesionDTO(compraDTO.sesionId).precio;
+                sumatorio += sesion.GetSesionDTO(compraDTO.sesionId).precio;
                 var compra = new Compra{SesionId = compraDTO.sesionId, FechaCompra = DateTime.Now, PrecioCompra = sumatorio, UsuarioId = compraDTO.usuarioId};
                 _context.Compras.Add(compra);
                 SaveChanges();
