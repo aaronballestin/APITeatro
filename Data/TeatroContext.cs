@@ -31,10 +31,9 @@ namespace TeatroApi.Data
             modelBuilder.Entity<Sala>().HasData(
                 new Sala { SalaId = 1, AsientosNormales = 50, AsientosMinusvalidos = 0, AsientosVip = 0 },
                 new Sala { SalaId = 2, AsientosNormales = 0, AsientosMinusvalidos = 0, AsientosVip = 30 },
-                new Sala { SalaId = 3, AsientosNormales = 30, AsientosMinusvalidos = 10, AsientosVip = 10 }
+                new Sala { SalaId = 3, AsientosNormales = 20, AsientosMinusvalidos = 10, AsientosVip = 10 }
 
             );
-
 
 
             modelBuilder.Entity<Obra>().HasData(
@@ -337,33 +336,33 @@ namespace TeatroApi.Data
                 new DetallesCompra { CompraId = 7, SesionId = 1, AsientoId = 45 },
                 new DetallesCompra { CompraId = 8, SesionId = 1, AsientoId = 47 },
                 new DetallesCompra { CompraId = 9, SesionId = 1, AsientoId = 37 },
-                new DetallesCompra { CompraId = 10, SesionId = 1, AsientoId = 59 },
-                new DetallesCompra { CompraId = 11, SesionId = 1, AsientoId = 51 },
-                new DetallesCompra { CompraId = 11, SesionId = 1, AsientoId = 52 },
+                new DetallesCompra { CompraId = 10, SesionId = 2, AsientoId = 59 },
+                new DetallesCompra { CompraId = 11, SesionId = 2, AsientoId = 51 },
+                new DetallesCompra { CompraId = 11, SesionId = 2, AsientoId = 52 },
                 new DetallesCompra { CompraId = 12, SesionId = 2, AsientoId = 72 },
-                new DetallesCompra { CompraId = 13, SesionId = 1, AsientoId = 67 },
-                new DetallesCompra { CompraId = 14, SesionId = 1, AsientoId = 77 },
-                new DetallesCompra { CompraId = 15, SesionId = 1, AsientoId = 75 },
-                new DetallesCompra { CompraId = 16, SesionId = 1, AsientoId = 80 },
-                new DetallesCompra { CompraId = 16, SesionId = 1, AsientoId = 61 },
-                new DetallesCompra { CompraId = 16, SesionId = 1, AsientoId = 55 },
-                new DetallesCompra { CompraId = 17, SesionId = 1, AsientoId = 73 },
-                new DetallesCompra { CompraId = 18, SesionId = 1, AsientoId = 56 },
-                new DetallesCompra { CompraId = 19, SesionId = 1, AsientoId = 57 },
-                new DetallesCompra { CompraId = 20, SesionId = 1, AsientoId = 79 },
-                new DetallesCompra { CompraId = 21, SesionId = 1, AsientoId = 101 },
-                new DetallesCompra { CompraId = 21, SesionId = 1, AsientoId = 102 },
-                new DetallesCompra { CompraId = 22, SesionId = 2, AsientoId = 82 },
-                new DetallesCompra { CompraId = 23, SesionId = 1, AsientoId = 97 },
-                new DetallesCompra { CompraId = 24, SesionId = 1, AsientoId = 107 },
-                new DetallesCompra { CompraId = 25, SesionId = 1, AsientoId = 115 },
-                new DetallesCompra { CompraId = 26, SesionId = 1, AsientoId = 100 },
-                new DetallesCompra { CompraId = 26, SesionId = 1, AsientoId = 81 },
-                new DetallesCompra { CompraId = 26, SesionId = 1, AsientoId = 85 },
-                new DetallesCompra { CompraId = 27, SesionId = 1, AsientoId = 83 },
-                new DetallesCompra { CompraId = 28, SesionId = 1, AsientoId = 86 },
-                new DetallesCompra { CompraId = 29, SesionId = 1, AsientoId = 98 },
-                new DetallesCompra { CompraId = 30, SesionId = 1, AsientoId = 119 }
+                new DetallesCompra { CompraId = 13, SesionId = 2, AsientoId = 67 },
+                new DetallesCompra { CompraId = 14, SesionId = 2, AsientoId = 77 },
+                new DetallesCompra { CompraId = 15, SesionId = 2, AsientoId = 75 },
+                new DetallesCompra { CompraId = 16, SesionId = 2, AsientoId = 80 },
+                new DetallesCompra { CompraId = 16, SesionId = 2, AsientoId = 61 },
+                new DetallesCompra { CompraId = 16, SesionId = 2, AsientoId = 55 },
+                new DetallesCompra { CompraId = 17, SesionId = 2, AsientoId = 73 },
+                new DetallesCompra { CompraId = 18, SesionId = 2, AsientoId = 56 },
+                new DetallesCompra { CompraId = 19, SesionId = 2, AsientoId = 57 },
+                new DetallesCompra { CompraId = 20, SesionId = 2, AsientoId = 79 },
+                new DetallesCompra { CompraId = 21, SesionId = 3, AsientoId = 101 },
+                new DetallesCompra { CompraId = 21, SesionId = 3, AsientoId = 102 },
+                new DetallesCompra { CompraId = 22, SesionId = 3, AsientoId = 82 },
+                new DetallesCompra { CompraId = 23, SesionId = 3, AsientoId = 97 },
+                new DetallesCompra { CompraId = 24, SesionId = 3, AsientoId = 107 },
+                new DetallesCompra { CompraId = 25, SesionId = 3, AsientoId = 115 },
+                new DetallesCompra { CompraId = 26, SesionId = 3, AsientoId = 100 },
+                new DetallesCompra { CompraId = 26, SesionId = 3, AsientoId = 81 },
+                new DetallesCompra { CompraId = 26, SesionId = 3, AsientoId = 85 },
+                new DetallesCompra { CompraId = 27, SesionId = 3, AsientoId = 83 },
+                new DetallesCompra { CompraId = 28, SesionId = 3, AsientoId = 86 },
+                new DetallesCompra { CompraId = 29, SesionId = 3, AsientoId = 98 },
+                new DetallesCompra { CompraId = 30, SesionId = 3, AsientoId = 119 }
 
             );
 

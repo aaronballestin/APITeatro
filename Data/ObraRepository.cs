@@ -73,11 +73,12 @@ namespace TeatroApi.Data
                 {
                     int asientosTotales = 0;
 
-                    var asientosOcupados = _context.DetallesCompras
-                                                  .Where(d => d.SesionId == sesion.sesionId)
-                                                  .Select(d => d.AsientoId)
-                                                  .Distinct()
-                                                  .Count();
+                    var asientosOcupados = 0;
+                    var asientosOcupadosList = _context.DetallesCompras
+                                                 .Where(d => d.SesionId == sesion.sesionId)
+                                                 .OrderBy(d => d.CompraId);
+                                                 
+                    asientosOcupados = asientosOcupadosList.Count();
 
                     var sala = _context.Salas.FirstOrDefault(s => s.SalaId == sesion.salaId);
                     if (sala != null)
@@ -121,7 +122,7 @@ namespace TeatroApi.Data
                         nombre = obra.NombreObra,
                         descripcion = obra.DescripcionObra,
                         rutaFoto = obra.RutaFotoObra,
-                        duracion = obra.DuracionObra, 
+                        duracion = obra.DuracionObra,
                         fecha = _context.Sesiones.Where(s => s.ObraId == obra.ObraId && s.FechaHora >= DateTime.Today).Select(s => s.FechaHora).FirstOrDefault(),
                     };
                     obrasDTO.Add(obraDTO);
