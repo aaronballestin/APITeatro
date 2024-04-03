@@ -62,9 +62,14 @@ namespace TeatroApi.Data
 
                 var asientos = new List<Asiento>();
 
-                sesionDTO.asientos = _context.Asientos.Where(o => o.SalaId == sesion.SalaId)
-                                                        .Select(o => new AsientoGetDTO(o.AsientoId, o.TipoAsiento, o.Suplemento))
-                                                        .ToList();
+                sesionDTO.asientos = _context.Asientos
+                                                .Where(a => a.SalaId == sesion.SalaId)
+                                                .Select(a => new { a.AsientoId, a.TipoAsiento, a.Suplemento })
+                                                .ToList() 
+                                                .Select(a => new AsientoGetDTO(a.AsientoId, a.TipoAsiento, a.Suplemento))
+                                                .OrderByDescending(dto => dto.id)
+                                                .ToList();
+
 
 
                 foreach (var asiento in sesionDTO.asientos)
