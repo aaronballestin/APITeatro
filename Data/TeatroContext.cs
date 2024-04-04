@@ -372,6 +372,7 @@ namespace TeatroApi.Data
                 .WithMany(sala => sala.Sesiones)
                 .HasForeignKey(s => s.SalaId)
                 .IsRequired();
+
             modelBuilder.Entity<Sesion>()
                 .Property(s => s.SalaId)
                 .IsRequired();
@@ -387,7 +388,7 @@ namespace TeatroApi.Data
                 .HasOne(c => c.Sesion)
                 .WithMany(s => s.Compras)
                 .HasForeignKey(c => c.SesionId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Sala>()
                    .HasKey(s => s.SalaId);
             modelBuilder.Entity<DetallesCompra>()

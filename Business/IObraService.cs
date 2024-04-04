@@ -5,6 +5,8 @@ namespace TeatroApi.Business
     public interface IObraService
     {
         public List<ObraGetDTO> GetObras();
+        public List<ObraGetDTO> GetObrasIntranet();
+
         public ObraGetSesionDTO GetObra(int obraId);
         public Obra GetObraById (int id);
         public void UpdateObra(Obra obra);

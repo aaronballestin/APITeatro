@@ -17,6 +17,22 @@ namespace TeatroApi.Api
             _obraService = obraService;
         }
 
+        [HttpGet("/intranet/Obra")]
+        public ActionResult<List<ObraGetDTO>> GetObrasIntranet()
+        {
+            try
+            {
+                var obras = _obraService.GetObrasIntranet();
+                return Ok(obras);
+
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound("No hay obras disponibles");
+            }
+
+        }
+
         [HttpGet]
         public ActionResult<List<ObraGetDTO>> GetObras()
         {
