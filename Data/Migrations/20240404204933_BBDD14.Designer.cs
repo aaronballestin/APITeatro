@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeatroApi.Data;
 
@@ -11,9 +12,11 @@ using TeatroApi.Data;
 namespace TeatroApi.Data.Migrations
 {
     [DbContext(typeof(TeatroContext))]
-    partial class TeatroContextModelSnapshot : ModelSnapshot
+    [Migration("20240404204933_BBDD14")]
+    partial class BBDD14
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -925,7 +928,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 1,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6274),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1647),
                             PrecioCompra = 100.0,
                             SesionId = 1,
                             UsuarioId = 1
@@ -933,7 +936,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 2,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6277),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1650),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 3
@@ -941,7 +944,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 3,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6279),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1652),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 4
@@ -949,7 +952,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 4,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6280),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1654),
                             PrecioCompra = 100.0,
                             SesionId = 1,
                             UsuarioId = 5
@@ -957,7 +960,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 5,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6282),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1656),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 1
@@ -965,7 +968,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 6,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6284),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1657),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 3
@@ -973,7 +976,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 7,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6286),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1659),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 4
@@ -981,7 +984,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 8,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6287),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1663),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 5
@@ -989,7 +992,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 9,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6289),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1665),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 1
@@ -997,7 +1000,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 10,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6291),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1666),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 3
@@ -1005,7 +1008,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 11,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6293),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1668),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 4
@@ -1013,7 +1016,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 12,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6296),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1670),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 5
@@ -1021,7 +1024,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 13,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6297),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1672),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 1
@@ -1029,7 +1032,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 14,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6299),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1674),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 3
@@ -1037,7 +1040,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 15,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6301),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1676),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 4
@@ -1045,7 +1048,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 16,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6303),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1678),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 5
@@ -1053,7 +1056,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 17,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6304),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1680),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 1
@@ -1061,7 +1064,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 18,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6306),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1682),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 1
@@ -1069,7 +1072,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 19,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6308),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1684),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 5
@@ -1077,7 +1080,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 20,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6309),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1686),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 4
@@ -1085,7 +1088,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 21,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6311),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1687),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 3
@@ -1093,7 +1096,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 22,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6313),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1689),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 2
@@ -1101,7 +1104,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 23,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6314),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1691),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 3
@@ -1109,7 +1112,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 24,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6316),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1694),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 4
@@ -1117,7 +1120,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 25,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6318),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1696),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 5
@@ -1125,7 +1128,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 26,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6319),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1698),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 6
@@ -1133,7 +1136,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 27,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6321),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1699),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 7
@@ -1141,7 +1144,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 28,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6324),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1701),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 8
@@ -1149,7 +1152,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 29,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6325),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1703),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 9
@@ -1157,7 +1160,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 30,
-                            FechaCompra = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6327),
+                            FechaCompra = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1705),
                             PrecioCompra = 50.0,
                             SesionId = 3,
                             UsuarioId = 12
@@ -1459,7 +1462,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 1,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(5978),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1339),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Una de las obras más famosas de William Shakespeare, Hamlet es una tragedia que narra la historia del príncipe Hamlet de Dinamarca, quien busca vengar la muerte de su padre a manos de su tío Claudio, que luego se convierte en rey.",
                             DuracionObra = 180,
@@ -1469,7 +1472,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 2,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6039),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1388),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Casa de Bernarda Alba es una obra de teatro escrita por el dramaturgo español Federico García Lorca. Ambientada en un pueblo de Andalucía, la obra narra la historia de Bernarda Alba, una viuda adinerada y autoritaria que impone un luto riguroso a sus cinco hijas.",
                             DuracionObra = 150,
@@ -1479,7 +1482,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 3,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6042),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1391),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Romeo y Julieta es una de las tragedias más conocidas de William Shakespeare. La obra cuenta la historia de dos jóvenes amantes cuyas familias, los Montesco y los Capuleto, están enfrentadas.",
                             DuracionObra = 160,
@@ -1489,7 +1492,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 4,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6044),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1393),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "El Fantasma de la Ópera es un musical de Andrew Lloyd Webber basado en la novela homónima de Gaston Leroux. La historia se desarrolla en la Ópera de París, donde un misterioso fantasma aterroriza a la compañía y se enamora de Christine, una joven cantante.",
                             DuracionObra = 200,
@@ -1499,7 +1502,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 5,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6046),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1396),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Esperando a Godot es una obra de teatro escrita por Samuel Beckett. La obra sigue a dos personajes, Vladimir y Estragón, que esperan la llegada de alguien llamado Godot, pero nunca llega.",
                             DuracionObra = 120,
@@ -1509,7 +1512,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 6,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6050),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1398),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Macbeth es una tragedia escrita por William Shakespeare. La obra narra la historia de Macbeth, un noble escocés que, incitado por la profecía de tres brujas, asesina al rey Duncan y se convierte en rey de Escocia. ",
                             DuracionObra = 170,
@@ -1519,7 +1522,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 7,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6052),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1401),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Los Miserables es un musical basado en la novela homónima de Victor Hugo. La historia sigue las vidas entrelazadas de varios personajes, incluido Jean Valjean, un exconvicto que busca redención; Javert, un inspector de policía obsesionado con atraparlo; y Cosette, la hija adoptiva de Valjean.",
                             DuracionObra = 210,
@@ -1529,7 +1532,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 8,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6054),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1403),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Otelo es una tragedia escrita por William Shakespeare. La obra cuenta la historia del moro Otelo, un general veneciano que se casa con Desdémona, una joven veneciana. ",
                             DuracionObra = 190,
@@ -1539,7 +1542,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 9,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6056),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1405),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Gaviota es una obra de teatro escrita por el dramaturgo ruso Anton Chejov. Ambientada en una finca rural en Rusia, la obra sigue las vidas entrelazadas de varios personajes, incluida la famosa actriz Irina Arkádina, su amante Boris Trigorin y el aspirante a escritor Konstantín Tréplev.",
                             DuracionObra = 180,
@@ -1549,7 +1552,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 10,
-                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 50, 10, 423, DateTimeKind.Local).AddTicks(6058),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 22, 49, 33, 401, DateTimeKind.Local).AddTicks(1407),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Opera de los Tres Centavos es una ópera escrita por el dramaturgo alemán Bertolt Brecht, con música de Kurt Weill.",
                             DuracionObra = 200,
@@ -1641,7 +1644,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
-                            FechaHora = new DateTime(2024, 4, 7, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
                             Precio = 50.0,
                             SalaId = 1
@@ -1649,7 +1652,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 2,
-                            FechaHora = new DateTime(2024, 4, 8, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 2,
                             Precio = 50.0,
                             SalaId = 2
@@ -1657,7 +1660,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 3,
-                            FechaHora = new DateTime(2024, 4, 8, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
                             Precio = 50.0,
                             SalaId = 3
@@ -1665,7 +1668,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 4,
-                            FechaHora = new DateTime(2024, 4, 9, 17, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 4, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
                             Precio = 50.0,
                             SalaId = 1
@@ -1673,7 +1676,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 5,
-                            FechaHora = new DateTime(2024, 4, 10, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 5, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
                             Precio = 50.0,
                             SalaId = 2
@@ -1681,7 +1684,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 6,
-                            FechaHora = new DateTime(2024, 4, 11, 19, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 6, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
                             Precio = 50.0,
                             SalaId = 3
@@ -1689,7 +1692,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 7,
-                            FechaHora = new DateTime(2024, 4, 12, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 7, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
                             Precio = 50.0,
                             SalaId = 1
@@ -1697,7 +1700,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 8,
-                            FechaHora = new DateTime(2024, 4, 13, 17, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 8, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
                             Precio = 50.0,
                             SalaId = 2
@@ -1705,7 +1708,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 9,
-                            FechaHora = new DateTime(2024, 4, 14, 18, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 9, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
                             Precio = 50.0,
                             SalaId = 3
@@ -1713,7 +1716,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 10,
-                            FechaHora = new DateTime(2024, 4, 15, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 10, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
                             Precio = 50.0,
                             SalaId = 1
@@ -1721,7 +1724,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 11,
-                            FechaHora = new DateTime(2024, 4, 16, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
                             Precio = 50.0,
                             SalaId = 2
@@ -1729,7 +1732,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 12,
-                            FechaHora = new DateTime(2024, 4, 17, 17, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 12, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
                             Precio = 50.0,
                             SalaId = 3
@@ -1737,7 +1740,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 13,
-                            FechaHora = new DateTime(2024, 4, 18, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
                             Precio = 50.0,
                             SalaId = 1
@@ -1745,7 +1748,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 14,
-                            FechaHora = new DateTime(2024, 4, 19, 19, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 14, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
                             Precio = 50.0,
                             SalaId = 2
@@ -1753,7 +1756,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 15,
-                            FechaHora = new DateTime(2024, 4, 20, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
                             Precio = 50.0,
                             SalaId = 3

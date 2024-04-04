@@ -54,7 +54,7 @@ namespace TeatroApi.Data
             {
                 var obra = _context.Obras.FirstOrDefault(o => o.ObraId == obraId);
 
-                var sesiones = _context.Sesiones.Where(s => s.ObraId == obraId)
+                var sesiones = _context.Sesiones.Where(s => s.ObraId == obraId && s.FechaHora > DateTime.Now)
                                                 .Select(s => new SesionGetDTO(s.SesionId, s.FechaHora, s.Precio, s.SalaId))
                                                 .ToList();
 
