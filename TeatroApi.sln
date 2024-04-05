@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeatroApi.Models", "Models\TeatroApi.Models.csproj", "{AA15F066-6345-4211-A1F7-C96B446C4853}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeatroApi.Business", "Business\TeatroApi.Business.csproj", "{FCA869B9-C91F-4E5B-B9CC-81377C6A34FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeatroApi.Data", "Data\TeatroApi.Data.csproj", "{8DF65F1D-64EB-4C95-A395-FF77B8E944DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeatroApi.Api", "Api\TeatroApi.Api.csproj", "{82F8CC44-C053-4CCC-8BA9-15B6F6036C57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA15F066-6345-4211-A1F7-C96B446C4853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA15F066-6345-4211-A1F7-C96B446C4853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA15F066-6345-4211-A1F7-C96B446C4853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA15F066-6345-4211-A1F7-C96B446C4853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA869B9-C91F-4E5B-B9CC-81377C6A34FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA869B9-C91F-4E5B-B9CC-81377C6A34FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA869B9-C91F-4E5B-B9CC-81377C6A34FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA869B9-C91F-4E5B-B9CC-81377C6A34FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF65F1D-64EB-4C95-A395-FF77B8E944DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF65F1D-64EB-4C95-A395-FF77B8E944DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF65F1D-64EB-4C95-A395-FF77B8E944DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF65F1D-64EB-4C95-A395-FF77B8E944DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F8CC44-C053-4CCC-8BA9-15B6F6036C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F8CC44-C053-4CCC-8BA9-15B6F6036C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F8CC44-C053-4CCC-8BA9-15B6F6036C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F8CC44-C053-4CCC-8BA9-15B6F6036C57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
