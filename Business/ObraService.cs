@@ -18,6 +18,11 @@ namespace TeatroApi.Business
             return _obraRepository.GetObras();
         }
 
+        public List<ObraGetDTO> GetObrasIntranet()
+        {
+            return _obraRepository.GetObrasIntranet();
+        }
+
         // public List<Obra> GetObrasByCategoria(int categoriaId){
         //     List<Obra> obrasByCategoria = new List<Obra>();
 

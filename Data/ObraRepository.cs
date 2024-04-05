@@ -54,7 +54,7 @@ namespace TeatroApi.Data
             {
                 var obra = _context.Obras.FirstOrDefault(o => o.ObraId == obraId);
 
-                var sesiones = _context.Sesiones.Where(s => s.ObraId == obraId)
+                var sesiones = _context.Sesiones.Where(s => s.ObraId == obraId && s.FechaHora > DateTime.Now)
                                                 .Select(s => new SesionGetDTO(s.SesionId, s.FechaHora, s.Precio, s.SalaId))
                                                 .ToList();
 
@@ -108,6 +108,37 @@ namespace TeatroApi.Data
             return obras;
         }*/
 
+        public List<ObraGetDTO> GetObrasIntranet()
+        {
+            try
+            {
+                var obras = _context.Obras.ToList();
+                var obrasDTO = new List<ObraGetDTO>();
+                foreach (var obra in obras)
+                {
+                    var obraDTO = new ObraGetDTO
+                    {
+                        id = obra.ObraId,
+                        nombre = obra.NombreObra,
+                        descripcion = obra.DescripcionObra,
+                        rutaFoto = obra.RutaFotoObra,
+                        duracion = obra.DuracionObra,
+                        fecha = _context.Sesiones.Where(s => s.ObraId == obra.ObraId && s.FechaHora >= DateTime.Today).Select(s => s.FechaHora).FirstOrDefault(),
+                    };
+                        obrasDTO.Add(obraDTO);
+                    
+                }
+                return obrasDTO;
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation($"Mensaje: {e.Message}");
+                _logger.LogError($"StackTrace: {e.StackTrace}");
+                throw;
+            }
+
+        }
+
         public List<ObraGetDTO> GetObras()
         {
             try
@@ -125,7 +156,10 @@ namespace TeatroApi.Data
                         duracion = obra.DuracionObra,
                         fecha = _context.Sesiones.Where(s => s.ObraId == obra.ObraId && s.FechaHora >= DateTime.Today).Select(s => s.FechaHora).FirstOrDefault(),
                     };
-                    obrasDTO.Add(obraDTO);
+                    if (obraDTO.fecha > DateTime.Today)
+                    {
+                        obrasDTO.Add(obraDTO);
+                    }
                 }
                 return obrasDTO;
             }
@@ -162,9 +196,13 @@ namespace TeatroApi.Data
                 {
                     throw new KeyNotFoundException("Account not found.");
                 }
-                _context.Sesiones.Where(s => s.ObraId == obraId)
+                var sesiones = _context.Sesiones.Where(s => s.ObraId == obraId)
                                 .ToList();
-
+                foreach (var sesion in sesiones)
+                {
+                    _context.Sesiones.Remove(sesion);
+                    SaveChanges();
+                }
                 _context.Obras.Remove(account);
                 SaveChanges();
             }

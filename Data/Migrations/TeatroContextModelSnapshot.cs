@@ -400,280 +400,280 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 51,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 52,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 53,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 54,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 55,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 56,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 57,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 58,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 59,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 60,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 61,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 62,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 63,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 64,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 65,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 66,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 67,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 68,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 69,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 70,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 71,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 72,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 73,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 74,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 75,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 76,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 77,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 78,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 79,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 80,
                             SalaId = 2,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 81,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 82,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 83,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 84,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 85,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 86,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 87,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 88,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 89,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
                         {
                             AsientoId = 90,
                             SalaId = 3,
-                            Suplemento = -10.0,
+                            Suplemento = -30.0,
                             TipoAsiento = 3
                         },
                         new
@@ -820,70 +820,70 @@ namespace TeatroApi.Data.Migrations
                         {
                             AsientoId = 111,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 112,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 113,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 114,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 115,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 116,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 117,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 118,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 119,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         },
                         new
                         {
                             AsientoId = 120,
                             SalaId = 3,
-                            Suplemento = 20.0,
+                            Suplemento = 40.0,
                             TipoAsiento = 2
                         });
                 });
@@ -925,6 +925,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 1,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7710),
                             PrecioCompra = 100.0,
                             SesionId = 1,
                             UsuarioId = 1
@@ -932,27 +933,31 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 2,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7714),
                             PrecioCompra = 50.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 3
                         },
                         new
                         {
                             CompraId = 3,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7717),
                             PrecioCompra = 50.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 4
                         },
                         new
                         {
                             CompraId = 4,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7720),
                             PrecioCompra = 100.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 5
                         },
                         new
                         {
                             CompraId = 5,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7722),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 1
@@ -960,27 +965,31 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 6,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7725),
                             PrecioCompra = 50.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 3
                         },
                         new
                         {
                             CompraId = 7,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7727),
                             PrecioCompra = 50.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 4
                         },
                         new
                         {
                             CompraId = 8,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7729),
                             PrecioCompra = 50.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 5
                         },
                         new
                         {
                             CompraId = 9,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7732),
                             PrecioCompra = 50.0,
                             SesionId = 1,
                             UsuarioId = 1
@@ -988,27 +997,31 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 10,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7736),
                             PrecioCompra = 50.0,
                             SesionId = 1,
-                            UsuarioId = 1
+                            UsuarioId = 3
                         },
                         new
                         {
                             CompraId = 11,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7738),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 4
                         },
                         new
                         {
                             CompraId = 12,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7740),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 5
                         },
                         new
                         {
                             CompraId = 13,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7742),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 1
@@ -1016,27 +1029,31 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 14,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7744),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 3
                         },
                         new
                         {
                             CompraId = 15,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7745),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 4
                         },
                         new
                         {
                             CompraId = 16,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7747),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 5
                         },
                         new
                         {
                             CompraId = 17,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7749),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 1
@@ -1044,6 +1061,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 18,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7751),
                             PrecioCompra = 50.0,
                             SesionId = 2,
                             UsuarioId = 1
@@ -1051,86 +1069,98 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             CompraId = 19,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7753),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 5
                         },
                         new
                         {
                             CompraId = 20,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7755),
                             PrecioCompra = 50.0,
                             SesionId = 2,
-                            UsuarioId = 1
+                            UsuarioId = 4
                         },
                         new
                         {
                             CompraId = 21,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7756),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 3
                         },
                         new
                         {
                             CompraId = 22,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7758),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 2
                         },
                         new
                         {
                             CompraId = 23,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7760),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 3
                         },
                         new
                         {
                             CompraId = 24,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7762),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 4
                         },
                         new
                         {
                             CompraId = 25,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7763),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 5
                         },
                         new
                         {
                             CompraId = 26,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7766),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 6
                         },
                         new
                         {
                             CompraId = 27,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7768),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 7
                         },
                         new
                         {
                             CompraId = 28,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7770),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 8
                         },
                         new
                         {
                             CompraId = 29,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7771),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 9
                         },
                         new
                         {
                             CompraId = 30,
+                            FechaCompra = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7773),
                             PrecioCompra = 50.0,
                             SesionId = 3,
-                            UsuarioId = 1
+                            UsuarioId = 12
                         });
                 });
 
@@ -1429,7 +1459,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 1,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6201),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7389),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Una de las obras más famosas de William Shakespeare, Hamlet es una tragedia que narra la historia del príncipe Hamlet de Dinamarca, quien busca vengar la muerte de su padre a manos de su tío Claudio, que luego se convierte en rey.",
                             DuracionObra = 180,
@@ -1439,7 +1469,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 2,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6251),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7449),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Casa de Bernarda Alba es una obra de teatro escrita por el dramaturgo español Federico García Lorca. Ambientada en un pueblo de Andalucía, la obra narra la historia de Bernarda Alba, una viuda adinerada y autoritaria que impone un luto riguroso a sus cinco hijas.",
                             DuracionObra = 150,
@@ -1449,7 +1479,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 3,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6254),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7453),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Romeo y Julieta es una de las tragedias más conocidas de William Shakespeare. La obra cuenta la historia de dos jóvenes amantes cuyas familias, los Montesco y los Capuleto, están enfrentadas.",
                             DuracionObra = 160,
@@ -1459,7 +1489,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 4,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6256),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7457),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "El Fantasma de la Ópera es un musical de Andrew Lloyd Webber basado en la novela homónima de Gaston Leroux. La historia se desarrolla en la Ópera de París, donde un misterioso fantasma aterroriza a la compañía y se enamora de Christine, una joven cantante.",
                             DuracionObra = 200,
@@ -1469,7 +1499,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 5,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6258),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7460),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Esperando a Godot es una obra de teatro escrita por Samuel Beckett. La obra sigue a dos personajes, Vladimir y Estragón, que esperan la llegada de alguien llamado Godot, pero nunca llega.",
                             DuracionObra = 120,
@@ -1479,7 +1509,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 6,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6260),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7464),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Macbeth es una tragedia escrita por William Shakespeare. La obra narra la historia de Macbeth, un noble escocés que, incitado por la profecía de tres brujas, asesina al rey Duncan y se convierte en rey de Escocia. ",
                             DuracionObra = 170,
@@ -1489,7 +1519,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 7,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6262),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7467),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Los Miserables es un musical basado en la novela homónima de Victor Hugo. La historia sigue las vidas entrelazadas de varios personajes, incluido Jean Valjean, un exconvicto que busca redención; Javert, un inspector de policía obsesionado con atraparlo; y Cosette, la hija adoptiva de Valjean.",
                             DuracionObra = 210,
@@ -1499,7 +1529,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 8,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6264),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7470),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "Otelo es una tragedia escrita por William Shakespeare. La obra cuenta la historia del moro Otelo, un general veneciano que se casa con Desdémona, una joven veneciana. ",
                             DuracionObra = 190,
@@ -1509,7 +1539,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 9,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6266),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7473),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Gaviota es una obra de teatro escrita por el dramaturgo ruso Anton Chejov. Ambientada en una finca rural en Rusia, la obra sigue las vidas entrelazadas de varios personajes, incluida la famosa actriz Irina Arkádina, su amante Boris Trigorin y el aspirante a escritor Konstantín Tréplev.",
                             DuracionObra = 180,
@@ -1519,7 +1549,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             ObraId = 10,
-                            AuditoriaHorario = new DateTime(2024, 4, 3, 11, 52, 43, 235, DateTimeKind.Local).AddTicks(6268),
+                            AuditoriaHorario = new DateTime(2024, 4, 4, 23, 28, 51, 410, DateTimeKind.Local).AddTicks(7476),
                             AuditoriaUsuario = "Admin",
                             DescripcionObra = "La Opera de los Tres Centavos es una ópera escrita por el dramaturgo alemán Bertolt Brecht, con música de Kurt Weill.",
                             DuracionObra = 200,
@@ -1611,7 +1641,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 1,
-                            FechaHora = new DateTime(2024, 4, 1, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 7, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
                             Precio = 50.0,
                             SalaId = 1
@@ -1619,7 +1649,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 2,
-                            FechaHora = new DateTime(2024, 4, 2, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 8, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 2,
                             Precio = 50.0,
                             SalaId = 2
@@ -1627,7 +1657,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 3,
-                            FechaHora = new DateTime(2024, 4, 3, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 8, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
                             Precio = 50.0,
                             SalaId = 3
@@ -1635,7 +1665,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 4,
-                            FechaHora = new DateTime(2024, 4, 4, 17, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 9, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 1,
                             Precio = 50.0,
                             SalaId = 1
@@ -1643,7 +1673,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 5,
-                            FechaHora = new DateTime(2024, 4, 5, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 10, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
                             Precio = 50.0,
                             SalaId = 2
@@ -1651,7 +1681,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 6,
-                            FechaHora = new DateTime(2024, 4, 6, 19, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 11, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 3,
                             Precio = 50.0,
                             SalaId = 3
@@ -1659,7 +1689,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 7,
-                            FechaHora = new DateTime(2024, 4, 7, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 12, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
                             Precio = 50.0,
                             SalaId = 1
@@ -1667,7 +1697,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 8,
-                            FechaHora = new DateTime(2024, 4, 8, 17, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 13, 17, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 4,
                             Precio = 50.0,
                             SalaId = 2
@@ -1675,7 +1705,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 9,
-                            FechaHora = new DateTime(2024, 4, 9, 18, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 14, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
                             Precio = 50.0,
                             SalaId = 3
@@ -1683,7 +1713,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 10,
-                            FechaHora = new DateTime(2024, 4, 10, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 15, 19, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 5,
                             Precio = 50.0,
                             SalaId = 1
@@ -1691,7 +1721,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 11,
-                            FechaHora = new DateTime(2024, 4, 11, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 16, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
                             Precio = 50.0,
                             SalaId = 2
@@ -1699,7 +1729,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 12,
-                            FechaHora = new DateTime(2024, 4, 12, 17, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 17, 17, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 6,
                             Precio = 50.0,
                             SalaId = 3
@@ -1707,7 +1737,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 13,
-                            FechaHora = new DateTime(2024, 4, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 18, 18, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
                             Precio = 50.0,
                             SalaId = 1
@@ -1715,7 +1745,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 14,
-                            FechaHora = new DateTime(2024, 4, 14, 19, 30, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 19, 19, 30, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 7,
                             Precio = 50.0,
                             SalaId = 2
@@ -1723,7 +1753,7 @@ namespace TeatroApi.Data.Migrations
                         new
                         {
                             SesionId = 15,
-                            FechaHora = new DateTime(2024, 4, 15, 20, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaHora = new DateTime(2024, 4, 20, 20, 0, 0, 0, DateTimeKind.Unspecified),
                             ObraId = 8,
                             Precio = 50.0,
                             SalaId = 3
@@ -1917,7 +1947,7 @@ namespace TeatroApi.Data.Migrations
                     b.HasOne("TeatroApi.Models.Sesion", "Sesion")
                         .WithMany("Compras")
                         .HasForeignKey("SesionId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("TeatroApi.Models.Usuario", "Usuario")
